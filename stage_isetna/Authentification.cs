@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace stage_isetna
 {
-    public partial class Form1 : Form
+    public partial class Authentification : Form
     {
-        public Form1()
+        public Authentification()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

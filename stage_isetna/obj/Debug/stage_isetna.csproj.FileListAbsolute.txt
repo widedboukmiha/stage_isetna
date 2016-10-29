@@ -1,1 +1,9 @@
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe.config
+C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe
+C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\stage_isetna.pdb
+C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csprojResolveAssemblyReference.cache
+C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Form1.resources
+C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Properties.Resources.resources
+C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csproj.GenerateResource.Cache
+C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.exe
+C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.pdb
