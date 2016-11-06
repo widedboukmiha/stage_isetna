@@ -9,3 +9,6 @@ C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\sta
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Authentification.resources
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Accueil.resources
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Etudiant.resources
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe.config
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.exe
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.pdb
