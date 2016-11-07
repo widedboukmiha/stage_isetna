@@ -12,3 +12,14 @@ C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\sta
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe.config
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.exe
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.pdb
+D:\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe.config
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.exe
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.pdb
+D:\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe
+D:\stage_isetna\stage_isetna\bin\Debug\stage_isetna.pdb
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csprojResolveAssemblyReference.cache
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Authentification.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Accueil.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Etudiant.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Properties.Resources.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csproj.GenerateResource.Cache
