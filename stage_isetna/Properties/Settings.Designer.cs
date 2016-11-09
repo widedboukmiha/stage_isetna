@@ -26,6 +26,8 @@ namespace stage_isetna.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LENOVO-PC\\SQLEXPRESS;Initial Catalog=StagesDB;Integrated Security=Tru" +
+            "e")]
         public string ch {
             get {
                 return ((string)(this["ch"]));

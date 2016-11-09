@@ -6,34 +6,42 @@ using System.Threading.Tasks;
 
 namespace stage_isetna.Business
 {
-    class Entreprise
+    public class Entreprise
     {
+        
         private int id;
         private String nomEntreprise;
         private String adresse;
         private String telephone;
 
-        private int getId()
+        public Entreprise()
+        {
+
+        }
+
+        public Entreprise(int id,String nomEntreprise,String adresse,String telephone)
+        {
+            this.id = id;
+            this.nomEntreprise = nomEntreprise;
+            this.adresse = adresse;
+            this.telephone = telephone;
+        }
+        public int getId()
         {
             return id;
         }
 
-        private String getnomEntreprise()
+        public String getnomEntreprise()
         {
             return nomEntreprise;
         }
-        private String getTelephone()
+        public String getTelephone()
         {
             return telephone;
         }
-        private String getAdresse()
+        public String getAdresse()
         {
             return adresse;
         }
-        
-
-
-
-
     }
 }

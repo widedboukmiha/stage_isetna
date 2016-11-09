@@ -61,7 +61,7 @@
     </Compile>
     <Compile Include="Business\Entreprise.cs" />
     <Compile Include="Business\Etudiant.cs" />
-    <Compile Include="DataAccess\EntreprisesDA.cs" />
+    <Compile Include="DataAccess\EntrepriseDA.cs" />
     <Compile Include="Entreprise.cs">
       <SubType>Form</SubType>
     </Compile>
