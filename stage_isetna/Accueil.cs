@@ -17,6 +17,17 @@ namespace stage_isetna
             InitializeComponent();
         }
 
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
+        }
+
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -100,6 +111,17 @@ namespace stage_isetna
         {
             Etudiant E = new Etudiant();
             E.Show(); 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Entreprise en = new Entreprise();
+            en.Show();
         }
     }
 }
