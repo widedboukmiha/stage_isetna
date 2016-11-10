@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace stage_isetna.Views.Entreprises
+namespace stage_isetna.Views.Etudiants
 {
-    public partial class Affichage : Form
+    public partial class ModifierEtudiant : Form
     {
-        public Affichage()
+        public ModifierEtudiant()
         {
             InitializeComponent();
         }

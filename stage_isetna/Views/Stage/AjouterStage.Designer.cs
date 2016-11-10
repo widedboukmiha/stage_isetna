@@ -1,6 +1,6 @@
-﻿namespace stage_isetna
+﻿namespace stage_isetna.Views.Stage
 {
-    partial class Authentification
+    partial class AjouterStage
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Authentification
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(759, 388);
-            this.Name = "Authentification";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "AjouterStage";
         }
 
         #endregion
     }
 }
-

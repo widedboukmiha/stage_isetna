@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace stage_isetna.Views.Entreprises
+namespace stage_isetna.Views.Filiere
 {
-    public partial class Supression : Form
+    public partial class AjouterFiliere : Form
     {
-        public Supression()
+        public AjouterFiliere()
         {
             InitializeComponent();
         }

@@ -46,7 +46,7 @@ namespace stage_isetna
         private void button1_Click(object sender, EventArgs e)
         {
             
-           Form flowLayoutPanel1 = new Etudiant();
+           Form flowLayoutPanel1 = new AjouterEtudiant();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace stage_isetna
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Etudiant E = new Etudiant();
+            AjouterEtudiant E = new AjouterEtudiant();
             E.Show();
           
         }
@@ -109,7 +109,7 @@ namespace stage_isetna
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            Etudiant E = new Etudiant();
+            AjouterEtudiant E = new AjouterEtudiant();
             E.Show(); 
         }
 
@@ -120,8 +120,7 @@ namespace stage_isetna
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Entreprise en = new Entreprise();
-            en.Show();
+           
         }
     }
 }

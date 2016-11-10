@@ -32,3 +32,6 @@ C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetn
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Properties.Resources.resources
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csproj.GenerateResource.Cache
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Entreprise.resources
+C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe.config
+C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.exe
+C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.pdb

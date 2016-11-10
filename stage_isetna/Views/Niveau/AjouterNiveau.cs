@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace stage_isetna
+namespace stage_isetna.Views.Niveau
 {
-    public partial class Entreprise : Form
+    public partial class AjouterNiveau : Form
     {
-        public Entreprise()
+        public AjouterNiveau()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace stage_isetna
 {
-    public partial class Etudiant : Form
+    public partial class AjouterEtudiant : Form
     {
-        public Etudiant()
+        public AjouterEtudiant()
         {
             InitializeComponent();
         }
