@@ -161,5 +161,10 @@ namespace stage_isetna.Business
         {
             this.groupe = groupe;
         }
+
+        public String getDate_naissance()
+        {
+            return this.date_naissance;
+        }
     }
 }

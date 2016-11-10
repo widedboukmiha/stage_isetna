@@ -97,7 +97,6 @@ namespace stage_isetna.DataAccess
                 return false;
             }
         }
-
     }
 }
 
