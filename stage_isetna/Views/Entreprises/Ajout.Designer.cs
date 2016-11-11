@@ -28,43 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btAjouter = new System.Windows.Forms.Button();
+            this.comboVille = new System.Windows.Forms.ComboBox();
+            this.nomEntreprise = new System.Windows.Forms.TextBox();
+            this.telephone = new System.Windows.Forms.TextBox();
+            this.idEntreprise = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btAnnuler = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button2
+            // btAjouter
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(455, 439);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 32);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Annuler";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btAjouter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAjouter.Location = new System.Drawing.Point(263, 439);
+            this.btAjouter.Name = "btAjouter";
+            this.btAjouter.Size = new System.Drawing.Size(119, 32);
+            this.btAjouter.TabIndex = 23;
+            this.btAjouter.Text = "Ajouter";
+            this.btAjouter.UseVisualStyleBackColor = true;
+            this.btAjouter.Click += new System.EventHandler(this.btAjouter_Click);
             // 
-            // button1
+            // comboVille
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(263, 439);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 32);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Ajouter";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboVille.FormattingEnabled = true;
+            this.comboVille.Items.AddRange(new object[] {
             "Tunis",
             "Manouba",
             "Ariana",
@@ -89,31 +80,35 @@
             "Kebili",
             "Kairouan",
             "Gabes"});
-            this.comboBox1.Location = new System.Drawing.Point(394, 286);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(243, 21);
-            this.comboBox1.TabIndex = 22;
+            this.comboVille.Location = new System.Drawing.Point(394, 286);
+            this.comboVille.Name = "comboVille";
+            this.comboVille.Size = new System.Drawing.Size(243, 21);
+            this.comboVille.TabIndex = 22;
             // 
-            // textBox3
+            // nomEntreprise
             // 
-            this.textBox3.Location = new System.Drawing.Point(394, 209);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(243, 20);
-            this.textBox3.TabIndex = 21;
+            this.nomEntreprise.Location = new System.Drawing.Point(394, 209);
+            this.nomEntreprise.Name = "nomEntreprise";
+            this.nomEntreprise.Size = new System.Drawing.Size(243, 20);
+            this.nomEntreprise.TabIndex = 21;
+            this.nomEntreprise.TextChanged += new System.EventHandler(this.nomEntreprise_TextChanged);
             // 
-            // textBox2
+            // telephone
             // 
-            this.textBox2.Location = new System.Drawing.Point(394, 360);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(243, 20);
-            this.textBox2.TabIndex = 20;
+            this.telephone.Location = new System.Drawing.Point(394, 360);
+            this.telephone.Name = "telephone";
+            this.telephone.Size = new System.Drawing.Size(243, 20);
+            this.telephone.TabIndex = 20;
+            this.telephone.TextChanged += new System.EventHandler(this.telephone_TextChanged);
+            this.telephone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.telephone_KeyPress);
             // 
-            // textBox1
+            // idEntreprise
             // 
-            this.textBox1.Location = new System.Drawing.Point(394, 133);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(243, 20);
-            this.textBox1.TabIndex = 19;
+            this.idEntreprise.Location = new System.Drawing.Point(394, 133);
+            this.idEntreprise.Name = "idEntreprise";
+            this.idEntreprise.Size = new System.Drawing.Size(243, 20);
+            this.idEntreprise.TabIndex = 19;
+            this.idEntreprise.TextChanged += new System.EventHandler(this.idEntreprise_TextChanged);
             // 
             // label7
             // 
@@ -166,17 +161,27 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Id Entreprise";
             // 
+            // btAnnuler
+            // 
+            this.btAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAnnuler.Location = new System.Drawing.Point(437, 439);
+            this.btAnnuler.Name = "btAnnuler";
+            this.btAnnuler.Size = new System.Drawing.Size(119, 32);
+            this.btAnnuler.TabIndex = 25;
+            this.btAnnuler.Text = "Annuler";
+            this.btAnnuler.UseVisualStyleBackColor = true;
+            // 
             // Ajout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 510);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btAnnuler);
+            this.Controls.Add(this.btAjouter);
+            this.Controls.Add(this.comboVille);
+            this.Controls.Add(this.nomEntreprise);
+            this.Controls.Add(this.telephone);
+            this.Controls.Add(this.idEntreprise);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -184,23 +189,23 @@
             this.Controls.Add(this.label1);
             this.Name = "Ajout";
             this.Text = "Ajout";
+            this.Load += new System.EventHandler(this.Ajout_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btAjouter;
+        private System.Windows.Forms.ComboBox comboVille;
+        private System.Windows.Forms.TextBox nomEntreprise;
+        private System.Windows.Forms.TextBox telephone;
+        private System.Windows.Forms.TextBox idEntreprise;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btAnnuler;
     }
 }

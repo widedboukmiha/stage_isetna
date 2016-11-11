@@ -17,16 +17,17 @@ namespace stage_isetna
             InitializeComponent();
         }
 
-        private const int CP_NOCLOSE_BUTTON = 0x200;
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams myCp = base.CreateParams;
-                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
-                return myCp;
-            }
-        }
+         //private const int CP_NOCLOSE_BUTTON = 0x200;
+        //protected override CreateParams CreateParams
+        //{
+          //get
+            //{
+                //CreateParams myCp = base.CreateParams;
+              //  myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+            //    return myCp;
+          //  }
+        //}
+        
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
@@ -121,6 +122,29 @@ namespace stage_isetna
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            stage_isetna.Views.Entreprises.Ajout ajoutEntreprise = new stage_isetna.Views.Entreprises.Ajout();
+            ajoutEntreprise.Show();
+            
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Inscription_Click(object sender, EventArgs e)
+        {
+            FormBorderStyle = FormBorderStyle.Sizable;
+
+        }
+
+        private void Accueil_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

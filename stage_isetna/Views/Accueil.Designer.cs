@@ -30,12 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Inscription = new System.Windows.Forms.TabPage();
-            this.Etudiant = new System.Windows.Forms.TabPage();
-            this.Entreprise = new System.Windows.Forms.TabPage();
-            this.Groupe = new System.Windows.Forms.TabPage();
-            this.Stage = new System.Windows.Forms.TabPage();
-            this.Filiére = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -51,6 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Etudiant = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.Importer = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -59,11 +54,15 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.Entreprise = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.g = new System.Windows.Forms.Label();
+            this.Groupe = new System.Windows.Forms.TabPage();
+            this.Stage = new System.Windows.Forms.TabPage();
+            this.Filiére = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -74,17 +73,18 @@
             this.label15 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.Inscription.SuspendLayout();
             this.Etudiant.SuspendLayout();
-            this.Entreprise.SuspendLayout();
-            this.Filiére.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Entreprise.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.Filiére.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -127,89 +127,7 @@
             this.Inscription.Size = new System.Drawing.Size(1091, 476);
             this.Inscription.TabIndex = 0;
             this.Inscription.Text = "Inscription";
-            // 
-            // Etudiant
-            // 
-            this.Etudiant.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.Etudiant.Controls.Add(this.label1);
-            this.Etudiant.Controls.Add(this.Importer);
-            this.Etudiant.Controls.Add(this.dataGridView1);
-            this.Etudiant.Controls.Add(this.textBox1);
-            this.Etudiant.Controls.Add(this.radioButton4);
-            this.Etudiant.Controls.Add(this.radioButton3);
-            this.Etudiant.Controls.Add(this.radioButton2);
-            this.Etudiant.Controls.Add(this.radioButton5);
-            this.Etudiant.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Etudiant.Location = new System.Drawing.Point(4, 22);
-            this.Etudiant.Name = "Etudiant";
-            this.Etudiant.Padding = new System.Windows.Forms.Padding(3);
-            this.Etudiant.Size = new System.Drawing.Size(1091, 476);
-            this.Etudiant.TabIndex = 1;
-            this.Etudiant.Text = "Etudiant";
-            // 
-            // Entreprise
-            // 
-            this.Entreprise.Controls.Add(this.button3);
-            this.Entreprise.Controls.Add(this.textBox8);
-            this.Entreprise.Controls.Add(this.dataGridView2);
-            this.Entreprise.Controls.Add(this.label10);
-            this.Entreprise.Controls.Add(this.g);
-            this.Entreprise.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Entreprise.Location = new System.Drawing.Point(4, 22);
-            this.Entreprise.Name = "Entreprise";
-            this.Entreprise.Padding = new System.Windows.Forms.Padding(3);
-            this.Entreprise.Size = new System.Drawing.Size(1091, 476);
-            this.Entreprise.TabIndex = 2;
-            this.Entreprise.Text = "Entreprise";
-            this.Entreprise.UseVisualStyleBackColor = true;
-            // 
-            // Groupe
-            // 
-            this.Groupe.BackColor = System.Drawing.Color.Teal;
-            this.Groupe.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Groupe.Location = new System.Drawing.Point(4, 22);
-            this.Groupe.Name = "Groupe";
-            this.Groupe.Padding = new System.Windows.Forms.Padding(3);
-            this.Groupe.Size = new System.Drawing.Size(1091, 476);
-            this.Groupe.TabIndex = 3;
-            this.Groupe.Text = "Groupe";
-            // 
-            // Stage
-            // 
-            this.Stage.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Stage.Location = new System.Drawing.Point(4, 22);
-            this.Stage.Name = "Stage";
-            this.Stage.Padding = new System.Windows.Forms.Padding(3);
-            this.Stage.Size = new System.Drawing.Size(1091, 476);
-            this.Stage.TabIndex = 4;
-            this.Stage.Text = "Stage";
-            this.Stage.UseVisualStyleBackColor = true;
-            // 
-            // Filiére
-            // 
-            this.Filiére.Controls.Add(this.dataGridView4);
-            this.Filiére.Controls.Add(this.button5);
-            this.Filiére.Controls.Add(this.label13);
-            this.Filiére.Controls.Add(this.label12);
-            this.Filiére.Controls.Add(this.textBox10);
-            this.Filiére.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Filiére.Location = new System.Drawing.Point(4, 22);
-            this.Filiére.Name = "Filiére";
-            this.Filiére.Padding = new System.Windows.Forms.Padding(3);
-            this.Filiére.Size = new System.Drawing.Size(1091, 476);
-            this.Filiére.TabIndex = 5;
-            this.Filiére.Text = "Filiére";
-            this.Filiére.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.tabControl1);
-            this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1102, 537);
-            this.panel1.TabIndex = 8;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.Inscription.Click += new System.EventHandler(this.Inscription_Click);
             // 
             // button2
             // 
@@ -230,6 +148,7 @@
             this.button1.TabIndex = 28;
             this.button1.Text = "Ajouter";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // textBox7
             // 
@@ -348,6 +267,25 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Ajouter Utilisateurs";
             // 
+            // Etudiant
+            // 
+            this.Etudiant.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Etudiant.Controls.Add(this.label1);
+            this.Etudiant.Controls.Add(this.Importer);
+            this.Etudiant.Controls.Add(this.dataGridView1);
+            this.Etudiant.Controls.Add(this.textBox1);
+            this.Etudiant.Controls.Add(this.radioButton4);
+            this.Etudiant.Controls.Add(this.radioButton3);
+            this.Etudiant.Controls.Add(this.radioButton2);
+            this.Etudiant.Controls.Add(this.radioButton5);
+            this.Etudiant.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Etudiant.Location = new System.Drawing.Point(4, 22);
+            this.Etudiant.Name = "Etudiant";
+            this.Etudiant.Padding = new System.Windows.Forms.Padding(3);
+            this.Etudiant.Size = new System.Drawing.Size(1091, 476);
+            this.Etudiant.TabIndex = 1;
+            this.Etudiant.Text = "Etudiant";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -437,6 +375,22 @@
             this.radioButton5.Text = "N° Carte D\'identité";
             this.radioButton5.UseVisualStyleBackColor = true;
             // 
+            // Entreprise
+            // 
+            this.Entreprise.Controls.Add(this.button3);
+            this.Entreprise.Controls.Add(this.textBox8);
+            this.Entreprise.Controls.Add(this.dataGridView2);
+            this.Entreprise.Controls.Add(this.label10);
+            this.Entreprise.Controls.Add(this.g);
+            this.Entreprise.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Entreprise.Location = new System.Drawing.Point(4, 22);
+            this.Entreprise.Name = "Entreprise";
+            this.Entreprise.Padding = new System.Windows.Forms.Padding(3);
+            this.Entreprise.Size = new System.Drawing.Size(1091, 476);
+            this.Entreprise.TabIndex = 2;
+            this.Entreprise.Text = "Entreprise";
+            this.Entreprise.UseVisualStyleBackColor = true;
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(853, 173);
@@ -445,6 +399,7 @@
             this.button3.TabIndex = 9;
             this.button3.Text = "Ajouter Entreprise";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // textBox8
             // 
@@ -480,6 +435,44 @@
             this.g.Size = new System.Drawing.Size(305, 39);
             this.g.TabIndex = 5;
             this.g.Text = "Gestion des Entreprises";
+            // 
+            // Groupe
+            // 
+            this.Groupe.BackColor = System.Drawing.Color.Teal;
+            this.Groupe.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Groupe.Location = new System.Drawing.Point(4, 22);
+            this.Groupe.Name = "Groupe";
+            this.Groupe.Padding = new System.Windows.Forms.Padding(3);
+            this.Groupe.Size = new System.Drawing.Size(1091, 476);
+            this.Groupe.TabIndex = 3;
+            this.Groupe.Text = "Groupe";
+            // 
+            // Stage
+            // 
+            this.Stage.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Stage.Location = new System.Drawing.Point(4, 22);
+            this.Stage.Name = "Stage";
+            this.Stage.Padding = new System.Windows.Forms.Padding(3);
+            this.Stage.Size = new System.Drawing.Size(1091, 476);
+            this.Stage.TabIndex = 4;
+            this.Stage.Text = "Stage";
+            this.Stage.UseVisualStyleBackColor = true;
+            // 
+            // Filiére
+            // 
+            this.Filiére.Controls.Add(this.dataGridView4);
+            this.Filiére.Controls.Add(this.button5);
+            this.Filiére.Controls.Add(this.label13);
+            this.Filiére.Controls.Add(this.label12);
+            this.Filiére.Controls.Add(this.textBox10);
+            this.Filiére.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Filiére.Location = new System.Drawing.Point(4, 22);
+            this.Filiére.Name = "Filiére";
+            this.Filiére.Padding = new System.Windows.Forms.Padding(3);
+            this.Filiére.Size = new System.Drawing.Size(1091, 476);
+            this.Filiére.TabIndex = 5;
+            this.Filiére.Text = "Filiére";
+            this.Filiére.UseVisualStyleBackColor = true;
             // 
             // dataGridView4
             // 
@@ -573,30 +566,42 @@
             this.dataGridView5.Size = new System.Drawing.Size(752, 242);
             this.dataGridView5.TabIndex = 5;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.tabControl1);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1102, 537);
+            this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1192, 499);
+            this.ClientSize = new System.Drawing.Size(1087, 499);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Accueil";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Accueil_Load);
             this.tabControl1.ResumeLayout(false);
             this.Inscription.ResumeLayout(false);
             this.Inscription.PerformLayout();
             this.Etudiant.ResumeLayout(false);
             this.Etudiant.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.Entreprise.ResumeLayout(false);
             this.Entreprise.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.Filiére.ResumeLayout(false);
             this.Filiére.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

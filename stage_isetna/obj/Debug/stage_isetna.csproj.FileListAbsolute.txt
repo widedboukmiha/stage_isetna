@@ -28,10 +28,17 @@ C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\stage_isetn
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csprojResolveAssemblyReference.cache
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Authentification.resources
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Accueil.resources
-C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Etudiant.resources
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Properties.Resources.resources
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csproj.GenerateResource.Cache
-C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Entreprise.resources
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe.config
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.exe
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.pdb
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Entreprises.Ajout.resources
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Entreprises.Modification.resources
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.AjouterEtudiant.resources
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Etudiants.ModifierEtudiant.resources
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AjouterFiliere.resources
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.ModifierFiliere.resources
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.AjouterGroupe.resources
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.ModifierGroupe.resources
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Niveau.AjouterNiveau.resources
