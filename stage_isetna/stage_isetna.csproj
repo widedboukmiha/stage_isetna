@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\Groupe.cs" />
+    <Compile Include="DataAccess\GroupeDA.cs" />
     <Compile Include="Views\Authentification.cs">
       <SubType>Form</SubType>
     </Compile>
