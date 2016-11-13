@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,7 @@ namespace stage_isetna.DataAccess
         SqlConnection cn = new SqlConnection(Properties.Settings.Default.ch);
         public List<stage_isetna.Business.Filiere> Retrive()
         {
-            List<stage_isetna.Business.Filiere> listGroupe =new List<Business.Filiere>();
+            List<stage_isetna.Business.Filiere> listGroupe = new List<Business.Filiere>();
             try
             {
                 string req = string.Format("SELECT * FROM Filiere");
@@ -21,7 +21,7 @@ namespace stage_isetna.DataAccess
                 SqlDataReader Reader = cmd.ExecuteReader();
                 while (Reader.Read())
                 {
-                    
+
                     listGroupe.Add(new stage_isetna.Business.Filiere(Reader.GetString(0), Reader.GetString(1)));
                 }
                 Reader.Close();
@@ -46,7 +46,7 @@ namespace stage_isetna.DataAccess
                 string strQuery = "INSERT INTO Groupe  VALUES (@id, @nomFiliere)";
                 SqlCommand cmd = new SqlCommand(strQuery, cn);
                 cmd.Parameters.AddWithValue("@id", f.getId_Groupe());
-                cmd.Parameters.AddWithValue("@nomFiliere",f.getNom_Groupe());
+                cmd.Parameters.AddWithValue("@nomFiliere", f.getNom_Groupe());
                 cmd.Connection = cn;
                 cmd.ExecuteNonQuery();
                 cn.Close();
@@ -65,7 +65,7 @@ namespace stage_isetna.DataAccess
             try
             {
                 cn.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE Filiere set nomFiliere='" + f.getNom_Filiere().ToString() + "' where id='"+id+"'" );
+                SqlCommand cmd = new SqlCommand("UPDATE Filiere set nomFiliere='" + f.getNom_Filiere().ToString() + "' where id='" + id + "'");
                 SqlDataReader Reader = cmd.ExecuteReader();
                 cn.Close();
                 return true;

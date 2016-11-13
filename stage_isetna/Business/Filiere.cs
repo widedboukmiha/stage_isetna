@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Gestion_des_Stage_ISET_CHARGUIA.Business
+namespace stage_isetna.Business
 {
     class Filiere
     {
@@ -41,9 +42,5 @@ namespace Gestion_des_Stage_ISET_CHARGUIA.Business
             return "Id_filiere=" + id_filiere + ", nom_filiere=" + nom_filiere;
 
         }
-
-
-
-
-    }
+}
 }
