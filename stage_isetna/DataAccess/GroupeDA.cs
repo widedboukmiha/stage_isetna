@@ -12,4 +12,3 @@ namespace stage_isetna.DataAccess
        
     }
 }
-

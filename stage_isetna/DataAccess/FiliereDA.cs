@@ -1,102 +1,83 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 
 namespace stage_isetna.DataAccess
 {
     class FiliereDA
     {
-        SqlConnection cn = new SqlConnection(Properties.Settings.Default.ch);
-        public List<stage_isetna.Business.Filiere> Retrive()
+        private string conString = "";
+        public void Create(Business.Filiere filiere)
         {
-            List<stage_isetna.Business.Filiere> listGroupe = new List<Business.Filiere>();
-            try
+            using (SqlConnection con = new SqlConnection(conString))
             {
-                string req = string.Format("SELECT * FROM Filiere");
-                cn.Open();
-                SqlCommand cmd = new SqlCommand(req, cn);
-                SqlDataReader Reader = cmd.ExecuteReader();
-                while (Reader.Read())
+                con.Open();
+                using (SqlCommand cmd = con.CreateCommand())
                 {
-
-                    listGroupe.Add(new stage_isetna.Business.Filiere(Reader.GetString(0), Reader.GetString(1)));
+                    cmd.CommandText = String.Format("INSERT INTO Filiere VALUES (NULL, '{0}')", filiere.Nom);
+                    cmd.ExecuteNonQuery();
                 }
-                Reader.Close();
-
-                cn.Close();
-                return listFiliere;
-            }
-            catch (Exception ex)
-            {
-
-            }
-            return listFiliere;
-
-
-        }
-
-        public Boolean Insert(stage_isetna.Business.Groupe f)
-        {
-            try
-            {
-                cn.Open();
-                string strQuery = "INSERT INTO Groupe  VALUES (@id, @nomFiliere)";
-                SqlCommand cmd = new SqlCommand(strQuery, cn);
-                cmd.Parameters.AddWithValue("@id", f.getId_Groupe());
-                cmd.Parameters.AddWithValue("@nomFiliere", f.getNom_Groupe());
-                cmd.Connection = cn;
-                cmd.ExecuteNonQuery();
-                cn.Close();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                String er = ex.Message;
-                return false;
             }
         }
 
-        public Boolean Update(int id, stage_isetna.Business.Filiere f)
+        public List<Business.Filiere> Get()
         {
-
-            try
+            DataSet ds = new DataSet();
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM Filiere", new SqlConnection(conString)))
             {
-                cn.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE Filiere set nomFiliere='" + f.getNom_Filiere().ToString() + "' where id='" + id + "'");
-                SqlDataReader Reader = cmd.ExecuteReader();
-                cn.Close();
-                return true;
+                cmd.Connection.Open();
+                DataTable table = new DataTable();
+                table.Load(cmd.ExecuteReader());
+                ds.Tables.Add(table);
             }
-            catch (Exception ex)
+
+            var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Filiere { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
+            return list;
+        }
+
+        public Business.Filiere Get(int id)
+        {
+            DataSet ds = new DataSet();
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM Filiere WHERE Id = " + id.ToString(), new SqlConnection(conString)))
             {
-                String er = ex.Message;
-                return false;
+                cmd.Connection.Open();
+                DataTable table = new DataTable();
+                table.Load(cmd.ExecuteReader());
+                ds.Tables.Add(table);
+            }
+
+            var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Filiere { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
+            return list[0];
+        }
+
+        public void Update(int id, Business.Filiere filiere)
+        {
+            using (SqlConnection con = new SqlConnection(conString))
+            {
+                con.Open();
+                using (SqlCommand cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = String.Format("UPDATE Filiere SET Nom = '{0}' WHERE Id = {1}", filiere.Nom, id);
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
 
-        public Boolean Remove(int id)
+        public void Delete(int id)
         {
-            SqlCommand cmd = new SqlCommand();
-            SqlConnection connexion = new SqlConnection();
-            connexion.ConnectionString = Properties.Settings.Default.ch;
-            try
+            using (SqlConnection con = new SqlConnection(conString))
             {
-                string req = string.Format("DELETE FROM Filiere WHERE id = " + id);
-                cmd.Connection = connexion;
-                connexion.Open();
-                cmd.CommandText = req;
-                cmd.ExecuteNonQuery();
-                connexion.Close();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
+                con.Open();
+                using (SqlCommand cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = String.Format("DELETE FROM Filiere WHERE Id = {0})", id);
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
     }
 }
-

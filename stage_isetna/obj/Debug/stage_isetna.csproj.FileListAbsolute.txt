@@ -87,3 +87,8 @@ C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\bin\Debug\Database\Database_log.ldf
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\bin\Debug\stage_isetna.pdb
+D:\stage_isetna\stage_isetna\bin\Debug\Database\Database.mdf
+D:\stage_isetna\stage_isetna\bin\Debug\Database\Database_log.ldf
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.AjouterStage.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.ModifierStage.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AfficherFiliere.resources
