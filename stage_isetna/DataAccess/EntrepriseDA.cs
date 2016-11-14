@@ -9,7 +9,7 @@ namespace stage_isetna.DataAccess
 {
     class EntrepriseDA  
     {
-        SqlConnection cn = new SqlConnection(Properties.Settings.Default.ch);
+       /* SqlConnection cn = new SqlConnection(Properties.Settings.Default.ch);
         public  List<stage_isetna.Business.Entreprise> Retrive()
         {
             List<stage_isetna.Business.Entreprise> listEntreprise=new List<stage_isetna.Business.Entreprise>();
@@ -96,7 +96,7 @@ namespace stage_isetna.DataAccess
             {
                 return false;
             }
-        }
+        }*/
     }
 }
 

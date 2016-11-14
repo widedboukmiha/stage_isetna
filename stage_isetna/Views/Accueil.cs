@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using stage_isetna.Views.Filiere;
+using stage_isetna.Views.Groupe;
+using stage_isetna.Views.Niveau;
+using stage_isetna.Views.Stage;
 
 namespace stage_isetna
 {
@@ -17,134 +21,43 @@ namespace stage_isetna
             InitializeComponent();
         }
 
-         //private const int CP_NOCLOSE_BUTTON = 0x200;
-        //protected override CreateParams CreateParams
-        //{
-          //get
-            //{
-                //CreateParams myCp = base.CreateParams;
-              //  myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
-            //    return myCp;
-          //  }
-        //}
-        
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-           Form flowLayoutPanel1 = new AjouterEtudiant();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
+            AjouterGroupe addgrp = new AjouterGroupe();
+            addgrp.Show();
+        }
 
+        private void btnAjoutStage_Click_1(object sender, EventArgs e)
+        {
+            AjouterStage ajoutstage = new AjouterStage();
+            ajoutstage.Show();
+        }
+
+        private void adfiliere_Click_1(object sender, EventArgs e)
+        {
+
+            AjouterFiliere addfiliere = new AjouterFiliere();
+            addfiliere.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            AjouterNiveau nv = new AjouterNiveau();
+            nv.Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            AjouterEtudiant E = new AjouterEtudiant();
-            E.Show();
-          
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            
-            
-        }
-
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            AjouterEtudiant E = new AjouterEtudiant();
-            E.Show(); 
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             stage_isetna.Views.Entreprises.Ajout ajoutEntreprise = new stage_isetna.Views.Entreprises.Ajout();
             ajoutEntreprise.Show();
-            
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
+        private void addStudent_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Inscription_Click(object sender, EventArgs e)
-        {
-            FormBorderStyle = FormBorderStyle.Sizable;
-
-        }
-
-        private void Accueil_Load(object sender, EventArgs e)
-        {
+            AjouterEtudiant ad = new AjouterEtudiant();
+            ad.Show();
 
         }
     }
 }
+

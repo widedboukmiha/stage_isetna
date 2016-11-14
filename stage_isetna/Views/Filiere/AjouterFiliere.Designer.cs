@@ -43,7 +43,7 @@
             this.button2.Location = new System.Drawing.Point(441, 377);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 32);
-            this.button2.TabIndex = 42;
+            this.button2.TabIndex = 56;
             this.button2.Text = "Annuler";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -53,7 +53,7 @@
             this.button1.Location = new System.Drawing.Point(243, 377);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 32);
-            this.button1.TabIndex = 41;
+            this.button1.TabIndex = 55;
             this.button1.Text = "Ajouter";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -62,14 +62,14 @@
             this.textBox3.Location = new System.Drawing.Point(384, 263);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(243, 20);
-            this.textBox3.TabIndex = 40;
+            this.textBox3.TabIndex = 54;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(384, 187);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(243, 20);
-            this.textBox1.TabIndex = 39;
+            this.textBox1.TabIndex = 53;
             // 
             // label7
             // 
@@ -79,7 +79,7 @@
             this.label7.Location = new System.Drawing.Point(313, 86);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(180, 36);
-            this.label7.TabIndex = 38;
+            this.label7.TabIndex = 52;
             this.label7.Text = "Ajouter Filiére";
             // 
             // label2
@@ -89,7 +89,7 @@
             this.label2.Location = new System.Drawing.Point(188, 257);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 25);
-            this.label2.TabIndex = 37;
+            this.label2.TabIndex = 51;
             this.label2.Text = "Nom Filiére";
             // 
             // label1
@@ -99,7 +99,7 @@
             this.label1.Location = new System.Drawing.Point(200, 182);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 25);
-            this.label1.TabIndex = 36;
+            this.label1.TabIndex = 50;
             this.label1.Text = "Id Filiére";
             // 
             // AjouterFiliere

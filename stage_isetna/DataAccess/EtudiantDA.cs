@@ -9,7 +9,7 @@ namespace stage_isetna.DataAccess
 {
     class EtudiantDA
     {
-        SqlConnection cn = new SqlConnection(Properties.Settings.Default.ch);
+       /* SqlConnection cn = new SqlConnection(Properties.Settings.Default.ch);
 
         public List<stage_isetna.Business.Etudiant> Retrive()
         {
@@ -56,7 +56,7 @@ namespace stage_isetna.DataAccess
         public Boolean Remove(String cin)
         {
             return false;
-        }
+        }*/
 
     }
 }

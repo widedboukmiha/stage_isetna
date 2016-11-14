@@ -146,6 +146,13 @@
     <Compile Include="Views\Stage\AjouterStage.Designer.cs">
       <DependentUpon>AjouterStage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Stage\ModifierStage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Stage\ModifierStage.Designer.cs">
+      <DependentUpon>ModifierStage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TestUnitaire.cs" />
     <EmbeddedResource Include="Views\Authentification.resx">
       <DependentUpon>Authentification.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +194,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Niveau\AjouterNiveau.resx">
       <DependentUpon>AjouterNiveau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Stage\AjouterStage.resx">
+      <DependentUpon>AjouterStage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Stage\ModifierStage.resx">
+      <DependentUpon>ModifierStage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
