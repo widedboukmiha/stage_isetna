@@ -20,7 +20,6 @@ D:\stage_isetna\stage_isetna\bin\Debug\stage_isetna.pdb
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csprojResolveAssemblyReference.cache
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Authentification.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Accueil.resources
-D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Etudiant.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Properties.Resources.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csproj.GenerateResource.Cache
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe
@@ -59,3 +58,12 @@ C:\Users\lenovo\Desktop\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.G
 C:\Users\lenovo\Desktop\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.ModifierGroupe.resources
 C:\Users\lenovo\Desktop\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Niveau.AjouterNiveau.resources
 C:\Users\lenovo\Desktop\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csproj.GenerateResource.Cache
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Entreprises.Ajout.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Entreprises.Modification.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.AjouterEtudiant.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Etudiants.ModifierEtudiant.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AjouterFiliere.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.ModifierFiliere.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.AjouterGroupe.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.ModifierGroupe.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Niveau.AjouterNiveau.resources
