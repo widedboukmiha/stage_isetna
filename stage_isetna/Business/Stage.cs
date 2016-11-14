@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace stage_isetna.Business
+{
+    class Stage
+    {
+        public int Id { get; set; }
+        public DateTime DateDebut { get; set; }
+        public DateTime DateFin { get; set; }
+        public string AnneeScolaire { get; set; }
+        public double Note { get; set; }
+        public string Etat { get; set; }
+        public int TypeId { get; set; }
+        public int EtudiantId { get; set; }
+        public int EntrepriseId { get; set; }
+        public virtual Type Type { get; set;}
+        public virtual Etudiant Etudiant { get; set; }
+        public virtual Entreprise Entreprise { get; set; }
+    }
+}

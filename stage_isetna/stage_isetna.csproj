@@ -62,7 +62,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\Groupe.cs" />
+    <Compile Include="Business\Entreprise.cs" />
+    <Compile Include="Business\Etudiant.cs" />
+    <Compile Include="Business\Filiere.cs" />
+    <Compile Include="Business\Group.cs" />
+    <Compile Include="Business\Niveau.cs" />
+    <Compile Include="Business\Stage.cs" />
+    <Compile Include="Business\Type.cs" />
     <Compile Include="DataAccess\GroupeDA.cs" />
     <Compile Include="Views\Authentification.cs">
       <SubType>Form</SubType>
@@ -76,8 +82,6 @@
     <Compile Include="Views\Accueil.Designer.cs">
       <DependentUpon>Accueil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Business\Entreprise.cs" />
-    <Compile Include="Business\Etudiant.cs" />
     <Compile Include="DataAccess\EntrepriseDA.cs" />
     <Compile Include="DataAccess\EtudiantDA.cs" />
     <Compile Include="Views\Etudiants\AjouterEtudiant.cs">
