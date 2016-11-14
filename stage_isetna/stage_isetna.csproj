@@ -71,6 +71,7 @@
     <Compile Include="Business\Type.cs" />
     <Compile Include="DataAccess\FiliereDA.cs" />
     <Compile Include="DataAccess\GroupeDA.cs" />
+    <Compile Include="DataAccess\NiveauDA.cs" />
     <Compile Include="Views\Authentification.cs">
       <SubType>Form</SubType>
     </Compile>
