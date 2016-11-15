@@ -8,23 +8,23 @@ using System.Threading.Tasks;
 
 namespace stage_isetna.DataAccess
 {
-    class FiliereDA
+   class FiliereDA
     {
-        private string conString = "";
-        public void Create(Business.Filiere filiere)
+        private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+        public static void Create(int id , string nom)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("INSERT INTO Filiere VALUES (NULL, '{0}')", filiere.Nom);
+                    cmd.CommandText = String.Format("INSERT INTO Filiere VALUES ('" + id + "', '" + nom + "')");
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        public List<Business.Filiere> Get()
+        public  static List<Business.Filiere> Get()
         {
             DataSet ds = new DataSet();
             using (SqlCommand cmd = new SqlCommand("SELECT * FROM Filiere", new SqlConnection(conString)))
@@ -54,14 +54,14 @@ namespace stage_isetna.DataAccess
             return list[0];
         }
 
-        public void Update(int id, Business.Filiere filiere)
+        public static void Update(int id, string nom)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("UPDATE Filiere SET Nom = '{0}' WHERE Id = {1}", filiere.Nom, id);
+                    cmd.CommandText = String.Format("UPDATE Filiere SET Nom = '{1}' WHERE Id = {0}",  id , nom);
                     cmd.ExecuteNonQuery();
                 }
             }

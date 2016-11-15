@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using stage_isetna.Business;
 using stage_isetna.Views.Filiere;
 using stage_isetna.Views.Groupe;
 using stage_isetna.Views.Niveau;
@@ -57,6 +58,49 @@ namespace stage_isetna
             AjouterEtudiant ad = new AjouterEtudiant();
             ad.Show();
 
+        }
+
+   
+
+        private void Accueil_Load(object sender, EventArgs e)
+        {
+            List<Filiere> listFiliere;
+            listFiliere = DataAccess.FiliereDA.Get();
+            dataGridView4.DataSource = listFiliere;
+                      
+
+            DataGridViewButtonColumn det = new DataGridViewButtonColumn();
+            dataGridView4.Columns.Add(det);
+             det.Text = "Detaille";
+            det.Name = "button";          
+            det.UseColumnTextForButtonValue = true;
+
+            DataGridViewButtonColumn upd = new DataGridViewButtonColumn();
+            dataGridView4.Columns.Add(upd);
+            upd.Text = "modifier";
+            upd.Name = "button";
+            upd.UseColumnTextForButtonValue = true;
+
+            DataGridViewButtonColumn sup = new DataGridViewButtonColumn();
+            dataGridView4.Columns.Add(sup);
+            sup.Text = "Supprimer";
+            sup.Name = "button";
+            sup.UseColumnTextForButtonValue = true;
+
+
+
+        }
+
+
+        private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ModifierFiliere updfiliere = new ModifierFiliere();
+            if (dataGridView4.Columns.Contains("upd") && e.ColumnIndex == dataGridView4.Columns["upd"].Index)//Specify which column contains Button in DGV
+            {
+                MessageBox.Show("hi");
+               
+                //updfiliere.Show();
+            }
         }
     }
 }

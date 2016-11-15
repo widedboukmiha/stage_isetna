@@ -517,7 +517,7 @@
             this.Inscription.Name = "Inscription";
             this.Inscription.Padding = new System.Windows.Forms.Padding(3);
             this.Inscription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Inscription.Size = new System.Drawing.Size(1288, 473);
+            this.Inscription.Size = new System.Drawing.Size(1288, 670);
             this.Inscription.TabIndex = 0;
             this.Inscription.Text = "Inscription";
             // 
@@ -633,7 +633,7 @@
             this.Entreprise.Location = new System.Drawing.Point(4, 22);
             this.Entreprise.Name = "Entreprise";
             this.Entreprise.Padding = new System.Windows.Forms.Padding(3);
-            this.Entreprise.Size = new System.Drawing.Size(1288, 473);
+            this.Entreprise.Size = new System.Drawing.Size(1288, 670);
             this.Entreprise.TabIndex = 2;
             this.Entreprise.Text = "Entreprise";
             // 
@@ -649,7 +649,7 @@
             this.Stage.Location = new System.Drawing.Point(4, 22);
             this.Stage.Name = "Stage";
             this.Stage.Padding = new System.Windows.Forms.Padding(3);
-            this.Stage.Size = new System.Drawing.Size(1288, 473);
+            this.Stage.Size = new System.Drawing.Size(1288, 670);
             this.Stage.TabIndex = 4;
             this.Stage.Text = "Stage";
             // 
@@ -732,7 +732,7 @@
             this.Groupe.Location = new System.Drawing.Point(4, 22);
             this.Groupe.Name = "Groupe";
             this.Groupe.Padding = new System.Windows.Forms.Padding(3);
-            this.Groupe.Size = new System.Drawing.Size(1288, 473);
+            this.Groupe.Size = new System.Drawing.Size(1288, 670);
             this.Groupe.TabIndex = 3;
             this.Groupe.Text = "Groupe";
             // 
@@ -768,7 +768,7 @@
             this.Etudiant.Location = new System.Drawing.Point(4, 22);
             this.Etudiant.Name = "Etudiant";
             this.Etudiant.Padding = new System.Windows.Forms.Padding(3);
-            this.Etudiant.Size = new System.Drawing.Size(1288, 473);
+            this.Etudiant.Size = new System.Drawing.Size(1288, 670);
             this.Etudiant.TabIndex = 1;
             this.Etudiant.Text = "Etudiant";
             // 
@@ -795,17 +795,18 @@
             this.Filiére.Location = new System.Drawing.Point(4, 22);
             this.Filiére.Name = "Filiére";
             this.Filiére.Padding = new System.Windows.Forms.Padding(3);
-            this.Filiére.Size = new System.Drawing.Size(1288, 473);
+            this.Filiére.Size = new System.Drawing.Size(1288, 670);
             this.Filiére.TabIndex = 5;
             this.Filiére.Text = "Filiére";
             // 
             // dataGridView4
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(152, 250);
+            this.dataGridView4.Location = new System.Drawing.Point(360, 261);
             this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(1149, 242);
+            this.dataGridView4.Size = new System.Drawing.Size(545, 242);
             this.dataGridView4.TabIndex = 9;
+            this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
             // 
             // adfiliere
             // 
@@ -856,7 +857,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1288, 473);
+            this.tabPage1.Size = new System.Drawing.Size(1288, 670);
             this.tabPage1.TabIndex = 6;
             this.tabPage1.Text = "Niveau";
             // 
@@ -906,6 +907,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Accueil";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Accueil_Load);
             this.Click += new System.EventHandler(this.button3_Click);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -996,7 +998,6 @@
         private System.Windows.Forms.TabPage Etudiant;
         private System.Windows.Forms.Button Importer;
         private System.Windows.Forms.TabPage Filiére;
-        private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Button adfiliere;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -1006,5 +1007,6 @@
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dataGridView4;
     }
 }

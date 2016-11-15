@@ -24,7 +24,7 @@ namespace stage_isetna.DataAccess
             }
         }
 
-        public Business.Niveau Get()
+        public List<Business.Niveau> Get()
         {
             DataSet ds = new DataSet();
             using (SqlCommand cmd = new SqlCommand("SELECT * FROM Niveau", new SqlConnection(conString)))
@@ -36,7 +36,7 @@ namespace stage_isetna.DataAccess
             }
 
             var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Niveau { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
-            return list;
+           return list;
         }
 
         public Business.Niveau Get(int id)

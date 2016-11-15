@@ -16,5 +16,25 @@ namespace stage_isetna.Views.Filiere
         {
             InitializeComponent();
         }
+
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Int32.Parse(txtId.Text);
+                DataAccess.FiliereDA.Create(id, txtFiliere.Text);
+                MessageBox.Show("Ajouter Filiere Avec Succées");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtId.Text = "";
+            txtFiliere.Text = "";
+        }
     }
 }

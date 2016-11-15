@@ -92,3 +92,4 @@ D:\stage_isetna\stage_isetna\bin\Debug\Database\Database_log.ldf
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.AjouterStage.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.ModifierStage.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AfficherFiliere.resources
+C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AfficherFiliere.resources
