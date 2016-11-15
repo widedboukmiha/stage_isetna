@@ -12,6 +12,8 @@ using stage_isetna.Views.Filiere;
 using stage_isetna.Views.Groupe;
 using stage_isetna.Views.Niveau;
 using stage_isetna.Views.Stage;
+using System.IO;
+using Excel;
 
 namespace stage_isetna
 {
@@ -64,54 +66,54 @@ namespace stage_isetna
 
         private void Accueil_Load(object sender, EventArgs e)
         {
-            List<Filiere> listFiliere;
-            List<Group> listGroupe;
-            List<Niveau> listNiveau;
+            //List<Filiere> listFiliere;
+            //List<Group> listGroupe;
+            //List<Niveau> listNiveau;
 
-            listFiliere = DataAccess.FiliereDA.Get();
-            listGroupe = DataAccess.GroupeDA.Get();
-            listNiveau = DataAccess.NiveauDA.Get();
+            //listFiliere = DataAccess.FiliereDA.Get();
+            //listGroupe = DataAccess.GroupeDA.Get();
+            //listNiveau = DataAccess.NiveauDA.Get();
 
-            dataGridView4.DataSource = listFiliere;
-            dataGridViewGroupe.DataSource = listGroupe;
-
-
-            DataGridViewButtonColumn detg = new DataGridViewButtonColumn();
-            dataGridViewGroupe.Columns.Add(detg);
-            detg.Text = "Detaille";
-            detg.Name = "button";
-            detg.UseColumnTextForButtonValue = true;
-
-            DataGridViewButtonColumn updg = new DataGridViewButtonColumn();
-            dataGridViewGroupe.Columns.Add(updg);
-            updg.Text = "modifier";
-            updg.Name = "button";
-            updg.UseColumnTextForButtonValue = true;
-
-            DataGridViewButtonColumn supg = new DataGridViewButtonColumn();
-            dataGridViewGroupe.Columns.Add(supg);
-            supg.Text = "Supprimer";
-            supg.Name = "button";
-            supg.UseColumnTextForButtonValue = true;
+            //dataGridView4.DataSource = listFiliere;
+            //dataGridViewGroupe.DataSource = listGroupe;
 
 
-            DataGridViewButtonColumn det = new DataGridViewButtonColumn();
-            dataGridView4.Columns.Add(det);
-             det.Text = "Detaille";
-            det.Name = "button";          
-            det.UseColumnTextForButtonValue = true;
+            //DataGridViewButtonColumn detg = new DataGridViewButtonColumn();
+            //dataGridViewGroupe.Columns.Add(detg);
+            //detg.Text = "Detaille";
+            //detg.Name = "button";
+            //detg.UseColumnTextForButtonValue = true;
 
-            DataGridViewButtonColumn upd = new DataGridViewButtonColumn();
-            dataGridView4.Columns.Add(upd);
-            upd.Text = "modifier";
-            upd.Name = "button";
-            upd.UseColumnTextForButtonValue = true;
+            //DataGridViewButtonColumn updg = new DataGridViewButtonColumn();
+            //dataGridViewGroupe.Columns.Add(updg);
+            //updg.Text = "modifier";
+            //updg.Name = "button";
+            //updg.UseColumnTextForButtonValue = true;
 
-            DataGridViewButtonColumn sup = new DataGridViewButtonColumn();
-            dataGridView4.Columns.Add(sup);
-            sup.Text = "Supprimer";
-            sup.Name = "button";
-            sup.UseColumnTextForButtonValue = true;
+            //DataGridViewButtonColumn supg = new DataGridViewButtonColumn();
+            //dataGridViewGroupe.Columns.Add(supg);
+            //supg.Text = "Supprimer";
+            //supg.Name = "button";
+            //supg.UseColumnTextForButtonValue = true;
+
+
+            //DataGridViewButtonColumn det = new DataGridViewButtonColumn();
+            //dataGridView4.Columns.Add(det);
+            // det.Text = "Detaille";
+            //det.Name = "button";          
+            //det.UseColumnTextForButtonValue = true;
+
+            //DataGridViewButtonColumn upd = new DataGridViewButtonColumn();
+            //dataGridView4.Columns.Add(upd);
+            //upd.Text = "modifier";
+            //upd.Name = "button";
+            //upd.UseColumnTextForButtonValue = true;
+
+            //DataGridViewButtonColumn sup = new DataGridViewButtonColumn();
+            //dataGridView4.Columns.Add(sup);
+            //sup.Text = "Supprimer";
+            //sup.Name = "button";
+            //sup.UseColumnTextForButtonValue = true;
 
 
 
@@ -128,6 +130,51 @@ namespace stage_isetna
                 //updfiliere.Show();
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ope = new OpenFileDialog();
+            ope.Filter = "Excel Files | *.xls;*.xlsx;*.xlsm";
+            if (ope.ShowDialog() == DialogResult.Cancel)
+            {
+                return;
+            }
+            FileStream stream = new FileStream(ope.FileName, FileMode.Open);
+            IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
+            DataSet result = excelReader.AsDataSet();
+            DataClasses1DataContext conn = new DataClasses1DataContext();
+            foreach (DataTable table in result.Tables)
+            {
+                Etudiant addtable = new stage_isetna.Etudiant();
+
+                foreach (DataRow dr in table.Rows)
+                {
+                    addtable = new Etudiant() {
+                        Id = 0,
+                        Cin = Convert.ToString(dr[0]),
+                        Nom = Convert.ToString(dr[1]),
+                        Prenom = Convert.ToString(dr[2]),
+                        DateNaissance = DateTime.Parse(dr[3].ToString()),
+                        Adresse = Convert.ToString(dr[4]),
+                        CodePostal = Convert.ToString(dr[5]),
+                        Tel = Convert.ToString(dr[6]),
+                        Email = Convert.ToString(dr[7]),
+                        NiveauId = Convert.ToInt32(dr[8]),
+                        FiliereId = Convert.ToInt32(dr[9]),
+                        GroupId = Convert.ToInt32(dr[10])
+                    };
+
+                    conn.Etudiants.InsertOnSubmit(addtable);
+                }
+                conn.SubmitChanges();
+                excelReader.Close();
+                stream.Close();
+
+                MessageBox.Show(conn.Etudiants.Contains(addtable).ToString());
+                MessageBox.Show("les etudiants sont ajoutès ");
+            }
+        }
     }
-}
+    }
+
 

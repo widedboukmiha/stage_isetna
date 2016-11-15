@@ -10,7 +10,7 @@ namespace stage_isetna.DataAccess
 {
    class FiliereDA
     {
-        private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+       /* private static string conString = Properties.Settings.Default.chaine;
         public static void Create(int id , string nom)
         {
             using (SqlConnection con = new SqlConnection(conString))
@@ -78,6 +78,6 @@ namespace stage_isetna.DataAccess
                     cmd.ExecuteNonQuery();
                 }
             }
-        }
+        }*/
     }
 }

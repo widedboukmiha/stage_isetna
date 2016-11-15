@@ -93,3 +93,30 @@ D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.AjouterStage.res
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.ModifierStage.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AfficherFiliere.resources
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AfficherFiliere.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe.config
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.exe
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.pdb
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\Database\Database.mdf
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\Database\Database_log.ldf
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\stage_isetna.pdb
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\Excel.4.5.dll
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\Excel.4.5.pdb
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csprojResolveAssemblyReference.cache
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Authentification.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Accueil.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Entreprises.Ajout.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Entreprises.Modification.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.AjouterEtudiant.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Properties.Resources.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Etudiants.ModifierEtudiant.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AfficherFiliere.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AjouterFiliere.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.ModifierFiliere.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.AjouterGroupe.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.ModifierGroupe.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Niveau.AjouterNiveau.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.AjouterStage.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.ModifierStage.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csproj.GenerateResource.Cache

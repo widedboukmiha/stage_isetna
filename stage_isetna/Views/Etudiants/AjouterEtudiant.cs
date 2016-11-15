@@ -48,7 +48,7 @@ namespace stage_isetna
 
             catch (Exception ex)
             {
-                MessageBox.Show("Vérifier le numéro du carte d'identité !!");
+                MessageBox.Show("Vérifier le numéro du carte d'identité !!"+ex.Message);
                 txtcin.Text = "";
             }
         }
@@ -117,7 +117,7 @@ namespace stage_isetna
 
             catch (Exception ex)
             {
-                MessageBox.Show("Vérifier le numéro du carte d'identité !!");
+                MessageBox.Show("Vérifier le numéro du carte d'identité !!"+ex.Message);
                 txtcin.Text = "";
             }
         }
