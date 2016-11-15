@@ -21,8 +21,7 @@ namespace stage_isetna.Views.Filiere
         {
             try
             {
-                int id = Int32.Parse(txtId.Text);
-                DataAccess.FiliereDA.Create(id, txtFiliere.Text);
+                DataAccess.FiliereDA.Create(txtFiliere.Text);
                 MessageBox.Show("Ajouter Filiere Avec Succées");
             }
             catch(Exception ex)
@@ -33,7 +32,7 @@ namespace stage_isetna.Views.Filiere
 
         private void button2_Click(object sender, EventArgs e)
         {
-            txtId.Text = "";
+            //txtId.Text = "";
             txtFiliere.Text = "";
         }
     }

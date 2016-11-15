@@ -21,13 +21,12 @@ namespace stage_isetna.Views.Groupe
         {
             try
             {
-               
-                DataAccess.GroupeDA.Create( txtNom.Text);
-                MessageBox.Show("Ajouter Filiere Avec Succées");
+                DataAccess.GroupeDA.Create(txtNom.Text);
+                MessageBox.Show("Ajouter Groupe Avec Succées");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
             }
         }
     }

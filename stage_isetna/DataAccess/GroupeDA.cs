@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace stage_isetna.DataAccess
 {
@@ -18,7 +19,7 @@ namespace stage_isetna.DataAccess
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("INSERT INTO Group VALUES (NULL, '{0}')", Nom);
+                    cmd.CommandText = String.Format("INSERT INTO [Group] VALUES ((SELECT MAX(Id) + 1 FROM [Group]), '{0}')", Nom);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -27,7 +28,7 @@ namespace stage_isetna.DataAccess
         public static List<Business.Group> Get()
         {
             DataSet ds = new DataSet();
-            using (SqlCommand cmd = new SqlCommand("SELECT * FROM Group", new SqlConnection(conString)))
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Group]", new SqlConnection(conString)))
             {
                 cmd.Connection.Open();
                 DataTable table = new DataTable();
@@ -38,11 +39,12 @@ namespace stage_isetna.DataAccess
             var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Group { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
             return list;
         }
+      
 
         public Business.Group Get(int id)
         {
             DataSet ds = new DataSet();
-            using (SqlCommand cmd = new SqlCommand("SELECT * FROM Group WHERE Id = " + id.ToString(), new SqlConnection(conString)))
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Group] WHERE Id = " + id.ToString(), new SqlConnection(conString)))
             {
                 cmd.Connection.Open();
                 DataTable table = new DataTable();
@@ -61,7 +63,7 @@ namespace stage_isetna.DataAccess
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("UPDATE Group SET Nom = '{0}' WHERE Id = {1}", Nom, id);
+                    cmd.CommandText = String.Format("UPDATE [Group] SET Nom = '{0}' WHERE Id = {1}", Nom, id);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -74,7 +76,7 @@ namespace stage_isetna.DataAccess
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("DELETE FROM Group WHERE Id = {0})", id);
+                    cmd.CommandText = String.Format("DELETE FROM [Group] WHERE Id = {0})", id);
                     cmd.ExecuteNonQuery();
                 }
             }

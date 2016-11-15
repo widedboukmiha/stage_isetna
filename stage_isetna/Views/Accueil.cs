@@ -69,11 +69,12 @@ namespace stage_isetna
             List<Niveau> listNiveau;
 
             listFiliere = DataAccess.FiliereDA.Get();
-            listGroupe = DataAccess.GroupeDA.Get();
+           // listGroupe = DataAccess.GroupeDA.Get();
             listNiveau = DataAccess.NiveauDA.Get();
 
             dataGridView4.DataSource = listFiliere;
-            dataGridViewGroupe.DataSource = listGroupe;
+            // dataGridViewGroupe.DataSource = listGroupe;
+            dataGridViewNiveau.DataSource = listNiveau; 
 
 
             DataGridViewButtonColumn detg = new DataGridViewButtonColumn();

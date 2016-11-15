@@ -11,14 +11,14 @@ namespace stage_isetna.DataAccess
    class FiliereDA
     {
         private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
-        public static void Create(int id , string nom)
+        public static void Create(string Nom)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("INSERT INTO Filiere VALUES ('" + id + "', '" + nom + "')");
+                    cmd.CommandText = String.Format("INSERT INTO [Filiere] VALUES ((SELECT MAX(Id) + 1 FROM [Filiere]), '{0}')", Nom);
                     cmd.ExecuteNonQuery();
                 }
             }

@@ -16,5 +16,18 @@ namespace stage_isetna.Views.Niveau
         {
             InitializeComponent();
         }
+
+        private void btnAjout_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataAccess.NiveauDA.Create(txtNom.Text);
+                MessageBox.Show("Ajouter Niveau Avec Succées");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
