@@ -96,7 +96,6 @@
             this.Controls.Add(this.label2);
             this.Name = "AjouterGroupe";
             this.Text = "AjouterGroupe";
-            this.Load += new System.EventHandler(this.AjouterGroupe_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

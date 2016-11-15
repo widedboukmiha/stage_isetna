@@ -19,7 +19,7 @@ namespace stage_isetna.Views.Filiere
 
         private void btnAjouter_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
             //try
             //{
             //    int id = Int32.Parse(txtId.Text);
@@ -30,7 +30,7 @@ namespace stage_isetna.Views.Filiere
             //{
             //    MessageBox.Show(ex.Message);
             //}
-=======
+
             try
             {
                 DataAccess.FiliereDA.Create(txtFiliere.Text);
@@ -40,7 +40,7 @@ namespace stage_isetna.Views.Filiere
             {
                 MessageBox.Show(ex.Message);
             }
->>>>>>> origin/master
+
         }
 
         private void button2_Click(object sender, EventArgs e)

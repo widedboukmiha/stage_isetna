@@ -14,6 +14,7 @@ using stage_isetna.Views.Niveau;
 using stage_isetna.Views.Stage;
 using System.IO;
 using Excel;
+using stage_isetna.Views.Utilisateurs;
 
 namespace stage_isetna
 {
@@ -57,7 +58,7 @@ namespace stage_isetna
 
         private void addStudent_Click(object sender, EventArgs e)
         {
-            AjouterEtudiant ad = new AjouterEtudiant();
+            AfficherUtilisateur ad = new AfficherUtilisateur();
             ad.Show();
 
         }

@@ -73,9 +73,11 @@
     <Compile Include="Business\Niveau.cs" />
     <Compile Include="Business\Stage.cs" />
     <Compile Include="Business\Type.cs" />
+    <Compile Include="Business\Users.cs" />
     <Compile Include="DataAccess\FiliereDA.cs" />
     <Compile Include="DataAccess\GroupeDA.cs" />
     <Compile Include="DataAccess\NiveauDA.cs" />
+    <Compile Include="DataAccess\UsersDA.cs" />
     <Compile Include="DataClasses1.cs">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
@@ -173,6 +175,33 @@
       <DependentUpon>ModifierStage.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\TestUnitaire.cs" />
+    <Compile Include="Views\Utilisateurs\AfficherUtilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Utilisateurs\AfficherUtilisateur.Designer.cs">
+      <DependentUpon>AfficherUtilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Utilisateurs\AjouterUtilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Utilisateurs\AjouterUtilisateur.Designer.cs">
+      <DependentUpon>AjouterUtilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Utilisateurs\ModifierUtilisateurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Utilisateurs\ModifierUtilisateurs.Designer.cs">
+      <DependentUpon>ModifierUtilisateurs.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Utilisateurs\AfficherUtilisateur.resx">
+      <DependentUpon>AfficherUtilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Utilisateurs\AjouterUtilisateur.resx">
+      <DependentUpon>AjouterUtilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Utilisateurs\ModifierUtilisateurs.resx">
+      <DependentUpon>ModifierUtilisateurs.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
