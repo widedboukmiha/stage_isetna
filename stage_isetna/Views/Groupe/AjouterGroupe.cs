@@ -19,16 +19,16 @@ namespace stage_isetna.Views.Groupe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                
-            //    DataAccess.GroupeDA.Create( txtNom.Text);
-            //    MessageBox.Show("Ajouter Filiere Avec Succées");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+                DataAccess.GroupeDA.Create( txtNom.Text);
+                MessageBox.Show("Ajouter Filiere Avec Succées");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
