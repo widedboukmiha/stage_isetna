@@ -73,7 +73,7 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewGroupe = new System.Windows.Forms.DataGridView();
             this.g = new System.Windows.Forms.Label();
             this.Entreprise = new System.Windows.Forms.TabPage();
             this.Stage = new System.Windows.Forms.TabPage();
@@ -103,7 +103,7 @@
             this.Inscription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroupe)).BeginInit();
             this.Entreprise.SuspendLayout();
             this.Stage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -602,13 +602,13 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // dataGridView6
+            // dataGridViewGroupe
             // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(27, 191);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(1249, 150);
-            this.dataGridView6.TabIndex = 4;
+            this.dataGridViewGroupe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewGroupe.Location = new System.Drawing.Point(27, 191);
+            this.dataGridViewGroupe.Name = "dataGridViewGroupe";
+            this.dataGridViewGroupe.Size = new System.Drawing.Size(1249, 150);
+            this.dataGridViewGroupe.TabIndex = 4;
             // 
             // g
             // 
@@ -724,7 +724,7 @@
             // 
             this.Groupe.BackColor = System.Drawing.Color.Lavender;
             this.Groupe.Controls.Add(this.button5);
-            this.Groupe.Controls.Add(this.dataGridView6);
+            this.Groupe.Controls.Add(this.dataGridViewGroupe);
             this.Groupe.Controls.Add(this.textBox12);
             this.Groupe.Controls.Add(this.label20);
             this.Groupe.Controls.Add(this.label19);
@@ -915,7 +915,7 @@
             this.Inscription.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroupe)).EndInit();
             this.Entreprise.ResumeLayout(false);
             this.Entreprise.PerformLayout();
             this.Stage.ResumeLayout(false);
@@ -982,7 +982,7 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.DataGridView dataGridViewGroupe;
         private System.Windows.Forms.Label g;
         private System.Windows.Forms.TabPage Entreprise;
         private System.Windows.Forms.TabPage Stage;

@@ -23,7 +23,7 @@ namespace stage_isetna.Views.Filiere
             {
                 int id = Int32.Parse(txtId.Text);
                 DataAccess.FiliereDA.Update(id, txtNom.Text);
-                MessageBox.Show("Ajouter Filiere Avec Succées");
+                MessageBox.Show("Modifier Filiere Avec Succées");
             }
             catch (Exception ex)
             {

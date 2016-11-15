@@ -10,21 +10,21 @@ namespace stage_isetna.DataAccess
 {
     class NiveauDA
     {
-        private string conString = "";
-        public void Create(Business.Niveau niveau)
+        private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+        public static void Create(string Nom)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("INSERT INTO Niveau VALUES (NULL, '{0}')", niveau.Nom);
+                    cmd.CommandText = String.Format("INSERT INTO Niveau VALUES (NULL, '{0}')", Nom);
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        public List<Business.Niveau> Get()
+        public static List<Business.Niveau> Get()
         {
             DataSet ds = new DataSet();
             using (SqlCommand cmd = new SqlCommand("SELECT * FROM Niveau", new SqlConnection(conString)))
@@ -54,14 +54,14 @@ namespace stage_isetna.DataAccess
             return list[0];
         }
 
-        public void Update(int id, Business.Niveau niveau)
+        public static void Update(int id, string Nom)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("UPDATE Niveau SET Nom = '{0}' WHERE Id = {1}", niveau.Nom, id);
+                    cmd.CommandText = String.Format("UPDATE Niveau SET Nom = '{0}' WHERE Id = {1}", Nom, id);
                     cmd.ExecuteNonQuery();
                 }
             }

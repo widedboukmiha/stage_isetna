@@ -65,9 +65,35 @@ namespace stage_isetna
         private void Accueil_Load(object sender, EventArgs e)
         {
             List<Filiere> listFiliere;
+            List<Group> listGroupe;
+            List<Niveau> listNiveau;
+
             listFiliere = DataAccess.FiliereDA.Get();
+            listGroupe = DataAccess.GroupeDA.Get();
+            listNiveau = DataAccess.NiveauDA.Get();
+
             dataGridView4.DataSource = listFiliere;
-                      
+            dataGridViewGroupe.DataSource = listGroupe;
+
+
+            DataGridViewButtonColumn detg = new DataGridViewButtonColumn();
+            dataGridViewGroupe.Columns.Add(detg);
+            detg.Text = "Detaille";
+            detg.Name = "button";
+            detg.UseColumnTextForButtonValue = true;
+
+            DataGridViewButtonColumn updg = new DataGridViewButtonColumn();
+            dataGridViewGroupe.Columns.Add(updg);
+            updg.Text = "modifier";
+            updg.Name = "button";
+            updg.UseColumnTextForButtonValue = true;
+
+            DataGridViewButtonColumn supg = new DataGridViewButtonColumn();
+            dataGridViewGroupe.Columns.Add(supg);
+            supg.Text = "Supprimer";
+            supg.Name = "button";
+            supg.UseColumnTextForButtonValue = true;
+
 
             DataGridViewButtonColumn det = new DataGridViewButtonColumn();
             dataGridView4.Columns.Add(det);

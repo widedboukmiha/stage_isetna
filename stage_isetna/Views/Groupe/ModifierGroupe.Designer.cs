@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnModifier = new System.Windows.Forms.Button();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,29 +47,30 @@
             this.button2.Text = "Annuler";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnModifier
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(206, 387);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 32);
-            this.button1.TabIndex = 55;
-            this.button1.Text = "Modifier";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifier.Location = new System.Drawing.Point(206, 387);
+            this.btnModifier.Name = "btnModifier";
+            this.btnModifier.Size = new System.Drawing.Size(119, 32);
+            this.btnModifier.TabIndex = 55;
+            this.btnModifier.Text = "Modifier";
+            this.btnModifier.UseVisualStyleBackColor = true;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
             // 
-            // textBox3
+            // txtNom
             // 
-            this.textBox3.Location = new System.Drawing.Point(347, 273);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(243, 20);
-            this.textBox3.TabIndex = 54;
+            this.txtNom.Location = new System.Drawing.Point(347, 273);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(243, 20);
+            this.txtNom.TabIndex = 54;
             // 
-            // textBox1
+            // txtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(347, 197);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(243, 20);
-            this.textBox1.TabIndex = 53;
+            this.txtId.Location = new System.Drawing.Point(347, 197);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(243, 20);
+            this.txtId.TabIndex = 53;
             // 
             // label7
             // 
@@ -108,9 +109,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 514);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnModifier);
+            this.Controls.Add(this.txtNom);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -124,9 +125,9 @@
         #endregion
 
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnModifier;
+        private System.Windows.Forms.TextBox txtNom;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

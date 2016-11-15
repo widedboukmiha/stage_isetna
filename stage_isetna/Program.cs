@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using stage_isetna.Views.Filiere;
+using stage_isetna.Views.Groupe;
 
 namespace stage_isetna
 {
@@ -17,7 +18,7 @@ namespace stage_isetna
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Accueil());
+            Application.Run(new AjouterGroupe());
         }
     }
 }
