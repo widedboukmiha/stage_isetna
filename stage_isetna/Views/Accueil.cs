@@ -66,54 +66,61 @@ namespace stage_isetna
 
         private void Accueil_Load(object sender, EventArgs e)
         {
-            //List<Filiere> listFiliere;
-            //List<Group> listGroupe;
-            //List<Niveau> listNiveau;
+            List<Filiere> listFiliere;
+            List<Group> listGroupe;
+            List<Niveau> listNiveau;
 
-            //listFiliere = DataAccess.FiliereDA.Get();
-            //listGroupe = DataAccess.GroupeDA.Get();
-            //listNiveau = DataAccess.NiveauDA.Get();
+            listFiliere = DataAccess.FiliereDA.Get();
+            listGroupe = DataAccess.GroupeDA.Get();
+            listNiveau = DataAccess.NiveauDA.Get();
 
-            //dataGridView4.DataSource = listFiliere;
-            //dataGridViewGroupe.DataSource = listGroupe;
+            dataGridView4.DataSource = listFiliere;
+            dataGridViewGroupe.DataSource = listGroupe;
+            listFiliere = DataAccess.FiliereDA.Get();
+            listGroupe = DataAccess.GroupeDA.Get();
+            listNiveau = DataAccess.NiveauDA.Get();
 
-
-            //DataGridViewButtonColumn detg = new DataGridViewButtonColumn();
-            //dataGridViewGroupe.Columns.Add(detg);
-            //detg.Text = "Detaille";
-            //detg.Name = "button";
-            //detg.UseColumnTextForButtonValue = true;
-
-            //DataGridViewButtonColumn updg = new DataGridViewButtonColumn();
-            //dataGridViewGroupe.Columns.Add(updg);
-            //updg.Text = "modifier";
-            //updg.Name = "button";
-            //updg.UseColumnTextForButtonValue = true;
-
-            //DataGridViewButtonColumn supg = new DataGridViewButtonColumn();
-            //dataGridViewGroupe.Columns.Add(supg);
-            //supg.Text = "Supprimer";
-            //supg.Name = "button";
-            //supg.UseColumnTextForButtonValue = true;
+            dataGridView4.DataSource = listFiliere;
+            dataGridViewGroupe.DataSource = listGroupe;
+            dataGridViewNiveau.DataSource = listNiveau;
 
 
-            //DataGridViewButtonColumn det = new DataGridViewButtonColumn();
-            //dataGridView4.Columns.Add(det);
-            // det.Text = "Detaille";
-            //det.Name = "button";          
-            //det.UseColumnTextForButtonValue = true;
+            DataGridViewButtonColumn detg = new DataGridViewButtonColumn();
+            dataGridViewGroupe.Columns.Add(detg);
+            detg.Text = "Detaille";
+            detg.Name = "button";
+            detg.UseColumnTextForButtonValue = true;
 
-            //DataGridViewButtonColumn upd = new DataGridViewButtonColumn();
-            //dataGridView4.Columns.Add(upd);
-            //upd.Text = "modifier";
-            //upd.Name = "button";
-            //upd.UseColumnTextForButtonValue = true;
+            DataGridViewButtonColumn updg = new DataGridViewButtonColumn();
+            dataGridViewGroupe.Columns.Add(updg);
+            updg.Text = "modifier";
+            updg.Name = "button";
+            updg.UseColumnTextForButtonValue = true;
 
-            //DataGridViewButtonColumn sup = new DataGridViewButtonColumn();
-            //dataGridView4.Columns.Add(sup);
-            //sup.Text = "Supprimer";
-            //sup.Name = "button";
-            //sup.UseColumnTextForButtonValue = true;
+            DataGridViewButtonColumn supg = new DataGridViewButtonColumn();
+            dataGridViewGroupe.Columns.Add(supg);
+            supg.Text = "Supprimer";
+            supg.Name = "button";
+            supg.UseColumnTextForButtonValue = true;
+
+
+            DataGridViewButtonColumn det = new DataGridViewButtonColumn();
+            dataGridView4.Columns.Add(det);
+            det.Text = "Detaille";
+            det.Name = "button";
+            det.UseColumnTextForButtonValue = true;
+
+            DataGridViewButtonColumn upd = new DataGridViewButtonColumn();
+            dataGridView4.Columns.Add(upd);
+            upd.Text = "modifier";
+            upd.Name = "button";
+            upd.UseColumnTextForButtonValue = true;
+
+            DataGridViewButtonColumn sup = new DataGridViewButtonColumn();
+            dataGridView4.Columns.Add(sup);
+            sup.Text = "Supprimer";
+            sup.Name = "button";
+            sup.UseColumnTextForButtonValue = true;
 
 
 
@@ -123,11 +130,12 @@ namespace stage_isetna
         private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ModifierFiliere updfiliere = new ModifierFiliere();
-            if (dataGridView4.Columns.Contains("upd") && e.ColumnIndex == dataGridView4.Columns["upd"].Index)//Specify which column contains Button in DGV
+            if (dataGridView4.Columns.Contains("upd") && e.ColumnIndex == dataGridView4.Columns["upd"].Index)
+                //Specify which column contains Button in DGV
             {
                 MessageBox.Show("hi");
                
-                //updfiliere.Show();
+                updfiliere.Show();
             }
         }
 

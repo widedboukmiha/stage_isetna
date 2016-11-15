@@ -142,12 +142,6 @@
     <Compile Include="Views\Filiere\ModifierFiliere.Designer.cs">
       <DependentUpon>ModifierFiliere.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Filiere\SupprimerFiliere.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Filiere\SupprimerFiliere.Designer.cs">
-      <DependentUpon>SupprimerFiliere.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Groupe\AjouterGroupe.cs">
       <SubType>Form</SubType>
     </Compile>

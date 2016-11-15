@@ -8,23 +8,26 @@ using System.Threading.Tasks;
 
 namespace stage_isetna.DataAccess
 {
-   class FiliereDA
+    class FiliereDA
     {
-       /* private static string conString = Properties.Settings.Default.chaine;
-        public static void Create(int id , string nom)
+
+        private static string conString = Properties.Settings.Default.chaine;
+
+        // Sprivate static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+        public static void Create(string Nom)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("INSERT INTO Filiere VALUES ('" + id + "', '" + nom + "')");
+                    cmd.CommandText = String.Format("INSERT INTO [Filiere] VALUES ((SELECT MAX(Id) + 1 FROM [Filiere]), '{0}')", Nom);
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        public  static List<Business.Filiere> Get()
+        public static List<Business.Filiere> Get()
         {
             DataSet ds = new DataSet();
             using (SqlCommand cmd = new SqlCommand("SELECT * FROM Filiere", new SqlConnection(conString)))
@@ -61,7 +64,7 @@ namespace stage_isetna.DataAccess
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("UPDATE Filiere SET Nom = '{1}' WHERE Id = {0}",  id , nom);
+                    cmd.CommandText = String.Format("UPDATE Filiere SET Nom = '{1}' WHERE Id = {0}", id, nom);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -78,6 +81,6 @@ namespace stage_isetna.DataAccess
                     cmd.ExecuteNonQuery();
                 }
             }
-        }*/
+        }
     }
 }

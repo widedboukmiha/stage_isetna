@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 namespace stage_isetna.DataAccess
 {
     class NiveauDA
-    {/*
+    {
         private static string conString = Properties.Settings.Default.chaine;
+
         public static void Create(string Nom)
         {
             using (SqlConnection con = new SqlConnection(conString))
@@ -18,7 +19,7 @@ namespace stage_isetna.DataAccess
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("INSERT INTO Niveau VALUES (NULL, '{0}')", Nom);
+                    cmd.CommandText = String.Format("INSERT INTO [Niveau] VALUES ((SELECT MAX(Id) + 1 FROM [Niveau]), '{0}')", Nom);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -36,7 +37,7 @@ namespace stage_isetna.DataAccess
             }
 
             var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Niveau { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
-           return list;
+            return list;
         }
 
         public Business.Niveau Get(int id)
@@ -78,6 +79,6 @@ namespace stage_isetna.DataAccess
                     cmd.ExecuteNonQuery();
                 }
             }
-        }*/
+        }
     }
 }

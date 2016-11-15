@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using stage_isetna.Views.Filiere;
 using stage_isetna.Views.Groupe;
+using stage_isetna.Views.Niveau;
 
 namespace stage_isetna
 {

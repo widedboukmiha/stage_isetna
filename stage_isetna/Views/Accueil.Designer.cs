@@ -98,7 +98,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewNiveau = new System.Windows.Forms.DataGridView();
             this.tabPage2.SuspendLayout();
             this.Inscription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -113,7 +113,7 @@
             this.Filiére.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveau)).BeginInit();
             this.SuspendLayout();
             // 
             // button9
@@ -854,7 +854,7 @@
             this.tabPage1.Controls.Add(this.textBox11);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.button6);
-            this.tabPage1.Controls.Add(this.dataGridView5);
+            this.tabPage1.Controls.Add(this.dataGridViewNiveau);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -891,13 +891,13 @@
             this.label15.TabIndex = 7;
             this.label15.Text = "Niveau";
             // 
-            // dataGridView5
+            // dataGridViewNiveau
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(94, 229);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(1232, 341);
-            this.dataGridView5.TabIndex = 5;
+            this.dataGridViewNiveau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNiveau.Location = new System.Drawing.Point(267, 280);
+            this.dataGridViewNiveau.Name = "dataGridViewNiveau";
+            this.dataGridViewNiveau.Size = new System.Drawing.Size(602, 274);
+            this.dataGridViewNiveau.TabIndex = 5;
             // 
             // Accueil
             // 
@@ -932,7 +932,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveau)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1007,7 +1007,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dataGridViewNiveau;
         private System.Windows.Forms.DataGridView dataGridView4;
     }
 }
