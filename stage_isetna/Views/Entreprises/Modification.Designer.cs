@@ -64,6 +64,7 @@
             // 
             // comboVille
             // 
+            this.comboVille.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboVille.FormattingEnabled = true;
             this.comboVille.Items.AddRange(new object[] {
             "Tunis",
@@ -92,79 +93,82 @@
             "Gabes"});
             this.comboVille.Location = new System.Drawing.Point(382, 291);
             this.comboVille.Name = "comboVille";
-            this.comboVille.Size = new System.Drawing.Size(243, 21);
+            this.comboVille.Size = new System.Drawing.Size(243, 29);
             this.comboVille.TabIndex = 33;
             // 
             // nomEntreprise
             // 
+            this.nomEntreprise.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.nomEntreprise.Location = new System.Drawing.Point(382, 214);
             this.nomEntreprise.Name = "nomEntreprise";
-            this.nomEntreprise.Size = new System.Drawing.Size(243, 20);
+            this.nomEntreprise.Size = new System.Drawing.Size(243, 29);
             this.nomEntreprise.TabIndex = 32;
             // 
             // telephone
             // 
+            this.telephone.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.telephone.Location = new System.Drawing.Point(382, 365);
             this.telephone.Name = "telephone";
-            this.telephone.Size = new System.Drawing.Size(243, 20);
+            this.telephone.Size = new System.Drawing.Size(243, 29);
             this.telephone.TabIndex = 31;
             // 
             // idEntreprise
             // 
+            this.idEntreprise.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idEntreprise.Location = new System.Drawing.Point(382, 138);
             this.idEntreprise.Name = "idEntreprise";
-            this.idEntreprise.Size = new System.Drawing.Size(243, 20);
+            this.idEntreprise.Size = new System.Drawing.Size(243, 29);
             this.idEntreprise.TabIndex = 30;
             this.idEntreprise.TextChanged += new System.EventHandler(this.idEntreprise_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label7.Location = new System.Drawing.Point(292, 44);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(237, 36);
+            this.label7.Size = new System.Drawing.Size(266, 37);
             this.label7.TabIndex = 29;
             this.label7.Text = "Modifier Entreprise";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(198, 359);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 25);
+            this.label4.Size = new System.Drawing.Size(141, 30);
             this.label4.TabIndex = 28;
             this.label4.Text = "N° Téléphone";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(246, 291);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 25);
+            this.label3.Size = new System.Drawing.Size(52, 30);
             this.label3.TabIndex = 27;
             this.label3.Text = "Ville";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(186, 208);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 25);
+            this.label2.Size = new System.Drawing.Size(163, 30);
             this.label2.TabIndex = 26;
             this.label2.Text = "Nom Entreprise";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(198, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 25);
+            this.label1.Size = new System.Drawing.Size(134, 30);
             this.label1.TabIndex = 25;
             this.label1.Text = "Id Entreprise";
             // 
@@ -185,7 +189,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Modification";
-            this.Text = "Modification";
+            this.Text = "Modifier Entreprise";
             this.ResumeLayout(false);
             this.PerformLayout();
 

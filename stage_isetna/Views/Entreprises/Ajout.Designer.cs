@@ -188,7 +188,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Ajout";
-            this.Text = "Ajout";
+            this.Text = "Ajouter Entreprise";
             this.Load += new System.EventHandler(this.Ajout_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

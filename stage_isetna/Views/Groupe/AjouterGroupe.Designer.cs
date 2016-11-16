@@ -66,11 +66,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label7.Location = new System.Drawing.Point(252, 105);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(187, 36);
+            this.label7.Size = new System.Drawing.Size(200, 37);
             this.label7.TabIndex = 45;
             this.label7.Text = "Ajouter Groupe";
             // 
@@ -95,7 +95,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Name = "AjouterGroupe";
-            this.Text = "AjouterGroupe";
+            this.Text = "Ajouter Groupe";
             this.ResumeLayout(false);
             this.PerformLayout();
 

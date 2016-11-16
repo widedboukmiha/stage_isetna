@@ -60,46 +60,48 @@
             // 
             // txtNom
             // 
+            this.txtNom.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNom.Location = new System.Drawing.Point(347, 273);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(243, 20);
+            this.txtNom.Size = new System.Drawing.Size(243, 25);
             this.txtNom.TabIndex = 54;
             // 
             // txtId
             // 
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(347, 197);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(243, 20);
+            this.txtId.Size = new System.Drawing.Size(243, 25);
             this.txtId.TabIndex = 53;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(276, 96);
+            this.label7.Location = new System.Drawing.Point(249, 69);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(202, 36);
+            this.label7.Size = new System.Drawing.Size(214, 37);
             this.label7.TabIndex = 52;
             this.label7.Text = "Modifier Groupe";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(151, 267);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 25);
+            this.label2.Size = new System.Drawing.Size(141, 30);
             this.label2.TabIndex = 51;
             this.label2.Text = "Nom Groupe";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(163, 192);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 25);
+            this.label1.Size = new System.Drawing.Size(112, 30);
             this.label1.TabIndex = 50;
             this.label1.Text = "Id Groupe";
             // 
@@ -107,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 514);
+            this.ClientSize = new System.Drawing.Size(681, 447);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.txtNom);
@@ -116,7 +118,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ModifierGroupe";
-            this.Text = "ModifierGroupe";
+            this.Text = "Modifier Groupe";
             this.ResumeLayout(false);
             this.PerformLayout();
 

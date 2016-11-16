@@ -19,16 +19,22 @@ namespace stage_isetna.Views.Utilisateurs
 
         private void Adduser_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
             try
             {
 
-                DataAccess.UsersDA.Update(txtId.Text , txtId.Text, txtNom.Text, txtPrenom.Text, txtMail.Text, txtLogin.Text, txtPass.Text);
+                DataAccess.UsersDA.Update(txtCin.Text, txtNom.Text, txtPrenom.Text, txtMail.Text, txtLogin.Text, txtPass.Text);
                 MessageBox.Show("Users Modifier Avec Succées");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
     }
 }

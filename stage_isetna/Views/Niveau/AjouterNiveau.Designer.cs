@@ -58,29 +58,30 @@
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(328, 222);
+            this.txtNom.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNom.Location = new System.Drawing.Point(302, 216);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(243, 20);
+            this.txtNom.Size = new System.Drawing.Size(243, 25);
             this.txtNom.TabIndex = 54;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label7.Location = new System.Drawing.Point(258, 94);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(187, 36);
+            this.label7.Size = new System.Drawing.Size(194, 37);
             this.label7.TabIndex = 52;
             this.label7.Text = "Ajouter Niveau";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(132, 216);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 25);
+            this.label2.Size = new System.Drawing.Size(65, 21);
             this.label2.TabIndex = 51;
             this.label2.Text = "Niveau";
             // 
@@ -95,7 +96,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Name = "AjouterNiveau";
-            this.Text = "AjouterNiveau";
+            this.Text = "Ajouter Niveau";
             this.ResumeLayout(false);
             this.PerformLayout();
 

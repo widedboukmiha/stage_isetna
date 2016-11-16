@@ -75,13 +75,13 @@ namespace stage_isetna
             listGroupe = DataAccess.GroupeDA.Get();
             listNiveau = DataAccess.NiveauDA.Get();
 
-            dataGridView4.DataSource = listFiliere;
+            dataGridViewFiliere.DataSource = listFiliere;
             dataGridViewGroupe.DataSource = listGroupe;
             listFiliere = DataAccess.FiliereDA.Get();
             listGroupe = DataAccess.GroupeDA.Get();
             listNiveau = DataAccess.NiveauDA.Get();
 
-            dataGridView4.DataSource = listFiliere;
+            dataGridViewFiliere.DataSource = listFiliere;
             dataGridViewGroupe.DataSource = listGroupe;
             dataGridViewNiveau.DataSource = listNiveau;
 
@@ -106,37 +106,54 @@ namespace stage_isetna
 
 
             DataGridViewButtonColumn det = new DataGridViewButtonColumn();
-            dataGridView4.Columns.Add(det);
+            dataGridViewFiliere.Columns.Add(det);
             det.Text = "Detaille";
             det.Name = "button";
             det.UseColumnTextForButtonValue = true;
 
             DataGridViewButtonColumn upd = new DataGridViewButtonColumn();
-            dataGridView4.Columns.Add(upd);
+            dataGridViewFiliere.Columns.Add(upd);
             upd.Text = "modifier";
             upd.Name = "button";
+            
             upd.UseColumnTextForButtonValue = true;
 
-            DataGridViewButtonColumn sup = new DataGridViewButtonColumn();
-            dataGridView4.Columns.Add(sup);
-            sup.Text = "Supprimer";
-            sup.Name = "button";
-            sup.UseColumnTextForButtonValue = true;
+            //DataGridViewButtonColumn sup = new DataGridViewButtonColumn();
+            //dataGridViewFiliere.Columns.Add(sup);
+            //sup.Text = "Supprimer";
+            //sup.Name = "button";
+            //sup.UseColumnTextForButtonValue = true;
+
+
+            DataGridViewImageColumn imgcell = new DataGridViewImageColumn();
+            imgcell.Image = Properties.Resources.img_detail;
+            dataGridViewFiliere.Columns.Add(imgcell); 
+
 
 
 
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Columns.Contains("button") && e.ColumnIndex == dataGridView1.Columns["button"].Index)//Specify which column contains Button in DGV
+            {
+                MessageBox.Show("Row " + (e.RowIndex + 1) + " Of " + (e.ColumnIndex + 1) + " th Column button clicked ");
+            }
+        }
 
         private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            ModifierFiliere updfiliere = new ModifierFiliere();
-            if (dataGridView4.Columns.Contains("upd") && e.ColumnIndex == dataGridView4.Columns["upd"].Index)
+           
+            if (dataGridViewFiliere.Columns.Contains("upd") && e.ColumnIndex == dataGridViewFiliere.Columns["upd"].Index)
                 //Specify which column contains Button in DGV
             {
-                MessageBox.Show("hi");
-               
-                updfiliere.Show();
+                //  MessageBox.Show("hi");
+                //ModifierFiliere updfiliere = new ModifierFiliere();
+                //updfiliere.Show();
+                MessageBox.Show("Row " + (e.RowIndex + 1) + " Of " + (e.ColumnIndex + 1) + " th Column button clicked ");
+
+
             }
         }
 

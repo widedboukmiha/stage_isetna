@@ -67,19 +67,19 @@
             // 
             // txtcodepost
             // 
-            this.txtcodepost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcodepost.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtcodepost.Location = new System.Drawing.Point(890, 159);
             this.txtcodepost.Name = "txtcodepost";
-            this.txtcodepost.Size = new System.Drawing.Size(315, 22);
+            this.txtcodepost.Size = new System.Drawing.Size(315, 25);
             this.txtcodepost.TabIndex = 35;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(743, 159);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(106, 20);
+            this.label23.Size = new System.Drawing.Size(126, 30);
             this.label23.TabIndex = 34;
             this.label23.Text = "Code Postal";
             // 
@@ -92,7 +92,7 @@
             // 
             // comboVille
             // 
-            this.comboVille.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboVille.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.comboVille.FormattingEnabled = true;
             this.comboVille.Items.AddRange(new object[] {
             "    ",
@@ -122,34 +122,34 @@
             "Gabes"});
             this.comboVille.Location = new System.Drawing.Point(328, 489);
             this.comboVille.Name = "comboVille";
-            this.comboVille.Size = new System.Drawing.Size(315, 24);
+            this.comboVille.Size = new System.Drawing.Size(315, 25);
             this.comboVille.TabIndex = 32;
             // 
             // comboFiliere
             // 
-            this.comboFiliere.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboFiliere.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.comboFiliere.FormattingEnabled = true;
             this.comboFiliere.Location = new System.Drawing.Point(890, 420);
             this.comboFiliere.Name = "comboFiliere";
-            this.comboFiliere.Size = new System.Drawing.Size(315, 24);
+            this.comboFiliere.Size = new System.Drawing.Size(315, 25);
             this.comboFiliere.TabIndex = 31;
             // 
             // comboDep
             // 
-            this.comboDep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboDep.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.comboDep.FormattingEnabled = true;
             this.comboDep.Location = new System.Drawing.Point(890, 489);
             this.comboDep.Name = "comboDep";
-            this.comboDep.Size = new System.Drawing.Size(315, 24);
+            this.comboDep.Size = new System.Drawing.Size(315, 25);
             this.comboDep.TabIndex = 30;
             // 
             // comboGroupe
             // 
-            this.comboGroupe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboGroupe.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.comboGroupe.FormattingEnabled = true;
             this.comboGroupe.Location = new System.Drawing.Point(890, 361);
             this.comboGroupe.Name = "comboGroupe";
-            this.comboGroupe.Size = new System.Drawing.Size(315, 24);
+            this.comboGroupe.Size = new System.Drawing.Size(315, 25);
             this.comboGroupe.TabIndex = 29;
             // 
             // pictureBox2
@@ -165,9 +165,10 @@
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(747, 643);
+            this.btnAnnuler.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnAnnuler.Location = new System.Drawing.Point(747, 637);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(231, 34);
+            this.btnAnnuler.Size = new System.Drawing.Size(231, 40);
             this.btnAnnuler.TabIndex = 27;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
@@ -176,9 +177,10 @@
             // btnAjouter
             // 
             this.btnAjouter.Enabled = false;
-            this.btnAjouter.Location = new System.Drawing.Point(442, 643);
+            this.btnAjouter.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnAjouter.Location = new System.Drawing.Point(442, 637);
             this.btnAjouter.Name = "btnAjouter";
-            this.btnAjouter.Size = new System.Drawing.Size(222, 34);
+            this.btnAjouter.Size = new System.Drawing.Size(222, 40);
             this.btnAjouter.TabIndex = 26;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = true;
@@ -186,174 +188,174 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label13.Location = new System.Drawing.Point(214, 420);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 20);
+            this.label13.Size = new System.Drawing.Size(88, 30);
             this.label13.TabIndex = 25;
             this.label13.Text = "Adresse";
             // 
             // txtmail
             // 
-            this.txtmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmail.Location = new System.Drawing.Point(890, 299);
             this.txtmail.Name = "txtmail";
-            this.txtmail.Size = new System.Drawing.Size(315, 22);
+            this.txtmail.Size = new System.Drawing.Size(315, 25);
             this.txtmail.TabIndex = 24;
             this.txtmail.TextChanged += new System.EventHandler(this.txtmail_TextChanged);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label14.Location = new System.Drawing.Point(759, 363);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(81, 20);
+            this.label14.Size = new System.Drawing.Size(100, 30);
             this.label14.TabIndex = 20;
             this.label14.Text = "Groupe *";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label15.Location = new System.Drawing.Point(759, 424);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 20);
+            this.label15.Size = new System.Drawing.Size(84, 30);
             this.label15.TabIndex = 19;
             this.label15.Text = "Filiére *";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label16.Location = new System.Drawing.Point(759, 489);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(75, 20);
+            this.label16.Size = new System.Drawing.Size(94, 30);
             this.label16.TabIndex = 18;
             this.label16.Text = "Niveau *";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label17.Location = new System.Drawing.Point(759, 296);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 20);
+            this.label17.Size = new System.Drawing.Size(64, 30);
             this.label17.TabIndex = 17;
             this.label17.Text = "Email";
             // 
             // txttel
             // 
-            this.txttel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txttel.Location = new System.Drawing.Point(890, 227);
             this.txttel.Name = "txttel";
-            this.txttel.Size = new System.Drawing.Size(315, 22);
+            this.txttel.Size = new System.Drawing.Size(315, 25);
             this.txttel.TabIndex = 16;
             this.txttel.TextChanged += new System.EventHandler(this.txttel_TextChanged);
             // 
             // txtadr
             // 
-            this.txtadr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtadr.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtadr.Location = new System.Drawing.Point(328, 425);
             this.txtadr.Name = "txtadr";
-            this.txtadr.Size = new System.Drawing.Size(315, 22);
+            this.txtadr.Size = new System.Drawing.Size(315, 25);
             this.txtadr.TabIndex = 13;
             this.txtadr.TextChanged += new System.EventHandler(this.txtadr_TextChanged);
             // 
             // txtprenom
             // 
-            this.txtprenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtprenom.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtprenom.Location = new System.Drawing.Point(328, 299);
             this.txtprenom.Name = "txtprenom";
-            this.txtprenom.Size = new System.Drawing.Size(315, 22);
+            this.txtprenom.Size = new System.Drawing.Size(315, 25);
             this.txtprenom.TabIndex = 11;
             this.txtprenom.TextChanged += new System.EventHandler(this.txtprenom_TextChanged);
             // 
             // txtnom
             // 
-            this.txtnom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnom.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtnom.Location = new System.Drawing.Point(328, 227);
             this.txtnom.Name = "txtnom";
-            this.txtnom.Size = new System.Drawing.Size(315, 22);
+            this.txtnom.Size = new System.Drawing.Size(315, 25);
             this.txtnom.TabIndex = 10;
             this.txtnom.TextChanged += new System.EventHandler(this.txtnom_TextChanged);
             // 
             // txtcin
             // 
-            this.txtcin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcin.Location = new System.Drawing.Point(328, 166);
             this.txtcin.Name = "txtcin";
-            this.txtcin.Size = new System.Drawing.Size(315, 22);
+            this.txtcin.Size = new System.Drawing.Size(315, 25);
             this.txtcin.TabIndex = 9;
             this.txtcin.TextChanged += new System.EventHandler(this.txtcin_TextChanged);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(154, 365);
+            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label18.Location = new System.Drawing.Point(134, 360);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(161, 20);
+            this.label18.Size = new System.Drawing.Size(188, 30);
             this.label18.TabIndex = 8;
             this.label18.Text = "Date de Naissance";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(219, 297);
+            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label19.Location = new System.Drawing.Point(214, 296);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(82, 20);
+            this.label19.Size = new System.Drawing.Size(103, 30);
             this.label19.TabIndex = 7;
             this.label19.Text = "Prenom *";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label20.Location = new System.Drawing.Point(219, 225);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(57, 20);
+            this.label20.Size = new System.Drawing.Size(76, 30);
             this.label20.TabIndex = 6;
             this.label20.Text = "Nom *";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label21.Location = new System.Drawing.Point(219, 157);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(47, 20);
+            this.label21.Size = new System.Drawing.Size(58, 30);
             this.label21.TabIndex = 5;
             this.label21.Text = "Cin *";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label22.Location = new System.Drawing.Point(219, 485);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(43, 20);
+            this.label22.Size = new System.Drawing.Size(52, 30);
             this.label22.TabIndex = 4;
             this.label22.Text = "Ville";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.label24.Location = new System.Drawing.Point(753, 231);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(93, 20);
+            this.label24.Size = new System.Drawing.Size(111, 30);
             this.label24.TabIndex = 2;
             this.label24.Text = "Téléphone";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.label25.Location = new System.Drawing.Point(562, 47);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(207, 36);
+            this.label25.Size = new System.Drawing.Size(229, 37);
             this.label25.TabIndex = 0;
             this.label25.Text = "Ajouter Etudiant";
             // 
@@ -405,7 +407,7 @@
             this.ClientSize = new System.Drawing.Size(1342, 733);
             this.Controls.Add(this.panel2);
             this.Name = "AjouterEtudiant";
-            this.Text = "Etudiant";
+            this.Text = "Ajouter Etudiant";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
