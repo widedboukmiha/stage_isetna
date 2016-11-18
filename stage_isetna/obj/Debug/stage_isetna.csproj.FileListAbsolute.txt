@@ -125,3 +125,13 @@ C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Utilisateurs.ModifierUtilisateurs.resources
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\bin\Debug\ICSharpCode.SharpZipLib.dll
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\bin\Debug\Excel.4.5.pdb
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\Database\Database.mdf
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\Database\Database_log.ldf
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\Excel.4.5.pdb
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Utilisateurs.AfficherUtilisateur.resources
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Utilisateurs.AjouterUtilisateur.resources
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Utilisateurs.ModifierUtilisateurs.resources
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AfficherFiliere.resources
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.AjouterStage.resources
+C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.ModifierStage.resources

@@ -39,12 +39,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btAnnuler = new System.Windows.Forms.Button();
+            this.adresseEntreprise = new System.Windows.Forms.TextBox();
+            this.Adressejj = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btAjouter
             // 
             this.btAjouter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAjouter.Location = new System.Drawing.Point(263, 439);
+            this.btAjouter.Location = new System.Drawing.Point(253, 427);
             this.btAjouter.Name = "btAjouter";
             this.btAjouter.Size = new System.Drawing.Size(119, 32);
             this.btAjouter.TabIndex = 23;
@@ -80,7 +82,7 @@
             "Kebili",
             "Kairouan",
             "Gabes"});
-            this.comboVille.Location = new System.Drawing.Point(394, 286);
+            this.comboVille.Location = new System.Drawing.Point(394, 260);
             this.comboVille.Name = "comboVille";
             this.comboVille.Size = new System.Drawing.Size(243, 21);
             this.comboVille.TabIndex = 22;
@@ -95,7 +97,7 @@
             // 
             // telephone
             // 
-            this.telephone.Location = new System.Drawing.Point(394, 360);
+            this.telephone.Location = new System.Drawing.Point(394, 376);
             this.telephone.Name = "telephone";
             this.telephone.Size = new System.Drawing.Size(243, 20);
             this.telephone.TabIndex = 20;
@@ -125,7 +127,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(210, 354);
+            this.label4.Location = new System.Drawing.Point(210, 376);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(155, 25);
             this.label4.TabIndex = 17;
@@ -135,7 +137,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(258, 286);
+            this.label3.Location = new System.Drawing.Point(258, 260);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 25);
             this.label3.TabIndex = 16;
@@ -164,18 +166,38 @@
             // btAnnuler
             // 
             this.btAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAnnuler.Location = new System.Drawing.Point(437, 439);
+            this.btAnnuler.Location = new System.Drawing.Point(432, 427);
             this.btAnnuler.Name = "btAnnuler";
             this.btAnnuler.Size = new System.Drawing.Size(119, 32);
             this.btAnnuler.TabIndex = 25;
             this.btAnnuler.Text = "Annuler";
             this.btAnnuler.UseVisualStyleBackColor = true;
             // 
+            // adresseEntreprise
+            // 
+            this.adresseEntreprise.Location = new System.Drawing.Point(394, 321);
+            this.adresseEntreprise.Name = "adresseEntreprise";
+            this.adresseEntreprise.Size = new System.Drawing.Size(243, 20);
+            this.adresseEntreprise.TabIndex = 27;
+            this.adresseEntreprise.TextChanged += new System.EventHandler(this.adresse_TextChanged);
+            // 
+            // Adressejj
+            // 
+            this.Adressejj.AutoSize = true;
+            this.Adressejj.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.Adressejj.Location = new System.Drawing.Point(231, 315);
+            this.Adressejj.Name = "Adressejj";
+            this.Adressejj.Size = new System.Drawing.Size(98, 25);
+            this.Adressejj.TabIndex = 26;
+            this.Adressejj.Text = "Adresse";
+            // 
             // Ajout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 510);
+            this.Controls.Add(this.adresseEntreprise);
+            this.Controls.Add(this.Adressejj);
             this.Controls.Add(this.btAnnuler);
             this.Controls.Add(this.btAjouter);
             this.Controls.Add(this.comboVille);
@@ -207,5 +229,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btAnnuler;
+        private System.Windows.Forms.TextBox adresseEntreprise;
+        private System.Windows.Forms.Label Adressejj;
     }
 }

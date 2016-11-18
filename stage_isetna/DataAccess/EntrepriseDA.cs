@@ -9,7 +9,11 @@ namespace stage_isetna.DataAccess
 {
     class EntrepriseDA  
     {
-       /* SqlConnection cn = new SqlConnection(Properties.Settings.Default.ch);
+        SqlConnection cn = new SqlConnection(Properties.Settings.Default.ch);
+        public EntrepriseDA()
+        {
+
+        }
         public  List<stage_isetna.Business.Entreprise> Retrive()
         {
             List<stage_isetna.Business.Entreprise> listEntreprise=new List<stage_isetna.Business.Entreprise>();
@@ -22,7 +26,7 @@ namespace stage_isetna.DataAccess
                 while (Reader.Read())
                 {
                 MessageBox.Show(Reader.GetInt32(0)+"");
-                    listEntreprise.Add(new stage_isetna.Business.Entreprise(Reader.GetInt32(0), Reader.GetString(1), Reader.GetString(2), Reader.GetString(3)));
+                    listEntreprise.Add(new stage_isetna.Business.Entreprise(Reader.GetInt32(0), Reader.GetString(1), Reader.GetString(2), Reader.GetString(3),Reader.GetString(4)));
                 }
                 Reader.Close();
             
@@ -43,10 +47,10 @@ namespace stage_isetna.DataAccess
                 cn.Open();
                 string strQuery = "INSERT INTO Entreprise  VALUES (@id, @nomEntreprise,@tel,@adresse)";
                 SqlCommand cmd = new SqlCommand(strQuery, cn);
-                cmd.Parameters.AddWithValue("@id", e.getId());
-                cmd.Parameters.AddWithValue("@nomEntreprise", e.getnomEntreprise());
-                cmd.Parameters.AddWithValue("@tel", e.getTelephone());
-                cmd.Parameters.AddWithValue("@adresse", e.getAdresse());
+                cmd.Parameters.AddWithValue("@id", e.Id);
+                cmd.Parameters.AddWithValue("@nomEntreprise", e.Nom);
+                cmd.Parameters.AddWithValue("@tel", e.NumTel);
+                cmd.Parameters.AddWithValue("@adresse", e.Adresse);
                 cmd.Connection = cn;
                 cmd.ExecuteNonQuery();
                 cn.Close();
@@ -65,7 +69,7 @@ namespace stage_isetna.DataAccess
             try
             {
                 cn.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE Entreprise set nomEntreprise='"+en.getnomEntreprise()+"',"+"telephone='"+en.getTelephone()+"',adresse='"+en.getAdresse()+"' where id="+id, cn);
+                SqlCommand cmd = new SqlCommand("UPDATE Entreprise set nomEntreprise='"+en.Nom+"',"+"telephone='"+en.NumTel+"',adresse='"+en.Adresse+"' where id="+id, cn);
                 SqlDataReader Reader = cmd.ExecuteReader();
                 cn.Close();
                 return true;
@@ -96,7 +100,7 @@ namespace stage_isetna.DataAccess
             {
                 return false;
             }
-        }*/
+        }
     }
 }
 

@@ -44,5 +44,16 @@ namespace stage_isetna.Properties {
                 return ((string)(this["chaine"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LENOVO-PC\\SQLEXPRESS;Initial Catalog=stage_isetna;Integrated Security" +
+            "=True")]
+        public string chaineHabib {
+            get {
+                return ((string)(this["chaineHabib"]));
+            }
+        }
     }
 }
