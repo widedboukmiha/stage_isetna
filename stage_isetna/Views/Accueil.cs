@@ -175,9 +175,8 @@ namespace stage_isetna
 
                 foreach (DataRow dr in table.Rows)
                 {
-                    addtable = new Etudiant()
-                    {
-                        Id = 3,
+                    addtable = new Etudiant() {
+                        Id = 0,
                         Cin = Convert.ToString(dr[0]),
                         Nom = Convert.ToString(dr[1]),
                         Prenom = Convert.ToString(dr[2]),
@@ -186,9 +185,9 @@ namespace stage_isetna
                         CodePostal = Convert.ToString(dr[5]),
                         Tel = Convert.ToString(dr[6]),
                         Email = Convert.ToString(dr[7]),
-                        NiveauId = new DataAccess.NiveauDA().Get(Convert.ToString(dr[8])).Id,
-                        FiliereId = new DataAccess.FiliereDA().Get(Convert.ToString(dr[9])).Id,
-                        GroupId = new DataAccess.GroupeDA().Get(Convert.ToString(dr[10])).Id,
+                        NiveauId = Convert.ToInt32(dr[8]),
+                        FiliereId = Convert.ToInt32(dr[9]),
+                        GroupId = Convert.ToInt32(dr[10])
                     };
 
                     conn.Etudiants.InsertOnSubmit(addtable);

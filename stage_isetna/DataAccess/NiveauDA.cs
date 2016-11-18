@@ -10,9 +10,9 @@ namespace stage_isetna.DataAccess
 {
     class NiveauDA
     {
-        private static string conString = Properties.Settings.Default.chaine;
+        //private static string conString = Properties.Settings.Default.chaine;
 
-       // private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+        private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
 
         public static void Create(string Nom)
         {
@@ -55,22 +55,6 @@ namespace stage_isetna.DataAccess
 
             var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Niveau { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
             return list[0];
-        }
-        public Business.Niveau Get(string nom)
-        {
-            DataSet ds = new DataSet();
-            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Niveau] WHERE Nom = '" + nom + "'", new SqlConnection(conString)))
-            {
-                cmd.Connection.Open();
-                DataTable table = new DataTable();
-                table.Load(cmd.ExecuteReader());
-                ds.Tables.Add(table);
-            }
-
-
-            var liste = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Niveau { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
-
-            return liste[0];
         }
 
         public static void Update(int id, string Nom)
