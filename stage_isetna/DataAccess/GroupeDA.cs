@@ -107,6 +107,7 @@ namespace stage_isetna.DataAccess
         }
         public void searchGrid(DataGridView v,string value)
         {
+            //Recherhce
             try
             {
                 SqlDataAdapter adap1;
