@@ -30,5 +30,10 @@ namespace stage_isetna.Views.Groupe
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void AjouterGroupe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

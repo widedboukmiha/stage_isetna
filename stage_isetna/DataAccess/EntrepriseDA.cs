@@ -9,7 +9,7 @@ namespace stage_isetna.DataAccess
 {
     class EntrepriseDA  
     {
-        SqlConnection cn = new SqlConnection(Properties.Settings.Default.ch);
+        SqlConnection cn = new SqlConnection(Properties.Settings.Default.chaine);
         public EntrepriseDA()
         {
 

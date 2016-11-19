@@ -146,13 +146,28 @@ namespace stage_isetna
             txtprenom.Clear();
 
             txtcodepost.Clear();
-            comboDep.SelectedItem = -1;
+            comboNi.SelectedItem = -1;
             comboFiliere.SelectedItem = false;
             comboGroupe.SelectedItem = false;
             comboVille.SelectedItem = -1
                 ;
         }
+        DataAccess.EtudiantDA etud = new DataAccess.EtudiantDA();
+        private void AjouterEtudiant_Load(object sender, EventArgs e)
+        {
+            etud.remplircombo(comboGroupe, "[Group]", "Nom", "Id");
+            etud.remplircombo(comboFiliere, "Filiere", "Nom", "Id");
+            etud.remplircombo(comboNi, "Niveau", "Nom", "Id");
+        }
 
-   
+        private void comboDep_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            etud.viderFromAjout(panel2);
+        }
     }
 }

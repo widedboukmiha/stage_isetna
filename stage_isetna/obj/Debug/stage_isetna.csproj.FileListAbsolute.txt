@@ -135,3 +135,6 @@ C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetn
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AfficherFiliere.resources
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.AjouterStage.resources
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.ModifierStage.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Utilisateurs.AfficherUtilisateur.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Utilisateurs.AjouterUtilisateur.resources
+C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Utilisateurs.ModifierUtilisateurs.resources

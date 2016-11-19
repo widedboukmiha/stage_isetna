@@ -35,7 +35,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboVille = new System.Windows.Forms.ComboBox();
             this.comboFiliere = new System.Windows.Forms.ComboBox();
-            this.comboDep = new System.Windows.Forms.ComboBox();
+            this.comboNi = new System.Windows.Forms.ComboBox();
             this.comboGroupe = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAnnuler = new System.Windows.Forms.Button();
@@ -134,14 +134,15 @@
             this.comboFiliere.Size = new System.Drawing.Size(315, 25);
             this.comboFiliere.TabIndex = 31;
             // 
-            // comboDep
+            // comboNi
             // 
-            this.comboDep.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.comboDep.FormattingEnabled = true;
-            this.comboDep.Location = new System.Drawing.Point(890, 489);
-            this.comboDep.Name = "comboDep";
-            this.comboDep.Size = new System.Drawing.Size(315, 25);
-            this.comboDep.TabIndex = 30;
+            this.comboNi.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.comboNi.FormattingEnabled = true;
+            this.comboNi.Location = new System.Drawing.Point(890, 489);
+            this.comboNi.Name = "comboNi";
+            this.comboNi.Size = new System.Drawing.Size(315, 25);
+            this.comboNi.TabIndex = 30;
+            this.comboNi.SelectedIndexChanged += new System.EventHandler(this.comboDep_SelectedIndexChanged);
             // 
             // comboGroupe
             // 
@@ -173,6 +174,7 @@
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
             this.btnAnnuler.TextChanged += new System.EventHandler(this.button3_Click);
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // btnAjouter
             // 
@@ -367,7 +369,7 @@
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.comboVille);
             this.panel2.Controls.Add(this.comboFiliere);
-            this.panel2.Controls.Add(this.comboDep);
+            this.panel2.Controls.Add(this.comboNi);
             this.panel2.Controls.Add(this.comboGroupe);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.btnAnnuler);
@@ -408,6 +410,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "AjouterEtudiant";
             this.Text = "Ajouter Etudiant";
+            this.Load += new System.EventHandler(this.AjouterEtudiant_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -423,7 +426,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboVille;
         private System.Windows.Forms.ComboBox comboFiliere;
-        private System.Windows.Forms.ComboBox comboDep;
+        private System.Windows.Forms.ComboBox comboNi;
         private System.Windows.Forms.ComboBox comboGroupe;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnAnnuler;
