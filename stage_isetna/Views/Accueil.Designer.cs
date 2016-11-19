@@ -37,6 +37,7 @@
             this.button14 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -48,7 +49,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.rechercheNomGroupe = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -70,6 +71,7 @@
             this.Groupe = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Etudiant = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.Filiére = new System.Windows.Forms.TabPage();
             this.dataGridViewFiliere = new System.Windows.Forms.DataGridView();
             this.adfiliere = new System.Windows.Forms.Button();
@@ -81,8 +83,6 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.dataGridViewNiveau = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -195,6 +195,17 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(0, 43);
             this.label11.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(551, 119);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(240, 37);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Gestion des Stages";
             // 
             // button13
             // 
@@ -336,13 +347,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(1182, 382);
             this.dataGridView1.TabIndex = 44;
             // 
-            // textBox12
+            // rechercheNomGroupe
             // 
-            this.textBox12.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(607, 122);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(278, 25);
-            this.textBox12.TabIndex = 3;
+            this.rechercheNomGroupe.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rechercheNomGroupe.Location = new System.Drawing.Point(607, 122);
+            this.rechercheNomGroupe.Name = "rechercheNomGroupe";
+            this.rechercheNomGroupe.Size = new System.Drawing.Size(278, 25);
+            this.rechercheNomGroupe.TabIndex = 3;
+            this.rechercheNomGroupe.TextChanged += new System.EventHandler(this.rechercheNomGroupe_TextChanged);
             // 
             // label20
             // 
@@ -537,7 +549,7 @@
             this.Groupe.BackColor = System.Drawing.Color.Lavender;
             this.Groupe.Controls.Add(this.button5);
             this.Groupe.Controls.Add(this.dataGridViewGroupe);
-            this.Groupe.Controls.Add(this.textBox12);
+            this.Groupe.Controls.Add(this.rechercheNomGroupe);
             this.Groupe.Controls.Add(this.label20);
             this.Groupe.Controls.Add(this.label19);
             this.Groupe.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -582,6 +594,16 @@
             this.Etudiant.Size = new System.Drawing.Size(1285, 670);
             this.Etudiant.TabIndex = 1;
             this.Etudiant.Text = "Etudiant";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(1074, 206);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(173, 38);
+            this.button1.TabIndex = 47;
+            this.button1.Text = "Ajouter Etudiant";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Filiére
             // 
@@ -700,27 +722,6 @@
             this.dataGridViewNiveau.Size = new System.Drawing.Size(602, 274);
             this.dataGridViewNiveau.TabIndex = 5;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(551, 119);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(240, 37);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Gestion des Stages";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(1074, 206);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 38);
-            this.button1.TabIndex = 47;
-            this.button1.Text = "Ajouter Etudiant";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -778,7 +779,7 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox rechercheNomGroupe;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button3;

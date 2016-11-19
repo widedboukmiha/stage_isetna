@@ -10,8 +10,8 @@ namespace stage_isetna.DataAccess
 {
     class UsersDA
     {
-        private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
-
+        //private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+        private static string conString = Properties.Settings.Default.chaineHabib;
         public static void Create(string Cin , string Nom , string Prenom , string Mail , string Login , string Password)
         {
             using (SqlConnection con = new SqlConnection(conString))

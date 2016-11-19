@@ -201,6 +201,12 @@ namespace stage_isetna
                 MessageBox.Show("les etudiants sont ajoutès ");
             }
         }
+
+        private void rechercheNomGroupe_TextChanged(object sender, EventArgs e)
+        {
+            stage_isetna.DataAccess.GroupeDA gDa = new stage_isetna.DataAccess.GroupeDA();
+            gDa.searchGrid(dataGridViewGroupe, rechercheNomGroupe.Text.ToString());
+        }
     }
     }
 

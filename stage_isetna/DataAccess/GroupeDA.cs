@@ -11,10 +11,13 @@ namespace stage_isetna.DataAccess
 {
     class GroupeDA
     {
-        //private static string conString = Properties.Settings.Default.chaineHabib;
-        private static string conString = Properties.Settings.Default.chaine;
+        private static string conString = Properties.Settings.Default.chaineHabib;
+        //private static string conString = Properties.Settings.Default.chaine;
         //   private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+        public GroupeDA()
+        {
 
+        }
         public static void Create(string Nom)
         {
             using (SqlConnection con = new SqlConnection(conString))
@@ -31,7 +34,7 @@ namespace stage_isetna.DataAccess
         public static List<Business.Group> Get()
         {
             DataSet ds = new DataSet();
-            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Group]", new SqlConnection(conString)))
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Groupe]", new SqlConnection(conString)))
             {
                 cmd.Connection.Open();
                 DataTable table = new DataTable();
@@ -100,6 +103,23 @@ namespace stage_isetna.DataAccess
                     cmd.CommandText = String.Format("DELETE FROM [Group] WHERE Id = {0})", id);
                     cmd.ExecuteNonQuery();
                 }
+            }
+        }
+        public void searchGrid(DataGridView v,string value)
+        {
+            try
+            {
+                SqlDataAdapter adap1;
+                DataTable tab1;
+                adap1 = new SqlDataAdapter("select * from Groupe where nom like'" + value + "%'", conString);
+                DataSet dtst = new DataSet();
+                adap1.Fill(dtst, "Groupe");
+                tab1 = dtst.Tables["Groupe"];
+                v.DataSource = tab1;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
