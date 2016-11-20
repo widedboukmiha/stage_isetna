@@ -99,5 +99,10 @@ namespace stage_isetna.DataAccess
                 }
             }
         }
+
+        public void recherche()
+        {
+
+        }
     }
 }
