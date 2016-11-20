@@ -37,12 +37,12 @@ namespace stage_isetna.Views.Entreprises
 
         private void btAjouter_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(idEntreprise.Text.ToString());
+            //int id = int.Parse(idEntreprise.Text.ToString());
             string nom = nomEntreprise.Text.ToString();
             string ville = comboVille.SelectedItem.ToString();
             string adresse = adresseEntreprise.Text.ToString();
             string tel = telephone.Text.ToString();
-            stage_isetna.Business.Entreprise en = new stage_isetna.Business.Entreprise(id, nom, ville, adresse, tel);
+            stage_isetna.Business.Entreprise en = new stage_isetna.Business.Entreprise(0, nom, ville, adresse, tel);
             stage_isetna.DataAccess.EntrepriseDA enDA = new stage_isetna.DataAccess.EntrepriseDA();
             Boolean test = enDA.Insert(en);
             if(test==true)
@@ -53,23 +53,14 @@ namespace stage_isetna.Views.Entreprises
             {
                 MessageBox.Show("Insertion echoué");
             }
+            Application.Restart();
         }
 
-        private void idEntreprise_TextChanged(object sender, EventArgs e)
-        {
-            if ((idEntreprise.Text != "") && (nomEntreprise.Text != "") && (telephone.Text != "") && (adresseEntreprise.Text != ""))
-            {
-                btAjouter.Enabled = true;
-            }
-            else
-            {
-                btAjouter.Enabled = false;
-            }
-        }
+       
 
         private void nomEntreprise_TextChanged(object sender, EventArgs e)
         {
-            if ((idEntreprise.Text != "") && (nomEntreprise.Text != "") && (telephone.Text != "") && (adresseEntreprise.Text != ""))
+            if ((nomEntreprise.Text != "") && (telephone.Text != "") && (adresseEntreprise.Text != ""))
             {
                 btAjouter.Enabled = true;
             }
@@ -81,7 +72,7 @@ namespace stage_isetna.Views.Entreprises
 
         private void telephone_TextChanged(object sender, EventArgs e)
         {
-            if ((idEntreprise.Text != "") && (nomEntreprise.Text != "") && (telephone.Text != "") && (adresseEntreprise.Text != ""))
+            if ((nomEntreprise.Text != "") && (telephone.Text != "") && (adresseEntreprise.Text != ""))
             {
                 btAjouter.Enabled = true;
             }
@@ -101,7 +92,7 @@ namespace stage_isetna.Views.Entreprises
 
         private void adresse_TextChanged(object sender, EventArgs e)
         {
-            if ((idEntreprise.Text != "") && (nomEntreprise.Text != "") && (telephone.Text != "")&&(adresseEntreprise.Text!=""))
+            if ((nomEntreprise.Text != "") && (telephone.Text != "")&&(adresseEntreprise.Text!=""))
             {
                 btAjouter.Enabled = true;
             }

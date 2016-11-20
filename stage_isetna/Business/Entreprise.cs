@@ -24,6 +24,7 @@ namespace stage_isetna.Business
             this.Id = Id;
             this.Nom = Nom;
             this.Adresse = Adresse;
+            this.Ville = Ville;
             this.NumTel = NumTel;
         }
 

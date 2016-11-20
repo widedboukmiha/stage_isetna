@@ -127,9 +127,14 @@ namespace stage_isetna
 
             DataGridViewImageColumn imgcell = new DataGridViewImageColumn();
             imgcell.Image = Properties.Resources.img_detail;
-            dataGridViewFiliere.Columns.Add(imgcell); 
-
-
+            dataGridViewFiliere.Columns.Add(imgcell);
+            //timer 
+            lbldate.Text = DateTime.Now.ToShortDateString();
+            timer1.Start();
+            //Affichage les entreprise dans un GridView
+            stage_isetna.DataAccess.EntrepriseDA eDa = new stage_isetna.DataAccess.EntrepriseDA();
+            eDa.afficheGrid(dataGridEntreprise);
+            
 
 
         }
@@ -206,6 +211,22 @@ namespace stage_isetna
         {
             stage_isetna.DataAccess.GroupeDA gDa = new stage_isetna.DataAccess.GroupeDA();
             gDa.searchGrid(dataGridViewGroupe, rechercheNomGroupe.Text.ToString());
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblheure.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            stage_isetna.DataAccess.EntrepriseDA enDa = new stage_isetna.DataAccess.EntrepriseDA();
+            enDa.searchGrid(dataGridEntreprise, nomEntrepriseNom.Text.ToString());
         }
     }
     }

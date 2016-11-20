@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
             this.button9 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -53,8 +54,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.nomEntrepriseNom = new System.Windows.Forms.TextBox();
+            this.dataGridEntreprise = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridViewGroupe = new System.Windows.Forms.DataGridView();
@@ -83,9 +84,15 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.dataGridViewNiveau = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblheure = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbldate = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEntreprise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroupe)).BeginInit();
             this.Entreprise.SuspendLayout();
             this.Stage.SuspendLayout();
@@ -97,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFiliere)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveau)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button9
@@ -134,6 +142,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.dateTimePicker1);
             this.tabPage2.Controls.Add(this.button14);
             this.tabPage2.Controls.Add(this.label14);
@@ -157,7 +166,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(1071, 15);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1058, 16);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(221, 25);
             this.dateTimePicker1.TabIndex = 22;
@@ -388,20 +397,21 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox8
+            // nomEntrepriseNom
             // 
-            this.textBox8.Location = new System.Drawing.Point(513, 142);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(302, 29);
-            this.textBox8.TabIndex = 8;
+            this.nomEntrepriseNom.Location = new System.Drawing.Point(513, 142);
+            this.nomEntrepriseNom.Name = "nomEntrepriseNom";
+            this.nomEntrepriseNom.Size = new System.Drawing.Size(302, 29);
+            this.nomEntrepriseNom.TabIndex = 8;
+            this.nomEntrepriseNom.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
-            // dataGridView2
+            // dataGridEntreprise
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(67, 207);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1240, 287);
-            this.dataGridView2.TabIndex = 7;
+            this.dataGridEntreprise.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridEntreprise.Location = new System.Drawing.Point(67, 207);
+            this.dataGridEntreprise.Name = "dataGridEntreprise";
+            this.dataGridEntreprise.Size = new System.Drawing.Size(1240, 287);
+            this.dataGridEntreprise.TabIndex = 7;
             // 
             // label10
             // 
@@ -447,8 +457,8 @@
             // 
             this.Entreprise.BackColor = System.Drawing.Color.Lavender;
             this.Entreprise.Controls.Add(this.button3);
-            this.Entreprise.Controls.Add(this.textBox8);
-            this.Entreprise.Controls.Add(this.dataGridView2);
+            this.Entreprise.Controls.Add(this.nomEntrepriseNom);
+            this.Entreprise.Controls.Add(this.dataGridEntreprise);
             this.Entreprise.Controls.Add(this.label10);
             this.Entreprise.Controls.Add(this.g);
             this.Entreprise.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -722,6 +732,58 @@
             this.dataGridViewNiveau.Size = new System.Drawing.Size(602, 274);
             this.dataGridViewNiveau.TabIndex = 5;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblheure);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.lbldate);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(1043, 47);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(234, 53);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
+            // 
+            // lblheure
+            // 
+            this.lblheure.AutoSize = true;
+            this.lblheure.Location = new System.Drawing.Point(180, 31);
+            this.lblheure.Name = "lblheure";
+            this.lblheure.Size = new System.Drawing.Size(43, 17);
+            this.lblheure.TabIndex = 0;
+            this.lblheure.Text = "heure";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(126, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 17);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Heure : ";
+            // 
+            // lbldate
+            // 
+            this.lbldate.AutoSize = true;
+            this.lbldate.Location = new System.Drawing.Point(54, 31);
+            this.lbldate.Name = "lbldate";
+            this.lbldate.Size = new System.Drawing.Size(37, 17);
+            this.lbldate.TabIndex = 0;
+            this.lbldate.Text = "Date";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Date :";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -729,6 +791,7 @@
             this.ClientSize = new System.Drawing.Size(1293, 696);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Accueil";
             this.Text = "Gestion des Stages";
             this.Load += new System.EventHandler(this.Accueil_Load);
@@ -736,7 +799,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEntreprise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroupe)).EndInit();
             this.Entreprise.ResumeLayout(false);
             this.Entreprise.PerformLayout();
@@ -754,6 +817,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveau)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -783,8 +848,8 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox nomEntrepriseNom;
+        private System.Windows.Forms.DataGridView dataGridEntreprise;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridViewGroupe;
@@ -814,5 +879,11 @@
         private System.Windows.Forms.DataGridView dataGridViewFiliere;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblheure;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbldate;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
     }
 }
