@@ -15,6 +15,7 @@ using stage_isetna.Views.Stage;
 using System.IO;
 using Excel;
 using stage_isetna.Views.Utilisateurs;
+using System.Data.SqlClient;
 
 namespace stage_isetna
 {
@@ -67,13 +68,18 @@ namespace stage_isetna
 
         private void Accueil_Load(object sender, EventArgs e)
         {
+
+           
+
             List<Filiere> listFiliere;
             List<Group> listGroupe;
             List<Niveau> listNiveau;
+            List<Business.Etudiant> listEtudiant; 
 
             listFiliere = DataAccess.FiliereDA.Get();
             listGroupe = DataAccess.GroupeDA.Get();
             listNiveau = DataAccess.NiveauDA.Get();
+            listEtudiant = DataAccess.EtudiantDA.Get();
 
             dataGridViewFiliere.DataSource = listFiliere;
             dataGridViewGroupe.DataSource = listGroupe;
@@ -81,6 +87,9 @@ namespace stage_isetna
             listGroupe = DataAccess.GroupeDA.Get();
             listNiveau = DataAccess.NiveauDA.Get();
 
+
+
+            dataGridViewEtudiant.DataSource = listEtudiant; 
             dataGridViewFiliere.DataSource = listFiliere;
             dataGridViewGroupe.DataSource = listGroupe;
             dataGridViewNiveau.DataSource = listNiveau;
@@ -141,7 +150,7 @@ namespace stage_isetna
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Columns.Contains("button") && e.ColumnIndex == dataGridView1.Columns["button"].Index)//Specify which column contains Button in DGV
+            if (dataGridViewEtudiant.Columns.Contains("button") && e.ColumnIndex == dataGridViewEtudiant.Columns["button"].Index)//Specify which column contains Button in DGV
             {
                 MessageBox.Show("Row " + (e.RowIndex + 1) + " Of " + (e.ColumnIndex + 1) + " th Column button clicked ");
             }

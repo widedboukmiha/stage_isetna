@@ -12,16 +12,17 @@ namespace stage_isetna.Business
         public string Cin { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
-        public DateTime DateNaissance { get; set; }
+        public string DateNaissance { get; set; }
         public string Adresse { get; set; }
-        public int CodePostal { get; set; }
+        public string CodePostal { get; set; }
         public string Tel { get; set; }
         public string Email { get; set; }
-        public int NiveauId { get; set; }
-        public int FiliereId { get; set; }
-        public int GroupId { get; set; }
-        public virtual Niveau Niveau { get; set; }
-        public virtual Filiere Filiere { get; set; }
-        public virtual Group Group { get; set; }
+        public string NiveauId { get; set; }
+        public string FiliereId { get; set; }
+        public string GroupId { get; set; }
+
+        //public  Niveau Niveau { get; set; }
+        //public  Filiere Filiere { get; set; }
+        //public  Group Group { get; set; }
     }
 }

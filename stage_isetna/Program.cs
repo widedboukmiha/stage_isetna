@@ -19,7 +19,7 @@ namespace stage_isetna
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Accueil ());
+            Application.Run(new AjouterEtudiant());
         }
     }
 }

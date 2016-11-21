@@ -33,7 +33,6 @@
             this.txtcodepost = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboVille = new System.Windows.Forms.ComboBox();
             this.comboFiliere = new System.Windows.Forms.ComboBox();
             this.comboNi = new System.Windows.Forms.ComboBox();
             this.comboGroupe = new System.Windows.Forms.ComboBox();
@@ -55,10 +54,10 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtdate = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -68,7 +67,7 @@
             // txtcodepost
             // 
             this.txtcodepost.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtcodepost.Location = new System.Drawing.Point(890, 159);
+            this.txtcodepost.Location = new System.Drawing.Point(328, 489);
             this.txtcodepost.Name = "txtcodepost";
             this.txtcodepost.Size = new System.Drawing.Size(315, 25);
             this.txtcodepost.TabIndex = 35;
@@ -77,7 +76,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(743, 159);
+            this.label23.Location = new System.Drawing.Point(181, 489);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(126, 30);
             this.label23.TabIndex = 34;
@@ -85,51 +84,16 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(328, 367);
+            this.dateTimePicker1.Location = new System.Drawing.Point(7, 171);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(315, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(116, 20);
             this.dateTimePicker1.TabIndex = 33;
-            // 
-            // comboVille
-            // 
-            this.comboVille.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.comboVille.FormattingEnabled = true;
-            this.comboVille.Items.AddRange(new object[] {
-            "    ",
-            "Tunis",
-            "Manouba",
-            "Ariana",
-            "Ben arous",
-            "Bizerte",
-            "Beja ",
-            "Jandouba ",
-            "Kef",
-            "Kasserine",
-            "Gafsa",
-            "Sfax",
-            "Soussa",
-            "Monastir",
-            "Mednine ",
-            "Tataouine",
-            "Mahdia ",
-            "Sidi bouzid",
-            "Zaghouan",
-            "Siliana",
-            "Tozeur",
-            "Nabeul",
-            "Kebili",
-            "Kairouan",
-            "Gabes"});
-            this.comboVille.Location = new System.Drawing.Point(328, 489);
-            this.comboVille.Name = "comboVille";
-            this.comboVille.Size = new System.Drawing.Size(315, 25);
-            this.comboVille.TabIndex = 32;
             // 
             // comboFiliere
             // 
             this.comboFiliere.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.comboFiliere.FormattingEnabled = true;
-            this.comboFiliere.Location = new System.Drawing.Point(890, 420);
+            this.comboFiliere.Location = new System.Drawing.Point(869, 364);
             this.comboFiliere.Name = "comboFiliere";
             this.comboFiliere.Size = new System.Drawing.Size(315, 25);
             this.comboFiliere.TabIndex = 31;
@@ -138,7 +102,7 @@
             // 
             this.comboNi.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.comboNi.FormattingEnabled = true;
-            this.comboNi.Location = new System.Drawing.Point(890, 489);
+            this.comboNi.Location = new System.Drawing.Point(869, 433);
             this.comboNi.Name = "comboNi";
             this.comboNi.Size = new System.Drawing.Size(315, 25);
             this.comboNi.TabIndex = 30;
@@ -148,7 +112,7 @@
             // 
             this.comboGroupe.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.comboGroupe.FormattingEnabled = true;
-            this.comboGroupe.Location = new System.Drawing.Point(890, 361);
+            this.comboGroupe.Location = new System.Drawing.Point(869, 305);
             this.comboGroupe.Name = "comboGroupe";
             this.comboGroupe.Size = new System.Drawing.Size(315, 25);
             this.comboGroupe.TabIndex = 29;
@@ -178,7 +142,6 @@
             // 
             // btnAjouter
             // 
-            this.btnAjouter.Enabled = false;
             this.btnAjouter.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnAjouter.Location = new System.Drawing.Point(442, 637);
             this.btnAjouter.Name = "btnAjouter";
@@ -186,6 +149,7 @@
             this.btnAjouter.TabIndex = 26;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // label13
             // 
@@ -200,7 +164,7 @@
             // txtmail
             // 
             this.txtmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmail.Location = new System.Drawing.Point(890, 299);
+            this.txtmail.Location = new System.Drawing.Point(869, 243);
             this.txtmail.Name = "txtmail";
             this.txtmail.Size = new System.Drawing.Size(315, 25);
             this.txtmail.TabIndex = 24;
@@ -210,7 +174,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(759, 363);
+            this.label14.Location = new System.Drawing.Point(738, 307);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(100, 30);
             this.label14.TabIndex = 20;
@@ -220,7 +184,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(759, 424);
+            this.label15.Location = new System.Drawing.Point(738, 368);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(84, 30);
             this.label15.TabIndex = 19;
@@ -230,7 +194,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(759, 489);
+            this.label16.Location = new System.Drawing.Point(738, 433);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(94, 30);
             this.label16.TabIndex = 18;
@@ -240,7 +204,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label17.Location = new System.Drawing.Point(759, 296);
+            this.label17.Location = new System.Drawing.Point(738, 240);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(64, 30);
             this.label17.TabIndex = 17;
@@ -249,7 +213,7 @@
             // txttel
             // 
             this.txttel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txttel.Location = new System.Drawing.Point(890, 227);
+            this.txttel.Location = new System.Drawing.Point(869, 171);
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(315, 25);
             this.txttel.TabIndex = 16;
@@ -331,21 +295,11 @@
             this.label21.TabIndex = 5;
             this.label21.Text = "Cin *";
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label22.Location = new System.Drawing.Point(219, 485);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 30);
-            this.label22.TabIndex = 4;
-            this.label22.Text = "Ville";
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label24.Location = new System.Drawing.Point(753, 231);
+            this.label24.Location = new System.Drawing.Point(732, 175);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(111, 30);
             this.label24.TabIndex = 2;
@@ -364,10 +318,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.txtdate);
             this.panel2.Controls.Add(this.txtcodepost);
             this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.comboVille);
             this.panel2.Controls.Add(this.comboFiliere);
             this.panel2.Controls.Add(this.comboNi);
             this.panel2.Controls.Add(this.comboGroupe);
@@ -389,7 +343,6 @@
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.label20);
             this.panel2.Controls.Add(this.label21);
-            this.panel2.Controls.Add(this.label22);
             this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -397,6 +350,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1342, 733);
             this.panel2.TabIndex = 31;
+            // 
+            // txtdate
+            // 
+            this.txtdate.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtdate.Location = new System.Drawing.Point(328, 370);
+            this.txtdate.Name = "txtdate";
+            this.txtdate.Size = new System.Drawing.Size(315, 25);
+            this.txtdate.TabIndex = 36;
             // 
             // errorProvider1
             // 
@@ -424,7 +385,6 @@
         private System.Windows.Forms.TextBox txtcodepost;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboVille;
         private System.Windows.Forms.ComboBox comboFiliere;
         private System.Windows.Forms.ComboBox comboNi;
         private System.Windows.Forms.ComboBox comboGroupe;
@@ -446,10 +406,10 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox txtdate;
     }
 }

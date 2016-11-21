@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,8 @@ namespace stage_isetna
 {
     public partial class AjouterEtudiant : Form
     {
+        private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+
         public AjouterEtudiant()
         {
             InitializeComponent();
@@ -149,15 +152,34 @@ namespace stage_isetna
             comboNi.SelectedItem = -1;
             comboFiliere.SelectedItem = false;
             comboGroupe.SelectedItem = false;
-            comboVille.SelectedItem = -1
-                ;
-        }
+                   }
         DataAccess.EtudiantDA etud = new DataAccess.EtudiantDA();
         private void AjouterEtudiant_Load(object sender, EventArgs e)
         {
-            etud.remplircombo(comboGroupe, "[Group]", "Nom", "Id");
-            etud.remplircombo(comboFiliere, "Filiere", "Nom", "Id");
-            etud.remplircombo(comboNi, "Niveau", "Nom", "Id");
+            SqlDataAdapter adapniveau = new SqlDataAdapter("select * from Niveau", conString);
+            DataSet dtniveau = new DataSet();
+            adapniveau.Fill(dtniveau, "Niveau");
+            comboNi.DataSource = dtniveau.Tables[0];
+            comboNi.DisplayMember = "Nom"; 
+            comboNi.ValueMember = "Id";
+
+
+            //SqlDataAdapter adapgroupe = new SqlDataAdapter("select * from Group", conString);
+            //DataSet dtgroupe = new DataSet();
+            //adapgroupe.Fill(dtgroupe, "Group");
+            //comboGroupe.DataSource = dtgroupe.Tables[0];
+            //comboGroupe.DisplayMember = "Nom";
+            //comboGroupe.ValueMember = "Id";
+
+
+
+            SqlDataAdapter adapfiliere = new SqlDataAdapter("select * from Filiere", conString);
+            DataSet dtfiliere = new DataSet();
+            adapfiliere.Fill(dtfiliere, "Filiere");
+            comboFiliere.DataSource = dtfiliere.Tables[0];
+            comboFiliere.DisplayMember = "Nom";
+            comboFiliere.ValueMember = "Id";
+
         }
 
         private void comboDep_SelectedIndexChanged(object sender, EventArgs e)
@@ -167,7 +189,21 @@ namespace stage_isetna
 
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
-            etud.viderFromAjout(panel2);
+            //etud.viderFromAjout(panel2);
+        }
+
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
+            int fil, niv, grou;
+            try
+            {
+                DataAccess.EtudiantDA.Create(txtnom.Text , txtprenom.Text , txtmail.Text , txtcin.Text , txtadr.Text , txtcodepost.Text , txtdate.Text , comboFiliere.SelectedValue.ToString(), comboNi.SelectedValue.ToString() , comboGroupe.SelectedValue.ToString() , txttel.Text);
+                MessageBox.Show("Ajouter Etudiant Avec Succées");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

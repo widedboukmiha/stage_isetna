@@ -54,7 +54,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewEtudiant = new System.Windows.Forms.DataGridView();
             this.rechercheNomGroupe = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -92,7 +92,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEtudiant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEntreprise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroupe)).BeginInit();
             this.Entreprise.SuspendLayout();
@@ -396,13 +396,13 @@
             this.radioButton5.Text = "N° Carte D\'identité";
             this.radioButton5.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewEtudiant
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(65, 250);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1182, 382);
-            this.dataGridView1.TabIndex = 44;
+            this.dataGridViewEtudiant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEtudiant.Location = new System.Drawing.Point(65, 250);
+            this.dataGridViewEtudiant.Name = "dataGridViewEtudiant";
+            this.dataGridViewEtudiant.Size = new System.Drawing.Size(1182, 382);
+            this.dataGridViewEtudiant.TabIndex = 44;
             // 
             // rechercheNomGroupe
             // 
@@ -639,7 +639,7 @@
             this.Etudiant.BackColor = System.Drawing.Color.Lavender;
             this.Etudiant.Controls.Add(this.button1);
             this.Etudiant.Controls.Add(this.label1);
-            this.Etudiant.Controls.Add(this.dataGridView1);
+            this.Etudiant.Controls.Add(this.dataGridViewEtudiant);
             this.Etudiant.Controls.Add(this.textBox1);
             this.Etudiant.Controls.Add(this.radioButton4);
             this.Etudiant.Controls.Add(this.radioButton3);
@@ -801,7 +801,7 @@
             this.tabPage2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEtudiant)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEntreprise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroupe)).EndInit();
             this.Entreprise.ResumeLayout(false);
@@ -844,7 +844,7 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewEtudiant;
         private System.Windows.Forms.TextBox rechercheNomGroupe;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;

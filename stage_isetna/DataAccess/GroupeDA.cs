@@ -11,9 +11,9 @@ namespace stage_isetna.DataAccess
 {
     class GroupeDA
     {
-        private static string conString = Properties.Settings.Default.chaineHabib;
+       // private static string conString = Properties.Settings.Default.chaineHabib;
         //private static string conString = Properties.Settings.Default.chaine;
-        //   private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+       private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
         public GroupeDA()
         {
 
@@ -34,7 +34,7 @@ namespace stage_isetna.DataAccess
         public static List<Business.Group> Get()
         {
             DataSet ds = new DataSet();
-            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Groupe]", new SqlConnection(conString)))
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Group]", new SqlConnection(conString)))
             {
                 cmd.Connection.Open();
                 DataTable table = new DataTable();
