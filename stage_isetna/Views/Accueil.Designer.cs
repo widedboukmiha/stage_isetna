@@ -34,6 +34,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblheure = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbldate = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button14 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -81,16 +86,12 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.nomNiveauRecherche = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.dataGridViewNiveau = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblheure = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lbldate = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabPage2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEntreprise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroupe)).BeginInit();
@@ -104,7 +105,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFiliere)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveau)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button9
@@ -163,6 +163,54 @@
             this.tabPage2.Size = new System.Drawing.Size(1285, 670);
             this.tabPage2.TabIndex = 7;
             this.tabPage2.Text = "Iset";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblheure);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.lbldate);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(1043, 47);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(234, 53);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
+            // 
+            // lblheure
+            // 
+            this.lblheure.AutoSize = true;
+            this.lblheure.Location = new System.Drawing.Point(180, 31);
+            this.lblheure.Name = "lblheure";
+            this.lblheure.Size = new System.Drawing.Size(43, 17);
+            this.lblheure.TabIndex = 0;
+            this.lblheure.Text = "heure";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(126, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 17);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Heure : ";
+            // 
+            // lbldate
+            // 
+            this.lbldate.AutoSize = true;
+            this.lbldate.Location = new System.Drawing.Point(54, 31);
+            this.lbldate.Name = "lbldate";
+            this.lbldate.Size = new System.Drawing.Size(37, 17);
+            this.lbldate.TabIndex = 0;
+            this.lbldate.Text = "Date";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Date :";
             // 
             // dateTimePicker1
             // 
@@ -655,7 +703,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(420, 156);
+            this.label13.Location = new System.Drawing.Point(340, 156);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(99, 21);
             this.label13.TabIndex = 7;
@@ -674,7 +722,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(612, 156);
+            this.textBox10.Location = new System.Drawing.Point(532, 156);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(351, 29);
             this.textBox10.TabIndex = 5;
@@ -683,7 +731,7 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Lavender;
             this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.textBox11);
+            this.tabPage1.Controls.Add(this.nomNiveauRecherche);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Controls.Add(this.dataGridViewNiveau);
@@ -706,13 +754,14 @@
             this.label16.TabIndex = 9;
             this.label16.Text = "Niveau";
             // 
-            // textBox11
+            // nomNiveauRecherche
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(583, 149);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(348, 22);
-            this.textBox11.TabIndex = 8;
+            this.nomNiveauRecherche.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomNiveauRecherche.Location = new System.Drawing.Point(583, 149);
+            this.nomNiveauRecherche.Name = "nomNiveauRecherche";
+            this.nomNiveauRecherche.Size = new System.Drawing.Size(348, 22);
+            this.nomNiveauRecherche.TabIndex = 8;
+            this.nomNiveauRecherche.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // label15
             // 
@@ -732,54 +781,6 @@
             this.dataGridViewNiveau.Size = new System.Drawing.Size(602, 274);
             this.dataGridViewNiveau.TabIndex = 5;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblheure);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.lbldate);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(1043, 47);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(234, 53);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            // 
-            // lblheure
-            // 
-            this.lblheure.AutoSize = true;
-            this.lblheure.Location = new System.Drawing.Point(180, 31);
-            this.lblheure.Name = "lblheure";
-            this.lblheure.Size = new System.Drawing.Size(43, 17);
-            this.lblheure.TabIndex = 0;
-            this.lblheure.Text = "heure";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(126, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Heure : ";
-            // 
-            // lbldate
-            // 
-            this.lbldate.AutoSize = true;
-            this.lbldate.Location = new System.Drawing.Point(54, 31);
-            this.lbldate.Name = "lbldate";
-            this.lbldate.Size = new System.Drawing.Size(37, 17);
-            this.lbldate.TabIndex = 0;
-            this.lbldate.Text = "Date";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Date :";
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -798,6 +799,8 @@
             this.Click += new System.EventHandler(this.button3_Click);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEntreprise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroupe)).EndInit();
@@ -817,8 +820,6 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveau)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -873,7 +874,7 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox nomNiveauRecherche;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dataGridViewNiveau;
         private System.Windows.Forms.DataGridView dataGridViewFiliere;

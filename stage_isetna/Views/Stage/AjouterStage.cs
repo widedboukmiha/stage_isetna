@@ -16,5 +16,10 @@ namespace stage_isetna.Views.Stage
         {
             InitializeComponent();
         }
+
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

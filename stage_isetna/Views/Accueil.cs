@@ -63,7 +63,7 @@ namespace stage_isetna
 
         }
 
-   
+
 
         private void Accueil_Load(object sender, EventArgs e)
         {
@@ -115,7 +115,7 @@ namespace stage_isetna
             dataGridViewFiliere.Columns.Add(upd);
             upd.Text = "modifier";
             upd.Name = "button";
-            
+
             upd.UseColumnTextForButtonValue = true;
 
             //DataGridViewButtonColumn sup = new DataGridViewButtonColumn();
@@ -134,7 +134,7 @@ namespace stage_isetna
             //Affichage les entreprise dans un GridView
             stage_isetna.DataAccess.EntrepriseDA eDa = new stage_isetna.DataAccess.EntrepriseDA();
             eDa.afficheGrid(dataGridEntreprise);
-            
+
 
 
         }
@@ -149,9 +149,9 @@ namespace stage_isetna
 
         private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
             if (dataGridViewFiliere.Columns.Contains("upd") && e.ColumnIndex == dataGridViewFiliere.Columns["upd"].Index)
-                //Specify which column contains Button in DGV
+            //Specify which column contains Button in DGV
             {
                 //  MessageBox.Show("hi");
                 //ModifierFiliere updfiliere = new ModifierFiliere();
@@ -228,7 +228,13 @@ namespace stage_isetna
             stage_isetna.DataAccess.EntrepriseDA enDa = new stage_isetna.DataAccess.EntrepriseDA();
             enDa.searchGrid(dataGridEntreprise, nomEntrepriseNom.Text.ToString());
         }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+            stage_isetna.DataAccess.NiveauDA nDa = new stage_isetna.DataAccess.NiveauDA();
+            nDa.recherche(dataGridViewNiveau, nomNiveauRecherche.Text.ToString());
+        }
     }
-    }
+}
 
 

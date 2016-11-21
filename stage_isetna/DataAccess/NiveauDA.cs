@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
+using System.Windows.Forms;
 
 namespace stage_isetna.DataAccess
 {
@@ -100,8 +101,22 @@ namespace stage_isetna.DataAccess
             }
         }
 
-        public void recherche()
+        public void recherche(DataGridView v,string value)
         {
+            try
+            {
+                SqlDataAdapter adap1;
+                DataTable tab1;
+                adap1 = new SqlDataAdapter("select id,Nom from Niveau where nom like'" + value + "%'", conString);
+                DataSet dtst = new DataSet();
+                adap1.Fill(dtst, "Niveau");
+                tab1 = dtst.Tables["Niveau"];
+                v.DataSource = tab1;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }

@@ -168,13 +168,13 @@
             // 
             // btnAjouter
             // 
-            this.btnAjouter.Enabled = false;
             this.btnAjouter.Location = new System.Drawing.Point(183, 613);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(222, 34);
             this.btnAjouter.TabIndex = 26;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // label13
             // 
