@@ -15,6 +15,7 @@ namespace stage_isetna.DataAccess
         //private static string conString = Properties.Settings.Default.chaineHabib;
         //private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
         private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+
         public static void Create(string Nom)
         {
             using (SqlConnection con = new SqlConnection(conString))
@@ -31,7 +32,7 @@ namespace stage_isetna.DataAccess
         public static List<Business.Niveau> Get()
         {
             DataSet ds = new DataSet();
-            using (SqlCommand cmd = new SqlCommand("SELECT * FROM Niveau", new SqlConnection(conString)))
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Niveau]", new SqlConnection(conString)))
             {
                 cmd.Connection.Open();
                 DataTable table = new DataTable();
@@ -43,10 +44,10 @@ namespace stage_isetna.DataAccess
             return list;
         }
 
-        public Business.Niveau Get(int id)
+        public Business.Niveau Get(int Id)
         {
             DataSet ds = new DataSet();
-            using (SqlCommand cmd = new SqlCommand("SELECT * FROM Niveau WHERE Id = " + id.ToString(), new SqlConnection(conString)))
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Niveau] WHERE Id = " + Id.ToString(), new SqlConnection(conString)))
             {
                 cmd.Connection.Open();
                 DataTable table = new DataTable();
@@ -57,10 +58,10 @@ namespace stage_isetna.DataAccess
             var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Niveau { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
             return list[0];
         }
-        public Business.Niveau Get(string nom)
+        public Business.Niveau Get(string Nom)
         {
             DataSet ds = new DataSet();
-            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Niveau] WHERE Nom = '" + nom + "'", new SqlConnection(conString)))
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Niveau] WHERE Nom = '" + Nom + "'", new SqlConnection(conString)))
             {
                 cmd.Connection.Open();
                 DataTable table = new DataTable();
@@ -74,49 +75,45 @@ namespace stage_isetna.DataAccess
             return liste[0];
         }
 
-        public static void Update(int id, string Nom)
+        public static void Update(int Id, string Nom)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("UPDATE Niveau SET Nom = '{0}' WHERE Id = {1}", Nom, id);
+                    cmd.CommandText = String.Format("UPDATE Niveau SET Nom = '{0}' WHERE Id = {1}", Nom, Id);
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        public void Delete(int id)
+        public static void Delete(int Id)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("DELETE FROM Niveau WHERE Id = {0})", id);
+                    cmd.CommandText = String.Format("DELETE FROM [Niveau] WHERE Id = {0}", Id);
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        public void recherche(DataGridView v, string value)
+        public static List<Business.Niveau> Find(string Nom)
         {
-            try
+            DataSet ds = new DataSet();
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Niveau] WHERE Nom LIKE '%" + Nom + "%'", new SqlConnection(conString)))
             {
-                SqlDataAdapter adap1;
-                DataTable tab1;
-                adap1 = new SqlDataAdapter("select id,Nom from Niveau where nom like'" + value + "%'", conString);
-                DataSet dtst = new DataSet();
-                adap1.Fill(dtst, "Niveau");
-                tab1 = dtst.Tables["Niveau"];
-                v.DataSource = tab1;
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
+                cmd.Connection.Open();
+                DataTable table = new DataTable();
+                table.Load(cmd.ExecuteReader());
+                ds.Tables.Add(table);
             }
 
+            var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Niveau { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
+            return list;
         }
     }
 }

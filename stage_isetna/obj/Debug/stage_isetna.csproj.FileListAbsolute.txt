@@ -66,7 +66,6 @@ D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AjouterFiliere
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.ModifierFiliere.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.AjouterGroupe.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.ModifierGroupe.resources
-D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Niveau.AjouterNiveau.resources
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csprojResolveAssemblyReference.cache
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Authentification.resources
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Accueil.resources
@@ -172,3 +171,6 @@ D:\stage_isetna\stage_isetna\bin\Debug\Excel.4.5.pdb
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Utilisateurs.AfficherUtilisateur.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Utilisateurs.AjouterUtilisateur.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Utilisateurs.ModifierUtilisateurs.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Niveau.Ajouter.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Niveau.Modifier.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Niveau.Supprimer.resources

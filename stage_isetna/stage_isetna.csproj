@@ -156,11 +156,23 @@
     <Compile Include="Views\Groupe\ModifierGroupe.Designer.cs">
       <DependentUpon>ModifierGroupe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Niveau\AjouterNiveau.cs">
+    <Compile Include="Views\Niveau\Ajouter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Niveau\AjouterNiveau.Designer.cs">
-      <DependentUpon>AjouterNiveau.cs</DependentUpon>
+    <Compile Include="Views\Niveau\Ajouter.Designer.cs">
+      <DependentUpon>Ajouter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Niveau\Modifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Niveau\Modifier.Designer.cs">
+      <DependentUpon>Modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Niveau\Supprimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Niveau\Supprimer.Designer.cs">
+      <DependentUpon>Supprimer.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Stage\AjouterStage.cs">
       <SubType>Form</SubType>
@@ -193,6 +205,12 @@
     <Compile Include="Views\Utilisateurs\ModifierUtilisateurs.Designer.cs">
       <DependentUpon>ModifierUtilisateurs.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Niveau\Modifier.resx">
+      <DependentUpon>Modifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Niveau\Supprimer.resx">
+      <DependentUpon>Supprimer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Utilisateurs\AfficherUtilisateur.resx">
       <DependentUpon>AfficherUtilisateur.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,8 +265,8 @@
     <EmbeddedResource Include="Views\Groupe\ModifierGroupe.resx">
       <DependentUpon>ModifierGroupe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Niveau\AjouterNiveau.resx">
-      <DependentUpon>AjouterNiveau.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Niveau\Ajouter.resx">
+      <DependentUpon>Ajouter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Stage\AjouterStage.resx">
       <DependentUpon>AjouterStage.cs</DependentUpon>

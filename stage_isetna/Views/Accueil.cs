@@ -47,8 +47,8 @@ namespace stage_isetna
 
         private void button6_Click(object sender, EventArgs e)
         {
-            AjouterNiveau nv = new AjouterNiveau();
-            nv.Show();
+            new Ajouter().ShowDialog();
+            dataGridViewNiveau.DataSource = DataAccess.NiveauDA.Find(nomNiveauRecherche.Text);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -64,13 +64,8 @@ namespace stage_isetna
 
         }
 
-
-
         private void Accueil_Load(object sender, EventArgs e)
         {
-
-           
-
             List<Filiere> listFiliere;
             List<Group> listGroupe;
             List<Niveau> listNiveau;
@@ -240,8 +235,14 @@ namespace stage_isetna
 
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
-            stage_isetna.DataAccess.NiveauDA nDa = new stage_isetna.DataAccess.NiveauDA();
-            nDa.recherche(dataGridViewNiveau, nomNiveauRecherche.Text.ToString());
+            dataGridViewNiveau.DataSource = DataAccess.NiveauDA.Find(nomNiveauRecherche.Text);
+        }
+
+        private void dataGridViewNiveau_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new Views.Niveau.Modifier(Convert.ToInt16(dataGridViewNiveau.Rows[dataGridViewNiveau.SelectedCells[0].RowIndex].Cells[0].Value)).ShowDialog();
+            dataGridViewNiveau.DataSource = DataAccess.NiveauDA.Find(nomNiveauRecherche.Text);
+            dataGridViewNiveau.Rows[dataGridViewNiveau.SelectedCells[0].RowIndex].Cells[0].Selected = true;
         }
     }
 }
