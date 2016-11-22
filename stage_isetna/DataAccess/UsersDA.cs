@@ -37,12 +37,14 @@ namespace stage_isetna.DataAccess
                 ds.Tables.Add(table);
             }
 
+            
             var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Users { Id = dataRow.Field<int>("Id"), Cin = dataRow.Field<string>("Cin"), Nom = dataRow.Field<string>("Nom"), Prenom = dataRow.Field<string>("Prenom"), Mail = dataRow.Field<string>("Mail"), Login = dataRow.Field<string>("Login") }).ToList();
             return list;
         }
 
         public static bool VerifierCin(int id, string Cin)
         {
+
 
 
             DataSet ds = new DataSet();
@@ -94,6 +96,23 @@ namespace stage_isetna.DataAccess
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
+        
+        public bool checkedLogin(string login, string password)
+        {
+            DataSet ds = new DataSet();
+            using (SqlCommand cmd = new SqlCommand(String.Format("SELECT * FROM Users WHERE Login = '{0}' AND Password = '{1}'", login, password), new SqlConnection(conString)))
+            {
+                cmd.Connection.Open();
+                DataTable table = new DataTable();
+                table.Load(cmd.ExecuteReader());
+                ds.Tables.Add(table);
+            }
+
+            var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Users { Id = dataRow.Field<int>("Id"), Cin = dataRow.Field<string>("Cin"), Nom = dataRow.Field<string>("Nom"), Prenom = dataRow.Field<string>("Prenom"), Mail = dataRow.Field<string>("Mail"), Login = dataRow.Field<string>("Login") }).ToList();
+
+            if (list.Count == 0) return false;
+            return true;
         }
     }
 }
