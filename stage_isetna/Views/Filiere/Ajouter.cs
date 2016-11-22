@@ -17,36 +17,22 @@ namespace stage_isetna.Views.Filiere
             InitializeComponent();
         }
 
-        private void btnAjouter_Click(object sender, EventArgs e)
+        private void btnAjout_Click(object sender, EventArgs e)
         {
-
-            //try
-            //{
-            //    int id = Int32.Parse(txtId.Text);
-            //    DataAccess.FiliereDA.Create(id, txtFiliere.Text);
-            //    MessageBox.Show("Ajouter Filiere Avec Succées");
-            //}
-            //catch(Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-
             try
             {
-                DataAccess.FiliereDA.Create(txtFiliere.Text);
-                MessageBox.Show("Ajouter Filiere Avec Succées");
+                new DataAccess.FiliereDA().Create(txtNom.Text);
+                this.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //txtId.Text = "";
-            txtFiliere.Text = "";
+            this.Close();
         }
     }
 }
