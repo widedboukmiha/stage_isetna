@@ -21,7 +21,7 @@ namespace stage_isetna.Views.Niveau
         {
             try
             {
-                DataAccess.NiveauDA.Create(txtNom.Text);
+                new DataAccess.NiveauDA().Create(txtNom.Text);
                 this.Close();
             }
             catch (Exception ex)

@@ -24,7 +24,7 @@ namespace stage_isetna.Views.Niveau
         {
             try
             {
-                DataAccess.NiveauDA.Delete(Id);
+                new DataAccess.NiveauDA().Delete(Id);
                 this.Close();
             }
             catch (Exception ex)

@@ -12,9 +12,30 @@ namespace stage_isetna.Views.Groupe
 {
     public partial class Supprimer : Form
     {
-        public Supprimer()
+        private int Id;
+
+        public Supprimer(int id)
         {
             InitializeComponent();
+            Id = id;
+        }
+
+        private void btnAjout_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new DataAccess.GroupeDA().Delete(Id);
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

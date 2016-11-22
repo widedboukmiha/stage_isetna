@@ -17,13 +17,12 @@ namespace stage_isetna.Views.Groupe
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAjout_Click(object sender, EventArgs e)
         {
             try
             {
-               
-                DataAccess.GroupeDA.Create( txtNom.Text);
-                MessageBox.Show("Ajouter Filiere Avec Succées");
+                new DataAccess.GroupeDA().Create(txtNom.Text);
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -31,9 +30,9 @@ namespace stage_isetna.Views.Groupe
             }
         }
 
-        private void AjouterGroupe_Load(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

@@ -174,3 +174,9 @@ D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Utilisateurs.ModifierU
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Niveau.Ajouter.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Niveau.Modifier.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Niveau.Supprimer.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Entreprises.Ajouter.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Entreprises.Modifier.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.Ajouter.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.Modifier.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.Ajouter.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.Modifier.resources

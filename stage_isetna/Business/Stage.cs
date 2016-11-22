@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +28,7 @@ namespace stage_isetna.Business
             EntrepriseId = entreprise;
 
             Type = new DataAccess.TypeDA().Get(TypeId);
-            Etudiant = new DataAccess.EtudiantDA().Get(EtudiantId);
+            //Etudiant = new DataAccess.EtudiantDA().Get(EtudiantId);
             Entreprise = new DataAccess.EntrepriseDA().Get(EntrepriseId);
         }
     }

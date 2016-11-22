@@ -12,23 +12,36 @@ namespace stage_isetna.Views.Groupe
 {
     public partial class Modifier : Form
     {
-        public Modifier()
+        private int Id;
+
+        public Modifier(int id)
         {
             InitializeComponent();
+            Id = id;
         }
 
-        private void btnModifier_Click(object sender, EventArgs e)
+        private void btnAjout_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    int id = Int32.Parse(txtId.Text);
-            //    DataAccess.GroupeDA.Update(id, txtNom.Text);
-            //    MessageBox.Show("Modifier Groupe Avec Succées");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            try
+            {
+                new DataAccess.GroupeDA().Update(Id, txtNom.Text);
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Supprimer(Id).ShowDialog();
+            this.Close();
         }
     }
 }
