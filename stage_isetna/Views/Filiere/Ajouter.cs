@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace stage_isetna.Views.Filiere
 {
-    public partial class AjouterFiliere : Form
+    public partial class Ajouter : Form
     {
-        public AjouterFiliere()
+        public Ajouter()
         {
             InitializeComponent();
         }

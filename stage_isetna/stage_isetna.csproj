@@ -100,6 +100,12 @@
     </Compile>
     <Compile Include="DataAccess\EntrepriseDA.cs" />
     <Compile Include="DataAccess\EtudiantDA.cs" />
+    <Compile Include="Views\Entreprises\Supprimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Entreprises\Supprimer.Designer.cs">
+      <DependentUpon>Supprimer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Etudiants\AjouterEtudiant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,17 +114,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Entreprises\Ajout.cs">
+    <Compile Include="Views\Entreprises\Ajouter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Entreprises\Ajout.Designer.cs">
-      <DependentUpon>Ajout.cs</DependentUpon>
+    <Compile Include="Views\Entreprises\Ajouter.Designer.cs">
+      <DependentUpon>Ajouter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Entreprises\Modification.cs">
+    <Compile Include="Views\Entreprises\Modifier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Entreprises\Modification.Designer.cs">
-      <DependentUpon>Modification.cs</DependentUpon>
+    <Compile Include="Views\Entreprises\Modifier.Designer.cs">
+      <DependentUpon>Modifier.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Etudiants\ModifierEtudiant.cs">
       <SubType>Form</SubType>
@@ -126,35 +132,41 @@
     <Compile Include="Views\Etudiants\ModifierEtudiant.Designer.cs">
       <DependentUpon>ModifierEtudiant.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Filiere\AfficherFiliere.cs">
+    <Compile Include="Views\Filiere\Ajouter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Filiere\AfficherFiliere.Designer.cs">
-      <DependentUpon>AfficherFiliere.cs</DependentUpon>
+    <Compile Include="Views\Filiere\Ajouter.Designer.cs">
+      <DependentUpon>Ajouter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Filiere\AjouterFiliere.cs">
+    <Compile Include="Views\Filiere\Modifier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Filiere\AjouterFiliere.Designer.cs">
-      <DependentUpon>AjouterFiliere.cs</DependentUpon>
+    <Compile Include="Views\Filiere\Modifier.Designer.cs">
+      <DependentUpon>Modifier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Filiere\ModifierFiliere.cs">
+    <Compile Include="Views\Filiere\Supprimer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Filiere\ModifierFiliere.Designer.cs">
-      <DependentUpon>ModifierFiliere.cs</DependentUpon>
+    <Compile Include="Views\Filiere\Supprimer.Designer.cs">
+      <DependentUpon>Supprimer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Groupe\AjouterGroupe.cs">
+    <Compile Include="Views\Groupe\Ajouter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Groupe\AjouterGroupe.Designer.cs">
-      <DependentUpon>AjouterGroupe.cs</DependentUpon>
+    <Compile Include="Views\Groupe\Ajouter.Designer.cs">
+      <DependentUpon>Ajouter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Groupe\ModifierGroupe.cs">
+    <Compile Include="Views\Groupe\Modifier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Groupe\ModifierGroupe.Designer.cs">
-      <DependentUpon>ModifierGroupe.cs</DependentUpon>
+    <Compile Include="Views\Groupe\Modifier.Designer.cs">
+      <DependentUpon>Modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Groupe\Supprimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Groupe\Supprimer.Designer.cs">
+      <DependentUpon>Supprimer.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Niveau\Ajouter.cs">
       <SubType>Form</SubType>
@@ -229,11 +241,11 @@
     <EmbeddedResource Include="Views\Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Entreprises\Ajout.resx">
-      <DependentUpon>Ajout.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Entreprises\Ajouter.resx">
+      <DependentUpon>Ajouter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Entreprises\Modification.resx">
-      <DependentUpon>Modification.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Entreprises\Modifier.resx">
+      <DependentUpon>Modifier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Etudiants\AjouterEtudiant.resx">
       <DependentUpon>AjouterEtudiant.cs</DependentUpon>
@@ -250,20 +262,17 @@
     <EmbeddedResource Include="Views\Etudiants\ModifierEtudiant.resx">
       <DependentUpon>ModifierEtudiant.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Filiere\AfficherFiliere.resx">
-      <DependentUpon>AfficherFiliere.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Filiere\Ajouter.resx">
+      <DependentUpon>Ajouter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Filiere\AjouterFiliere.resx">
-      <DependentUpon>AjouterFiliere.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Filiere\Modifier.resx">
+      <DependentUpon>Modifier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Filiere\ModifierFiliere.resx">
-      <DependentUpon>ModifierFiliere.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Groupe\Ajouter.resx">
+      <DependentUpon>Ajouter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Groupe\AjouterGroupe.resx">
-      <DependentUpon>AjouterGroupe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Groupe\ModifierGroupe.resx">
-      <DependentUpon>ModifierGroupe.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Groupe\Modifier.resx">
+      <DependentUpon>Modifier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Niveau\Ajouter.resx">
       <DependentUpon>Ajouter.cs</DependentUpon>

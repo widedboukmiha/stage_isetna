@@ -1,6 +1,6 @@
 ﻿namespace stage_isetna.Views.Groupe
 {
-    partial class AjouterGroupe
+    partial class Ajouter
     {
         /// <summary>
         /// Required designer variable.

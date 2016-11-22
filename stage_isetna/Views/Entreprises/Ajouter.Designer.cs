@@ -1,6 +1,6 @@
 ﻿namespace stage_isetna.Views.Entreprises
 {
-    partial class Ajout
+    partial class Ajouter
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace stage_isetna.Views.Filiere
 {
-    partial class AjouterFiliere
+    partial class Ajouter
     {
         /// <summary>
         /// Required designer variable.

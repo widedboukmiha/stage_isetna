@@ -1,6 +1,6 @@
 ﻿namespace stage_isetna.Views.Entreprises
 {
-    partial class Modification
+    partial class Modifier
     {
         /// <summary>
         /// Required designer variable.

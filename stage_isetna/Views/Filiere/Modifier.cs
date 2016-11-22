@@ -8,22 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace stage_isetna.Views.Groupe
+namespace stage_isetna.Views.Filiere
 {
-    public partial class ModifierGroupe : Form
+    public partial class Modifier : Form
     {
-        public ModifierGroupe()
+        public Modifier()
         {
             InitializeComponent();
         }
 
-        private void btnModifier_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             //try
             //{
             //    int id = Int32.Parse(txtId.Text);
-            //    DataAccess.GroupeDA.Update(id, txtNom.Text);
-            //    MessageBox.Show("Modifier Groupe Avec Succées");
+            //    DataAccess.FiliereDA.Update(id, txtNom.Text);
+            //    MessageBox.Show("Modifier Filiere Avec Succées");
             //}
             //catch (Exception ex)
             //{

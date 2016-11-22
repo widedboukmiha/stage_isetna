@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace stage_isetna.Views.Filiere
+namespace stage_isetna.Views.Entreprises
 {
-    public partial class AfficherFiliere : Form
+    public partial class Supprimer : Form
     {
-        public AfficherFiliere()
+        public Supprimer()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

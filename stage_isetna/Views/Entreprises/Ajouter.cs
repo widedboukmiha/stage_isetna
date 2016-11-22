@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace stage_isetna.Views.Entreprises
 {
-    public partial class Ajout : Form
+    public partial class Ajouter : Form
     {
-        public Ajout()
+        public Ajouter()
         {
             InitializeComponent();
         }

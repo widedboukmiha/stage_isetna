@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace stage_isetna.Views.Entreprises
 {
-    public partial class Modification : Form
+    public partial class Modifier : Form
     {
-        public Modification()
+        public Modifier()
         {
             InitializeComponent();
         }

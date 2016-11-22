@@ -28,7 +28,7 @@ namespace stage_isetna
 
         private void button5_Click(object sender, EventArgs e)
         {
-            AjouterGroupe addgrp = new AjouterGroupe();
+            Views.Groupe.Ajouter addgrp = new Views.Groupe.Ajouter();
             addgrp.Show();
         }
 
@@ -41,19 +41,19 @@ namespace stage_isetna
         private void adfiliere_Click_1(object sender, EventArgs e)
         {
 
-            AjouterFiliere addfiliere = new AjouterFiliere();
+            Views.Filiere.Ajouter addfiliere = new Views.Filiere.Ajouter();
             addfiliere.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            new Ajouter().ShowDialog();
+            new Views.Niveau.Ajouter().ShowDialog();
             dataGridViewNiveau.DataSource = DataAccess.NiveauDA.Find(nomNiveauRecherche.Text);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            stage_isetna.Views.Entreprises.Ajout ajoutEntreprise = new stage_isetna.Views.Entreprises.Ajout();
+            stage_isetna.Views.Entreprises.Ajouter ajoutEntreprise = new stage_isetna.Views.Entreprises.Ajouter();
             ajoutEntreprise.Show();
         }
 
