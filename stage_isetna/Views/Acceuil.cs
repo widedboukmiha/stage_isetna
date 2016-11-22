@@ -197,6 +197,14 @@ namespace stage_isetna
         {
             new Views.Entreprises.Modifier(Convert.ToInt16(dataGridEntreprise.Rows[dataGridEntreprise.SelectedCells[0].RowIndex].Cells[0].Value)).ShowDialog();
             dataGridEntreprise.DataSource = new DataAccess.EntrepriseDA().Find(nomEntrepriseNom.Text);
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+
+        {
+            parametres parm = new parametres();
+            parm.Show(); 
         }
     }
 }

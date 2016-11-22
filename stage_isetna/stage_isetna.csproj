@@ -87,6 +87,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="parametres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametres.Designer.cs">
+      <DependentUpon>parametres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Authentification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     <Compile Include="Views\Utilisateurs\ModifierUtilisateurs.Designer.cs">
       <DependentUpon>ModifierUtilisateurs.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="parametres.resx">
+      <DependentUpon>parametres.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Entreprise\Supprimer.resx">
       <DependentUpon>Supprimer.cs</DependentUpon>
     </EmbeddedResource>
@@ -298,6 +307,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\Etudiants\ModifierEtudiant.resx">
       <DependentUpon>ModifierEtudiant.cs</DependentUpon>
@@ -361,6 +371,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\15207966_1698759530440381_395685206_n.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

@@ -30,27 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
-            this.button9 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblheure = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lbldate = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button14 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.addStudent = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
@@ -97,6 +89,7 @@
             this.dataGridViewNiveau = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEtudiant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEntreprise)).BeginInit();
@@ -133,19 +126,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveau)).BeginInit();
             this.SuspendLayout();
             // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Purple;
-            this.button9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(207, 482);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(288, 93);
-            this.button9.TabIndex = 11;
-            this.button9.Text = "imprimer PV\'s";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(545, 149);
@@ -168,20 +148,12 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Controls.Add(this.dateTimePicker1);
-            this.tabPage2.Controls.Add(this.button14);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.button13);
             this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Controls.Add(this.button12);
-            this.tabPage2.Controls.Add(this.button7);
-            this.tabPage2.Controls.Add(this.button11);
-            this.tabPage2.Controls.Add(this.addStudent);
-            this.tabPage2.Controls.Add(this.button10);
-            this.tabPage2.Controls.Add(this.button9);
             this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
@@ -190,15 +162,25 @@
             this.tabPage2.TabIndex = 7;
             this.tabPage2.Text = "Iset";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1170, 132);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 67);
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblheure);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lbldate);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(1043, 47);
+            this.groupBox1.Location = new System.Drawing.Point(970, 547);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(234, 53);
+            this.groupBox1.Size = new System.Drawing.Size(260, 51);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             // 
@@ -214,6 +196,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.DarkOrange;
             this.label4.Location = new System.Drawing.Point(126, 31);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 17);
@@ -232,31 +215,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.DarkOrange;
             this.label2.Location = new System.Drawing.Point(17, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Date :";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(1058, 16);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(221, 25);
-            this.dateTimePicker1.TabIndex = 22;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.Red;
-            this.button14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
-            this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.Location = new System.Drawing.Point(901, 276);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(294, 97);
-            this.button14.TabIndex = 21;
-            this.button14.Text = "Ajouter Entreprise";
-            this.button14.UseVisualStyleBackColor = false;
             // 
             // label14
             // 
@@ -290,26 +254,13 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Gestion des Stages";
             // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.Teal;
-            this.button13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(532, 482);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(311, 93);
-            this.button13.TabIndex = 15;
-            this.button13.Text = "Archiver les données";
-            this.button13.UseVisualStyleBackColor = false;
-            // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.DeepPink;
+            this.button4.BackColor = System.Drawing.Color.Orange;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(207, 276);
+            this.button4.Location = new System.Drawing.Point(161, 334);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(288, 97);
             this.button4.TabIndex = 8;
@@ -317,72 +268,6 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(532, 379);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(311, 97);
-            this.button12.TabIndex = 14;
-            this.button12.Text = "liste des entreprises";
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(901, 379);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(294, 97);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Vider la base";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(532, 276);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(311, 97);
-            this.button11.TabIndex = 13;
-            this.button11.Text = "Historique";
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // addStudent
-            // 
-            this.addStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.addStudent.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.addStudent.Image = ((System.Drawing.Image)(resources.GetObject("addStudent.Image")));
-            this.addStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addStudent.Location = new System.Drawing.Point(901, 482);
-            this.addStudent.Name = "addStudent";
-            this.addStudent.Size = new System.Drawing.Size(294, 93);
-            this.addStudent.TabIndex = 10;
-            this.addStudent.Text = "Utilisateur";
-            this.addStudent.UseVisualStyleBackColor = false;
-            this.addStudent.Click += new System.EventHandler(this.addStudent_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Gray;
-            this.button10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(207, 379);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(288, 97);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "Ajouter Stage";
-            this.button10.UseVisualStyleBackColor = false;
             // 
             // radioButton2
             // 
@@ -972,6 +857,7 @@
             this.Click += new System.EventHandler(this.button3_Click);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEtudiant)).EndInit();
@@ -1019,22 +905,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button addStudent;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton5;
@@ -1086,5 +962,6 @@
         private System.Windows.Forms.SplitContainer splitContainer5;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
