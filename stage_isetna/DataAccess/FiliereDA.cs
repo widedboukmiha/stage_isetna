@@ -10,12 +10,12 @@ namespace stage_isetna.DataAccess
 {
     class FiliereDA
     {
-        //private static string conString = Properties.Settings.Default.chaine;
-        //private static string conString = Properties.Settings.Default.chaineHabib;
-        //private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
-        private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+        //private string conString = Properties.Settings.Default.chaine;
+        //private string conString = Properties.Settings.Default.chaineHabib;
+        //private string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+        private string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
 
-        public static void Create(string Nom)
+        public void Create(string Nom)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
@@ -28,7 +28,7 @@ namespace stage_isetna.DataAccess
             }
         }
 
-        public static List<Business.Filiere> Get()
+        public List<Business.Filiere> Get()
         {
             DataSet ds = new DataSet();
             using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Filiere]", new SqlConnection(conString)))
@@ -73,7 +73,7 @@ namespace stage_isetna.DataAccess
             return list[0];
         }
 
-        public static void Update(int Id, string Nom)
+        public void Update(int Id, string Nom)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
@@ -86,7 +86,7 @@ namespace stage_isetna.DataAccess
             }
         }
 
-        public static void Delete(int Id)
+        public void Delete(int Id)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
@@ -99,7 +99,7 @@ namespace stage_isetna.DataAccess
             }
         }
 
-        public static List<Business.Filiere> Find(string Nom)
+        public List<Business.Filiere> Find(string Nom)
         {
             DataSet ds = new DataSet();
             using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Filiere] WHERE Nom LIKE '%" + Nom + "%'", new SqlConnection(conString)))
