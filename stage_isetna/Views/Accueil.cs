@@ -28,8 +28,8 @@ namespace stage_isetna
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Views.Groupe.Ajouter addgrp = new Views.Groupe.Ajouter();
-            addgrp.Show();
+            new Views.Groupe.Ajouter().ShowDialog();
+            dataGridViewGroupe.DataSource = new DataAccess.GroupeDA().Find(rechercheNomGroupe.Text);
         }
 
         private void btnAjoutStage_Click_1(object sender, EventArgs e)
@@ -40,9 +40,8 @@ namespace stage_isetna
 
         private void adfiliere_Click_1(object sender, EventArgs e)
         {
-
-            Views.Filiere.Ajouter addfiliere = new Views.Filiere.Ajouter();
-            addfiliere.Show();
+            new Views.Filiere.Ajouter().ShowDialog();
+            dataGridViewNiveau.DataSource = new DataAccess.FiliereDA().Find(nomNiveauRecherche.Text);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -68,79 +67,12 @@ namespace stage_isetna
         {
 
 
-            List<Filiere> listFiliere;
-            List<Group> listGroupe;
-            List<Niveau> listNiveau;
-            List<Business.Etudiant> listEtudiant;
-
-            listFiliere = new DataAccess.FiliereDA().Get();
-            listGroupe = new DataAccess.GroupeDA().Get();
-            listNiveau = new DataAccess.NiveauDA().Get();
-            //listEtudiant = new DataAccess.EtudiantDA().Get();
-
-            dataGridViewFiliere.DataSource = listFiliere;
-            dataGridViewGroupe.DataSource = listGroupe;
-            dataGridViewNiveau.DataSource = listNiveau;
-
-
-
             //dataGridViewEtudiant.DataSource = listEtudiant;
-            dataGridViewFiliere.DataSource = listFiliere;
-            dataGridViewGroupe.DataSource = listGroupe;
-            dataGridViewNiveau.DataSource = listNiveau;
-
-
-            DataGridViewButtonColumn detg = new DataGridViewButtonColumn();
-            dataGridViewGroupe.Columns.Add(detg);
-            detg.Text = "Detaille";
-            detg.Name = "button";
-            detg.UseColumnTextForButtonValue = true;
-
-            DataGridViewButtonColumn updg = new DataGridViewButtonColumn();
-            dataGridViewGroupe.Columns.Add(updg);
-            updg.Text = "modifier";
-            updg.Name = "button";
-            updg.UseColumnTextForButtonValue = true;
-
-            DataGridViewButtonColumn supg = new DataGridViewButtonColumn();
-            dataGridViewGroupe.Columns.Add(supg);
-            supg.Text = "Supprimer";
-            supg.Name = "button";
-            supg.UseColumnTextForButtonValue = true;
-
-
-            DataGridViewButtonColumn det = new DataGridViewButtonColumn();
-            dataGridViewFiliere.Columns.Add(det);
-            det.Text = "Detaille";
-            det.Name = "button";
-            det.UseColumnTextForButtonValue = true;
-
-            DataGridViewButtonColumn upd = new DataGridViewButtonColumn();
-            dataGridViewFiliere.Columns.Add(upd);
-            upd.Text = "modifier";
-            upd.Name = "button";
-
-            upd.UseColumnTextForButtonValue = true;
-
-            //DataGridViewButtonColumn sup = new DataGridViewButtonColumn();
-            //dataGridViewFiliere.Columns.Add(sup);
-            //sup.Text = "Supprimer";
-            //sup.Name = "button";
-            //sup.UseColumnTextForButtonValue = true;
-
-
-            DataGridViewImageColumn imgcell = new DataGridViewImageColumn();
-            imgcell.Image = Properties.Resources.img_detail;
-            dataGridViewFiliere.Columns.Add(imgcell);
-            //timer 
+            dataGridViewFiliere.DataSource = new DataAccess.FiliereDA().Get();
+            dataGridViewGroupe.DataSource = new DataAccess.GroupeDA().Get();
+            dataGridViewNiveau.DataSource = new DataAccess.NiveauDA().Get();
             lbldate.Text = DateTime.Now.ToShortDateString();
             timer1.Start();
-            //Affichage les entreprise dans un GridView
-            //stage_isetna.DataAccess.EntrepriseDA eDa = new stage_isetna.DataAccess.EntrepriseDA();
-            //eDa.afficheGrid(dataGridEntreprise);
-
-
-
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -161,8 +93,6 @@ namespace stage_isetna
                 //ModifierFiliere updfiliere = new ModifierFiliere();
                 //updfiliere.Show();
                 MessageBox.Show("Row " + (e.RowIndex + 1) + " Of " + (e.ColumnIndex + 1) + " th Column button clicked ");
-
-
             }
         }
 
@@ -213,8 +143,7 @@ namespace stage_isetna
 
         private void rechercheNomGroupe_TextChanged(object sender, EventArgs e)
         {
-            //stage_isetna.DataAccess.GroupeDA gDa = new stage_isetna.DataAccess.GroupeDA();
-            //gDa.searchGrid(dataGridViewGroupe, rechercheNomGroupe.Text.ToString());
+            dataGridViewGroupe.DataSource = new DataAccess.GroupeDA().Find(rechercheNomGroupe.Text);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -242,6 +171,23 @@ namespace stage_isetna
         {
             new Views.Niveau.Modifier(Convert.ToInt16(dataGridViewNiveau.Rows[dataGridViewNiveau.SelectedCells[0].RowIndex].Cells[0].Value)).ShowDialog();
             dataGridViewNiveau.DataSource = new DataAccess.NiveauDA().Find(nomNiveauRecherche.Text);
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            dataGridViewFiliere.DataSource = new DataAccess.FiliereDA().Find(textBox10.Text);
+        }
+
+        private void dataGridViewFiliere_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new Views.Filiere.Modifier(Convert.ToInt16(dataGridViewFiliere.Rows[dataGridViewFiliere.SelectedCells[0].RowIndex].Cells[0].Value)).ShowDialog();
+            dataGridViewFiliere.DataSource = new DataAccess.FiliereDA().Find(textBox10.Text);
+        }
+
+        private void dataGridViewGroupe_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new Views.Groupe.Modifier(Convert.ToInt16(dataGridViewGroupe.Rows[dataGridViewGroupe.SelectedCells[0].RowIndex].Cells[0].Value)).ShowDialog();
+            dataGridViewGroupe.DataSource = new DataAccess.GroupeDA().Find(rechercheNomGroupe.Text);
         }
     }
 }
