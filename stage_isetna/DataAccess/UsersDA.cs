@@ -11,15 +11,16 @@ namespace stage_isetna.DataAccess
     class UsersDA
     {
         //private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
-        private static string conString = Properties.Settings.Default.chaineHabib;
-        public static void Create(string Cin , string Nom , string Prenom , string Mail , string Login , string Password)
+        //private static string conString = Properties.Settings.Default.chaineHabib;
+        private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+        public static void Create(string Cin, string Nom, string Prenom, string Mail, string Login, string Password)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("INSERT INTO [Users] VALUES ((SELECT MAX(Id) + 1 FROM [Users]), '{0}' , '{1}' , '{2}' , '{3}', '{4}' , '{5}')", Cin ,Nom , Prenom , Mail ,Login , Password );
+                    cmd.CommandText = String.Format("INSERT INTO [Users] VALUES ((SELECT MAX(Id) + 1 FROM [Users]), '{0}' , '{1}' , '{2}' , '{3}', '{4}' , '{5}')", Cin, Nom, Prenom, Mail, Login, Password);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -40,12 +41,12 @@ namespace stage_isetna.DataAccess
             return list;
         }
 
-        public static bool VerifierCin(int id , string Cin )
+        public static bool VerifierCin(int id, string Cin)
         {
 
 
             DataSet ds = new DataSet();
-            using (SqlCommand cmd = new SqlCommand("SELECT Cin  FROM Users where Id = " + id , new SqlConnection(conString)))
+            using (SqlCommand cmd = new SqlCommand("SELECT Cin  FROM Users where Id = " + id, new SqlConnection(conString)))
             {
                 cmd.Connection.Open();
                 //DataTable table = new DataTable();
@@ -55,28 +56,28 @@ namespace stage_isetna.DataAccess
 
                 if (cmd.Parameters["@Id"].Value == id.ToString())
                 {
-                    return true; 
+                    return true;
 
                 }
 
                 else
                 {
-                    return false; 
+                    return false;
                 }
             }
-           
+
 
 
         }
 
-        public static void Update(  string Cin, string Nom, string Prenom, string Mail, string Login, string Password)
+        public static void Update(string Cin, string Nom, string Prenom, string Mail, string Login, string Password)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("UPDATE Users SET Cin = '{1}' , Nom ='{2}' , Prenom = '{3}', Mail = '{4}' , Login = '{5}' , Password = '{6}' WHERE Cin = {1}" ,  Cin , Nom , Prenom , Mail , Login , Password);
+                    cmd.CommandText = String.Format("UPDATE Users SET Cin = '{1}' , Nom ='{2}' , Prenom = '{3}', Mail = '{4}' , Login = '{5}' , Password = '{6}' WHERE Cin = {1}", Cin, Nom, Prenom, Mail, Login, Password);
                     cmd.ExecuteNonQuery();
                 }
             }

@@ -167,3 +167,8 @@ C:\Users\lenovo\Documents\Visual Studio 2008\stage_isetna\stage_isetna\obj\Debug
 C:\Users\lenovo\Documents\Visual Studio 2008\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.AjouterStage.resources
 C:\Users\lenovo\Documents\Visual Studio 2008\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.ModifierStage.resources
 C:\Users\lenovo\Documents\Visual Studio 2008\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csproj.GenerateResource.Cache
+D:\stage_isetna\stage_isetna\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\stage_isetna\stage_isetna\bin\Debug\Excel.4.5.pdb
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Utilisateurs.AfficherUtilisateur.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Utilisateurs.AjouterUtilisateur.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Utilisateurs.ModifierUtilisateurs.resources

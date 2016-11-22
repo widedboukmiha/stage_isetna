@@ -12,10 +12,9 @@ namespace stage_isetna.DataAccess
     class NiveauDA
     {
         //private static string conString = Properties.Settings.Default.chaine;
-       //private static string conString = Properties.Settings.Default.chaineHabib;
-
-       private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
-
+        //private static string conString = Properties.Settings.Default.chaineHabib;
+        //private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+        private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
         public static void Create(string Nom)
         {
             using (SqlConnection con = new SqlConnection(conString))
@@ -101,7 +100,7 @@ namespace stage_isetna.DataAccess
             }
         }
 
-        public void recherche(DataGridView v,string value)
+        public void recherche(DataGridView v, string value)
         {
             try
             {

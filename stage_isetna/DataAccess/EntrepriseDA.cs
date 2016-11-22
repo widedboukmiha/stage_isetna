@@ -10,38 +10,34 @@ namespace stage_isetna.DataAccess
 {
     class EntrepriseDA
     {
-        SqlConnection conString = new SqlConnection(Properties.Settings.Default.chaineHabib);
+        //SqlConnection conString = new SqlConnection(Properties.Settings.Default.chaineHabib);
+        private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
         public EntrepriseDA()
         {
 
         }
-        public List<stage_isetna.Business.Entreprise> Retrive()
+        public static List<Business.Entreprise> Get()
         {
-            List<stage_isetna.Business.Entreprise> listEntreprise = new List<stage_isetna.Business.Entreprise>();
-            try
+            DataSet ds = new DataSet();
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Entreprise]", new SqlConnection(conString)))
             {
-                string req = string.Format("SELECT * FROM Entreprise");
-                conString.Open();
-                SqlCommand cmd = new SqlCommand(req, conString);
-                SqlDataReader Reader = cmd.ExecuteReader();
-                while (Reader.Read())
-                {
-                    MessageBox.Show(Reader.GetInt32(0) + "");
-                    listEntreprise.Add(new stage_isetna.Business.Entreprise(Reader.GetInt32(0), Reader.GetString(1), Reader.GetString(2), Reader.GetString(3), Reader.GetString(4)));
-                }
-                Reader.Close();
-
-                conString.Close();
-            }
-            catch (Exception ex)
-            {
-
+                cmd.Connection.Open();
+                DataTable table = new DataTable();
+                table.Load(cmd.ExecuteReader());
+                ds.Tables.Add(table);
             }
 
-            return listEntreprise;
+            var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Entreprise {
+                Id = dataRow.Field<int>("Id"),
+                Nom = dataRow.Field<string>("Nom"),
+                Adresse = dataRow.Field<string>("Adresse"),
+                Ville = dataRow.Field<string>("Ville"),
+                NumTel = dataRow.Field<string>("NumTel")
+            }).ToList();
+            return list;
         }
 
-        private int afficheMax()
+        private static int afficheMax()
         {
             int r = 0;
             SqlConnection cn = new SqlConnection(Properties.Settings.Default.chaineHabib); // ya jmé3a lazim t7otou chaine de connexion imté3kom fi el blassa hadhi 
@@ -53,26 +49,24 @@ namespace stage_isetna.DataAccess
             return r;
         }
 
-        public Boolean Insert(stage_isetna.Business.Entreprise e)
+        public static bool Create(Business.Entreprise e)
         {
             try
             {
-                conString.Open();
-                string strQuery = "INSERT INTO Entreprise  VALUES (@id, @nomEntreprise,@adresse,@ville,@numTel)";
-                SqlCommand cmd = new SqlCommand(strQuery, conString);
-                cmd.Parameters.AddWithValue("@id", afficheMax()+1);
-                cmd.Parameters.AddWithValue("@nomEntreprise", e.Nom);
-                cmd.Parameters.AddWithValue("@adresse", e.Adresse);
-                cmd.Parameters.AddWithValue("@ville", e.Ville);
-                cmd.Parameters.AddWithValue("@numTel", e.NumTel);
-                cmd.Connection = conString;
-                cmd.ExecuteNonQuery();
-                conString.Close();
-                return true;
+                using (SqlConnection con = new SqlConnection(conString))
+                {
+                    con.Open();
+                    using (SqlCommand cmd = con.CreateCommand())
+                    {
+                        cmd.CommandText = String.Format("INSERT INTO [Entreprise] VALUES ((SELECT MAX(Id) + 1 FROM [Group]), '{0}', '{1}', '{2}', '{3}')", e.Nom, e.Adresse, e.Ville, e.NumTel);
+                        cmd.ExecuteNonQuery();
+
+                        return true;
+                    }
+                }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                String er = ex.Message;
                 return false;
             }
         }
@@ -82,6 +76,7 @@ namespace stage_isetna.DataAccess
 
             try
             {
+                SqlConnection conString = new SqlConnection(EntrepriseDA.conString);
                 conString.Open();
                 SqlCommand cmd = new SqlCommand("UPDATE Entreprise set nomEntreprise='" + en.Nom + "'," + "telephone='" + en.NumTel + "',adresse='" + en.Adresse + "' where id=" + id, conString);
                 SqlDataReader Reader = cmd.ExecuteReader();

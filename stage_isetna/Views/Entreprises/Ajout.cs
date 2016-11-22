@@ -44,7 +44,7 @@ namespace stage_isetna.Views.Entreprises
             string tel = telephone.Text.ToString();
             stage_isetna.Business.Entreprise en = new stage_isetna.Business.Entreprise(0, nom, ville, adresse, tel);
             stage_isetna.DataAccess.EntrepriseDA enDA = new stage_isetna.DataAccess.EntrepriseDA();
-            Boolean test = enDA.Insert(en);
+            Boolean test = DataAccess.EntrepriseDA.Create(en);
             if(test==true)
             {
                 MessageBox.Show("Insertion effectué avec succeés");
