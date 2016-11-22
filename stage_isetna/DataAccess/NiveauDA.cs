@@ -70,9 +70,8 @@ namespace stage_isetna.DataAccess
             }
 
 
-            var liste = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Niveau { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
-
-            return liste[0];
+            var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Niveau { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
+            return list[0];
         }
 
         public static void Update(int Id, string Nom)
@@ -82,7 +81,7 @@ namespace stage_isetna.DataAccess
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("UPDATE Niveau SET Nom = '{0}' WHERE Id = {1}", Nom, Id);
+                    cmd.CommandText = String.Format("UPDATE [Niveau] SET Nom = '{0}' WHERE Id = {1}", Nom, Id);
                     cmd.ExecuteNonQuery();
                 }
             }

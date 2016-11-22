@@ -75,9 +75,8 @@ namespace stage_isetna.DataAccess
             }
 
 
-            var liste = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Group { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
-
-            return liste[0];
+            var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Group { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
+            return list[0];
         }
 
 
