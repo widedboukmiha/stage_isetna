@@ -65,6 +65,7 @@
             this.btnAjout.TabIndex = 55;
             this.btnAjout.Text = "Ajouter";
             this.btnAjout.UseVisualStyleBackColor = true;
+            this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
             // 
             // txtNom
             // 

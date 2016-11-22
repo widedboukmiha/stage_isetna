@@ -44,6 +44,7 @@
             this.button2.TabIndex = 56;
             this.button2.Text = "Non";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAjout
             // 
@@ -55,6 +56,7 @@
             this.btnAjout.TabIndex = 55;
             this.btnAjout.Text = "Oui";
             this.btnAjout.UseVisualStyleBackColor = true;
+            this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
             // 
             // label7
             // 
@@ -63,7 +65,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(21, 24);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(230, 37);
+            this.label7.Size = new System.Drawing.Size(265, 37);
             this.label7.TabIndex = 52;
             this.label7.Text = "Supprimer Entreprise";
             // 

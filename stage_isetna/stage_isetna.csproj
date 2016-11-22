@@ -254,6 +254,9 @@
     <Compile Include="Views\Utilisateurs\ModifierUtilisateurs.Designer.cs">
       <DependentUpon>ModifierUtilisateurs.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Entreprise\Supprimer.resx">
+      <DependentUpon>Supprimer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Niveau\Modifier.resx">
       <DependentUpon>Modifier.cs</DependentUpon>
     </EmbeddedResource>

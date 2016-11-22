@@ -192,6 +192,12 @@ namespace stage_isetna
         {
 
         }
+
+        private void dataGridEntreprise_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new Views.Entreprises.Modifier(Convert.ToInt16(dataGridEntreprise.Rows[dataGridEntreprise.SelectedCells[0].RowIndex].Cells[0].Value)).ShowDialog();
+            dataGridEntreprise.DataSource = new DataAccess.EntrepriseDA().Find(nomEntrepriseNom.Text);
+        }
     }
 }
 

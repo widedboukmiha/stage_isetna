@@ -39,6 +39,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +53,7 @@
             this.button2.TabIndex = 56;
             this.button2.Text = "Annuler";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAjout
             // 
@@ -61,8 +63,9 @@
             this.btnAjout.Name = "btnAjout";
             this.btnAjout.Size = new System.Drawing.Size(119, 51);
             this.btnAjout.TabIndex = 55;
-            this.btnAjout.Text = "Ajouter";
+            this.btnAjout.Text = "Modifier";
             this.btnAjout.UseVisualStyleBackColor = true;
+            this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
             // 
             // txtNom
             // 
@@ -79,9 +82,9 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(21, 24);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(229, 37);
+            this.label7.Size = new System.Drawing.Size(243, 37);
             this.label7.TabIndex = 52;
-            this.label7.Text = "Ajouter Entreprise";
+            this.label7.Text = "Modifier Entreprise";
             // 
             // label2
             // 
@@ -187,12 +190,25 @@
             this.comboBox1.Size = new System.Drawing.Size(503, 21);
             this.comboBox1.TabIndex = 64;
             // 
-            // Ajouter
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(28, 412);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 51);
+            this.button1.TabIndex = 65;
+            this.button1.Text = "Supprimer";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Modifier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(557, 486);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label4);
@@ -207,10 +223,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Ajouter";
+            this.Name = "Modifier";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Ajouter Entreprise";
+            this.Text = "Modifier Entreprise";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -232,5 +248,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

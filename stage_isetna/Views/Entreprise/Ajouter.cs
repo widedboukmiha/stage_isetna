@@ -19,6 +19,23 @@ namespace stage_isetna.Views.Entreprises
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnAjout_Click(object sender, EventArgs e)
+        {
+            new DataAccess.EntrepriseDA().Create(
+                txtNom.Text,
+                textBox1.Text,
+                comboBox1.Text,
+                textBox3.Text
+            );
+
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }
