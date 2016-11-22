@@ -19,21 +19,12 @@ namespace stage_isetna.Views.Entreprises
 
         private void btAnnuler_Click(object sender, EventArgs e)
         {
-            idEntreprise.Clear();
-            nomEntreprise.Clear();
-            telephone.Clear();
+            
         }
 
         private void idEntreprise_TextChanged(object sender, EventArgs e)
         {
-            if((idEntreprise.Text!="")&&(nomEntreprise.Text!="")&&(telephone.Text!=""))
-            {
-                btModifier.Enabled = true;
-            }
-            else
-            {
-                btModifier.Enabled = false;
-            }
+            
         }
     }
 }

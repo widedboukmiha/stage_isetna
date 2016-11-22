@@ -107,6 +107,12 @@
     <Compile Include="Views\Entreprise\Supprimer.Designer.cs">
       <DependentUpon>Supprimer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Etudiants\Ajouter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Etudiants\Ajouter.Designer.cs">
+      <DependentUpon>Ajouter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Etudiants\AjouterEtudiant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,11 +133,23 @@
     <Compile Include="Views\Entreprise\Modifier.Designer.cs">
       <DependentUpon>Modifier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Etudiants\Modifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Etudiants\Modifier.Designer.cs">
+      <DependentUpon>Modifier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Etudiants\ModifierEtudiant.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Etudiants\ModifierEtudiant.Designer.cs">
       <DependentUpon>ModifierEtudiant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Etudiants\Supprimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Etudiants\Supprimer.Designer.cs">
+      <DependentUpon>Supprimer.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Filiere\Ajouter.cs">
       <SubType>Form</SubType>

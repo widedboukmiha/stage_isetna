@@ -52,8 +52,8 @@ namespace stage_isetna
 
         private void button3_Click(object sender, EventArgs e)
         {
-            stage_isetna.Views.Entreprises.Ajouter ajoutEntreprise = new stage_isetna.Views.Entreprises.Ajouter();
-            ajoutEntreprise.Show();
+            new Views.Entreprises.Ajouter().ShowDialog();
+            dataGridEntreprise.DataSource = new DataAccess.EntrepriseDA().Find(nomEntrepriseNom.Text);
         }
 
         private void addStudent_Click(object sender, EventArgs e)
@@ -65,12 +65,11 @@ namespace stage_isetna
 
         private void Accueil_Load(object sender, EventArgs e)
         {
-
-
             //dataGridViewEtudiant.DataSource = listEtudiant;
             dataGridViewFiliere.DataSource = new DataAccess.FiliereDA().Get();
             dataGridViewGroupe.DataSource = new DataAccess.GroupeDA().Get();
             dataGridViewNiveau.DataSource = new DataAccess.NiveauDA().Get();
+            dataGridEntreprise.DataSource = new DataAccess.EntrepriseDA().Get();
             lbldate.Text = DateTime.Now.ToShortDateString();
             timer1.Start();
         }
@@ -158,8 +157,7 @@ namespace stage_isetna
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            //stage_isetna.DataAccess.EntrepriseDA enDa = new stage_isetna.DataAccess.EntrepriseDA();
-            //enDa.searchGrid(dataGridEntreprise, nomEntrepriseNom.Text.ToString());
+            dataGridEntreprise.DataSource = new DataAccess.EntrepriseDA().Find(nomEntrepriseNom.Text);
         }
 
         private void textBox11_TextChanged(object sender, EventArgs e)

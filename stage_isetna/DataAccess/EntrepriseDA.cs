@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -122,10 +122,10 @@ namespace stage_isetna.DataAccess
             }
         }
 
-        public List<Business.Entreprise> Find(string Nom, string Adresse, string Ville, string NumTel)
+        public List<Business.Entreprise> Find(string query)
         {
             DataSet ds = new DataSet();
-            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Entreprise] WHERE Nom LIKE '%" + Nom + "%' OR Adresse LIKE '%" + Adresse + "%' OR Ville LIKE '%" + Ville + "%' OR NumTel LIKE '%" + NumTel + "%'", new SqlConnection(conString)))
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Entreprise] WHERE Nom LIKE '%" + query + "%' OR Adresse LIKE '%" + query + "%' OR Ville LIKE '%" + query + "%' OR NumTel LIKE '%" + query + "%'", new SqlConnection(conString)))
             {
                 cmd.Connection.Open();
                 DataTable table = new DataTable();
