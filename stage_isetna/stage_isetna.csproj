@@ -100,10 +100,10 @@
     </Compile>
     <Compile Include="DataAccess\EntrepriseDA.cs" />
     <Compile Include="DataAccess\EtudiantDA.cs" />
-    <Compile Include="Views\Entreprises\Supprimer.cs">
+    <Compile Include="Views\Entreprise\Supprimer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Entreprises\Supprimer.Designer.cs">
+    <Compile Include="Views\Entreprise\Supprimer.Designer.cs">
       <DependentUpon>Supprimer.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Etudiants\AjouterEtudiant.cs">
@@ -114,16 +114,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Entreprises\Ajouter.cs">
+    <Compile Include="Views\Entreprise\Ajouter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Entreprises\Ajouter.Designer.cs">
+    <Compile Include="Views\Entreprise\Ajouter.Designer.cs">
       <DependentUpon>Ajouter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Entreprises\Modifier.cs">
+    <Compile Include="Views\Entreprise\Modifier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Entreprises\Modifier.Designer.cs">
+    <Compile Include="Views\Entreprise\Modifier.Designer.cs">
       <DependentUpon>Modifier.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Etudiants\ModifierEtudiant.cs">
@@ -241,10 +241,10 @@
     <EmbeddedResource Include="Views\Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Entreprises\Ajouter.resx">
+    <EmbeddedResource Include="Views\Entreprise\Ajouter.resx">
       <DependentUpon>Ajouter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Entreprises\Modifier.resx">
+    <EmbeddedResource Include="Views\Entreprise\Modifier.resx">
       <DependentUpon>Modifier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Etudiants\AjouterEtudiant.resx">
