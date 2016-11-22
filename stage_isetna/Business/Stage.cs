@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,5 +20,16 @@ namespace stage_isetna.Business
         public virtual Type Type { get; set;}
         public virtual Etudiant Etudiant { get; set; }
         public virtual Entreprise Entreprise { get; set; }
+
+        public Stage(int type, int etudiant, int entreprise)
+        {
+            TypeId = type;
+            EtudiantId = etudiant;
+            EntrepriseId = entreprise;
+
+            Type = new DataAccess.TypeDA().Get(TypeId);
+            Etudiant = new DataAccess.EtudiantDA().Get(EtudiantId);
+            Entreprise = new DataAccess.EntrepriseDA().Get(EntrepriseId);
+        }
     }
 }
