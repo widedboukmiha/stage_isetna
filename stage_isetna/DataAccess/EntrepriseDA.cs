@@ -10,12 +10,12 @@ namespace stage_isetna.DataAccess
 {
     class EntrepriseDA
     {
-        //private static string conString = Properties.Settings.Default.chaine;
-        //private static string conString = Properties.Settings.Default.chaineHabib;
-        //private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
-        private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+        //private string conString = Properties.Settings.Default.chaine;
+        //private string conString = Properties.Settings.Default.chaineHabib;
+        //private string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+        private string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
 
-        public static void Create(string Nom, string Adresse, string Ville, string NumTel)
+        public void Create(string Nom, string Adresse, string Ville, string NumTel)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
@@ -28,7 +28,7 @@ namespace stage_isetna.DataAccess
             }
         }
 
-        public static List<Business.Entreprise> Get()
+        public List<Business.Entreprise> Get()
         {
             DataSet ds = new DataSet();
             using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Entreprise]", new SqlConnection(conString)))
@@ -96,7 +96,7 @@ namespace stage_isetna.DataAccess
             return list[0];
         }
 
-        public static void Update(int Id, string Nom, string Adresse, string Ville, string NumTel)
+        public void Update(int Id, string Nom, string Adresse, string Ville, string NumTel)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
@@ -109,7 +109,7 @@ namespace stage_isetna.DataAccess
             }
         }
 
-        public static void Delete(int Id)
+        public void Delete(int Id)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
@@ -122,7 +122,7 @@ namespace stage_isetna.DataAccess
             }
         }
 
-        public static List<Business.Entreprise> Find(string Nom, string Adresse, string Ville, string NumTel)
+        public List<Business.Entreprise> Find(string Nom, string Adresse, string Ville, string NumTel)
         {
             DataSet ds = new DataSet();
             using (SqlCommand cmd = new SqlCommand("SELECT * FROM [Entreprise] WHERE Nom LIKE '%" + Nom + "%' OR Adresse LIKE '%" + Adresse + "%' OR Ville LIKE '%" + Ville + "%' OR NumTel LIKE '%" + NumTel + "%'", new SqlConnection(conString)))
