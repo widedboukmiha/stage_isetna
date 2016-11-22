@@ -200,6 +200,24 @@
       <DependentUpon>ModifierStage.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\TestUnitaire.cs" />
+    <Compile Include="Views\Type\Ajouter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Type\Ajouter.Designer.cs">
+      <DependentUpon>Ajouter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Type\Modifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Type\Modifier.Designer.cs">
+      <DependentUpon>Modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Type\Supprimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Type\Supprimer.Designer.cs">
+      <DependentUpon>Supprimer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Utilisateurs\AfficherUtilisateur.cs">
       <SubType>Form</SubType>
     </Compile>
