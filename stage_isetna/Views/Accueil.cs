@@ -48,7 +48,7 @@ namespace stage_isetna
         private void button6_Click(object sender, EventArgs e)
         {
             new Views.Niveau.Ajouter().ShowDialog();
-            dataGridViewNiveau.DataSource = DataAccess.NiveauDA.Find(nomNiveauRecherche.Text);
+            dataGridViewNiveau.DataSource = new DataAccess.NiveauDA().Find(nomNiveauRecherche.Text);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -66,25 +66,25 @@ namespace stage_isetna
 
         private void Accueil_Load(object sender, EventArgs e)
         {
+
+
             List<Filiere> listFiliere;
             List<Group> listGroupe;
             List<Niveau> listNiveau;
-            List<Business.Etudiant> listEtudiant; 
+            List<Business.Etudiant> listEtudiant;
 
-            listFiliere = DataAccess.FiliereDA.Get();
-            listGroupe = DataAccess.GroupeDA.Get();
-            listNiveau = DataAccess.NiveauDA.Get();
-            listEtudiant = DataAccess.EtudiantDA.Get();
+            listFiliere = new DataAccess.FiliereDA().Get();
+            listGroupe = new DataAccess.GroupeDA().Get();
+            listNiveau = new DataAccess.NiveauDA().Get();
+            //listEtudiant = new DataAccess.EtudiantDA().Get();
 
             dataGridViewFiliere.DataSource = listFiliere;
             dataGridViewGroupe.DataSource = listGroupe;
-            listFiliere = DataAccess.FiliereDA.Get();
-            listGroupe = DataAccess.GroupeDA.Get();
-            listNiveau = DataAccess.NiveauDA.Get();
+            dataGridViewNiveau.DataSource = listNiveau;
 
 
 
-            dataGridViewEtudiant.DataSource = listEtudiant; 
+            //dataGridViewEtudiant.DataSource = listEtudiant;
             dataGridViewFiliere.DataSource = listFiliere;
             dataGridViewGroupe.DataSource = listGroupe;
             dataGridViewNiveau.DataSource = listNiveau;
@@ -136,8 +136,8 @@ namespace stage_isetna
             lbldate.Text = DateTime.Now.ToShortDateString();
             timer1.Start();
             //Affichage les entreprise dans un GridView
-            stage_isetna.DataAccess.EntrepriseDA eDa = new stage_isetna.DataAccess.EntrepriseDA();
-            eDa.afficheGrid(dataGridEntreprise);
+            //stage_isetna.DataAccess.EntrepriseDA eDa = new stage_isetna.DataAccess.EntrepriseDA();
+            //eDa.afficheGrid(dataGridEntreprise);
 
 
 
@@ -213,8 +213,8 @@ namespace stage_isetna
 
         private void rechercheNomGroupe_TextChanged(object sender, EventArgs e)
         {
-            stage_isetna.DataAccess.GroupeDA gDa = new stage_isetna.DataAccess.GroupeDA();
-            gDa.searchGrid(dataGridViewGroupe, rechercheNomGroupe.Text.ToString());
+            //stage_isetna.DataAccess.GroupeDA gDa = new stage_isetna.DataAccess.GroupeDA();
+            //gDa.searchGrid(dataGridViewGroupe, rechercheNomGroupe.Text.ToString());
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -229,20 +229,19 @@ namespace stage_isetna
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            stage_isetna.DataAccess.EntrepriseDA enDa = new stage_isetna.DataAccess.EntrepriseDA();
-            enDa.searchGrid(dataGridEntreprise, nomEntrepriseNom.Text.ToString());
+            //stage_isetna.DataAccess.EntrepriseDA enDa = new stage_isetna.DataAccess.EntrepriseDA();
+            //enDa.searchGrid(dataGridEntreprise, nomEntrepriseNom.Text.ToString());
         }
 
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
-            dataGridViewNiveau.DataSource = DataAccess.NiveauDA.Find(nomNiveauRecherche.Text);
+            dataGridViewNiveau.DataSource = new DataAccess.NiveauDA().Find(nomNiveauRecherche.Text);
         }
 
         private void dataGridViewNiveau_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             new Views.Niveau.Modifier(Convert.ToInt16(dataGridViewNiveau.Rows[dataGridViewNiveau.SelectedCells[0].RowIndex].Cells[0].Value)).ShowDialog();
-            dataGridViewNiveau.DataSource = DataAccess.NiveauDA.Find(nomNiveauRecherche.Text);
-            dataGridViewNiveau.Rows[dataGridViewNiveau.SelectedCells[0].RowIndex].Cells[0].Selected = true;
+            dataGridViewNiveau.DataSource = new DataAccess.NiveauDA().Find(nomNiveauRecherche.Text);
         }
     }
 }

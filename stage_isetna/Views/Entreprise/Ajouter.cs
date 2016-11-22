@@ -38,22 +38,22 @@ namespace stage_isetna.Views.Entreprises
         private void btAjouter_Click(object sender, EventArgs e)
         {
             //int id = int.Parse(idEntreprise.Text.ToString());
-            string nom = nomEntreprise.Text.ToString();
-            string ville = comboVille.SelectedItem.ToString();
-            string adresse = adresseEntreprise.Text.ToString();
-            string tel = telephone.Text.ToString();
-            stage_isetna.Business.Entreprise en = new stage_isetna.Business.Entreprise(0, nom, ville, adresse, tel);
-            stage_isetna.DataAccess.EntrepriseDA enDA = new stage_isetna.DataAccess.EntrepriseDA();
-            Boolean test = DataAccess.EntrepriseDA.Create(en);
-            if(test==true)
-            {
-                MessageBox.Show("Insertion effectué avec succeés");
-            }
-            else
-            {
-                MessageBox.Show("Insertion echoué");
-            }
-            Application.Restart();
+            //string nom = nomEntreprise.Text.ToString();
+            //string ville = comboVille.SelectedItem.ToString();
+            //string adresse = adresseEntreprise.Text.ToString();
+            //string tel = telephone.Text.ToString();
+            //stage_isetna.Business.Entreprise en = new stage_isetna.Business.Entreprise(0, nom, ville, adresse, tel);
+            //stage_isetna.DataAccess.EntrepriseDA enDA = new stage_isetna.DataAccess.EntrepriseDA();
+            //Boolean test = new DataAccess.EntrepriseDA.Create(en);
+            //if (test==true)
+            //{
+            //    MessageBox.Show("Insertion effectué avec succeés");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Insertion echoué");
+            //}
+            //Application.Restart();
         }
 
        

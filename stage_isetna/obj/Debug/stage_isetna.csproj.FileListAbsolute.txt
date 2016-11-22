@@ -58,14 +58,8 @@ C:\Users\lenovo\Desktop\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.G
 C:\Users\lenovo\Desktop\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.ModifierGroupe.resources
 C:\Users\lenovo\Desktop\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Niveau.AjouterNiveau.resources
 C:\Users\lenovo\Desktop\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csproj.GenerateResource.Cache
-D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Entreprises.Ajout.resources
-D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Entreprises.Modification.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.AjouterEtudiant.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Etudiants.ModifierEtudiant.resources
-D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AjouterFiliere.resources
-D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.ModifierFiliere.resources
-D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.AjouterGroupe.resources
-D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.ModifierGroupe.resources
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csprojResolveAssemblyReference.cache
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Authentification.resources
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Accueil.resources
@@ -90,7 +84,6 @@ D:\stage_isetna\stage_isetna\bin\Debug\Database\Database.mdf
 D:\stage_isetna\stage_isetna\bin\Debug\Database\Database_log.ldf
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.AjouterStage.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.ModifierStage.resources
-D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AfficherFiliere.resources
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AfficherFiliere.resources
 C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe.config
 C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.exe
