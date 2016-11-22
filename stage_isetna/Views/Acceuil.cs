@@ -189,6 +189,11 @@ namespace stage_isetna
             new Views.Groupe.Modifier(Convert.ToInt16(dataGridViewGroupe.Rows[dataGridViewGroupe.SelectedCells[0].RowIndex].Cells[0].Value)).ShowDialog();
             dataGridViewGroupe.DataSource = new DataAccess.GroupeDA().Find(rechercheNomGroupe.Text);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

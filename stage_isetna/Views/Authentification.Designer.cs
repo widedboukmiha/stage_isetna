@@ -28,100 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnConnecter = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.txtCin = new System.Windows.Forms.TextBox();
+            this.btnAjout = new System.Windows.Forms.Button();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnConnecter
-            // 
-            this.btnConnecter.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnConnecter.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnecter.Location = new System.Drawing.Point(233, 292);
-            this.btnConnecter.Name = "btnConnecter";
-            this.btnConnecter.Size = new System.Drawing.Size(122, 31);
-            this.btnConnecter.TabIndex = 44;
-            this.btnConnecter.Text = "Connecter";
-            this.btnConnecter.UseVisualStyleBackColor = false;
-            this.btnConnecter.Click += new System.EventHandler(this.btnConnecter_Click);
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(410, 292);
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(278, 312);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 31);
-            this.button2.TabIndex = 43;
+            this.button2.Size = new System.Drawing.Size(119, 51);
+            this.button2.TabIndex = 4;
             this.button2.Text = "Annuler";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label3
+            // btnAjout
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(267, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(190, 30);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "Gestion Des Stages";
+            this.btnAjout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAjout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjout.Location = new System.Drawing.Point(412, 312);
+            this.btnAjout.Name = "btnAjout";
+            this.btnAjout.Size = new System.Drawing.Size(119, 51);
+            this.btnAjout.TabIndex = 3;
+            this.btnAjout.Text = "Connecter";
+            this.btnAjout.UseVisualStyleBackColor = true;
+            this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
             // 
-            // txtPass
+            // txtNom
             // 
-            this.txtPass.Location = new System.Drawing.Point(306, 235);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(291, 20);
-            this.txtPass.TabIndex = 41;
+            this.txtNom.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNom.Location = new System.Drawing.Point(28, 154);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(503, 25);
+            this.txtNom.TabIndex = 1;
             // 
-            // txtCin
+            // label7
             // 
-            this.txtCin.Location = new System.Drawing.Point(306, 171);
-            this.txtCin.Name = "txtCin";
-            this.txtCin.Size = new System.Drawing.Size(291, 20);
-            this.txtCin.TabIndex = 40;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(21, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(206, 37);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "Authentification";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(162, 225);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label2.Location = new System.Drawing.Point(24, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 30);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Mot de passe";
+            this.label2.Size = new System.Drawing.Size(53, 21);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Login";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(557, 91);
+            this.panel1.TabIndex = 57;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(181, 161);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label1.Location = new System.Drawing.Point(24, 204);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 30);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Login";
+            this.label1.Size = new System.Drawing.Size(110, 21);
+            this.label1.TabIndex = 58;
+            this.label1.Text = "Mot de passe";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(28, 244);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(503, 25);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.UseSystemPasswordChar = true;
             // 
             // Authentification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(759, 388);
-            this.Controls.Add(this.btnConnecter);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.txtCin);
-            this.Controls.Add(this.label2);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(557, 386);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnAjout);
+            this.Controls.Add(this.txtNom);
+            this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Authentification";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Authentification";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,13 +153,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnConnecter;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.TextBox txtCin;
+        private System.Windows.Forms.Button btnAjout;
+        private System.Windows.Forms.TextBox txtNom;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

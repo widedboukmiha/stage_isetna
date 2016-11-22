@@ -65,12 +65,18 @@
             this.g = new System.Windows.Forms.Label();
             this.Entreprise = new System.Windows.Forms.TabPage();
             this.Stage = new System.Windows.Forms.TabPage();
-            this.btnAjoutStage = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
+            this.btnAjoutStage = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Groupe = new System.Windows.Forms.TabPage();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Etudiant = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
@@ -88,12 +94,6 @@
             this.nomNiveauRecherche = new System.Windows.Forms.TextBox();
             this.dataGridViewNiveau = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEtudiant)).BeginInit();
@@ -101,8 +101,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroupe)).BeginInit();
             this.Entreprise.SuspendLayout();
             this.Stage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.Groupe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Etudiant.SuspendLayout();
             this.Filiére.SuspendLayout();
@@ -117,14 +125,6 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveau)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
-            this.splitContainer4.Panel1.SuspendLayout();
-            this.splitContainer4.Panel2.SuspendLayout();
-            this.splitContainer4.SuspendLayout();
             this.SuspendLayout();
             // 
             // button9
@@ -177,10 +177,10 @@
             this.tabPage2.Controls.Add(this.button10);
             this.tabPage2.Controls.Add(this.button9);
             this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1285, 670);
+            this.tabPage2.Size = new System.Drawing.Size(1285, 663);
             this.tabPage2.TabIndex = 7;
             this.tabPage2.Text = "Iset";
             // 
@@ -490,7 +490,7 @@
             this.dataGridViewGroupe.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewGroupe.Name = "dataGridViewGroupe";
             this.dataGridViewGroupe.ReadOnly = true;
-            this.dataGridViewGroupe.Size = new System.Drawing.Size(1279, 569);
+            this.dataGridViewGroupe.Size = new System.Drawing.Size(1279, 563);
             this.dataGridViewGroupe.TabIndex = 4;
             this.dataGridViewGroupe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewGroupe_CellDoubleClick);
             // 
@@ -514,10 +514,10 @@
             this.Entreprise.Controls.Add(this.label10);
             this.Entreprise.Controls.Add(this.g);
             this.Entreprise.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Entreprise.Location = new System.Drawing.Point(4, 22);
+            this.Entreprise.Location = new System.Drawing.Point(4, 29);
             this.Entreprise.Name = "Entreprise";
             this.Entreprise.Padding = new System.Windows.Forms.Padding(3);
-            this.Entreprise.Size = new System.Drawing.Size(1285, 670);
+            this.Entreprise.Size = new System.Drawing.Size(1285, 663);
             this.Entreprise.TabIndex = 2;
             this.Entreprise.Text = "Entreprise";
             // 
@@ -526,12 +526,54 @@
             this.Stage.BackColor = System.Drawing.Color.Lavender;
             this.Stage.Controls.Add(this.splitContainer3);
             this.Stage.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Stage.Location = new System.Drawing.Point(4, 22);
+            this.Stage.Location = new System.Drawing.Point(4, 29);
             this.Stage.Name = "Stage";
             this.Stage.Padding = new System.Windows.Forms.Padding(3);
-            this.Stage.Size = new System.Drawing.Size(1285, 670);
+            this.Stage.Size = new System.Drawing.Size(1285, 663);
             this.Stage.TabIndex = 4;
             this.Stage.Text = "Stage";
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.BackColor = System.Drawing.Color.Transparent;
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.BackColor = System.Drawing.Color.Gold;
+            this.splitContainer3.Panel1.Controls.Add(this.label6);
+            this.splitContainer3.Panel1.Controls.Add(this.textBox9);
+            this.splitContainer3.Panel1.Controls.Add(this.btnAjoutStage);
+            this.splitContainer3.Panel1.Controls.Add(this.label7);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.dataGridView3);
+            this.splitContainer3.Size = new System.Drawing.Size(1279, 657);
+            this.splitContainer3.SplitterDistance = 91;
+            this.splitContainer3.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(20, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(240, 37);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Stages effectuees";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(967, 47);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(297, 29);
+            this.textBox9.TabIndex = 2;
             // 
             // btnAjoutStage
             // 
@@ -544,6 +586,17 @@
             this.btnAjoutStage.UseVisualStyleBackColor = true;
             this.btnAjoutStage.Click += new System.EventHandler(this.btnAjoutStage_Click_1);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Gray;
+            this.label7.Location = new System.Drawing.Point(963, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 21);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Recherche";
+            // 
             // dataGridView3
             // 
             this.dataGridView3.AllowUserToAddRows = false;
@@ -553,15 +606,8 @@
             this.dataGridView3.Location = new System.Drawing.Point(0, 0);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.Size = new System.Drawing.Size(1279, 568);
+            this.dataGridView3.Size = new System.Drawing.Size(1279, 562);
             this.dataGridView3.TabIndex = 3;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(967, 47);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(297, 29);
-            this.textBox9.TabIndex = 2;
             // 
             // button6
             // 
@@ -591,23 +637,70 @@
             this.Groupe.BackColor = System.Drawing.Color.Lavender;
             this.Groupe.Controls.Add(this.splitContainer4);
             this.Groupe.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Groupe.Location = new System.Drawing.Point(4, 22);
+            this.Groupe.Location = new System.Drawing.Point(4, 29);
             this.Groupe.Name = "Groupe";
             this.Groupe.Padding = new System.Windows.Forms.Padding(3);
-            this.Groupe.Size = new System.Drawing.Size(1285, 670);
+            this.Groupe.Size = new System.Drawing.Size(1285, 663);
             this.Groupe.TabIndex = 3;
             this.Groupe.Text = "Groupe";
+            // 
+            // splitContainer4
+            // 
+            this.splitContainer4.BackColor = System.Drawing.Color.Transparent;
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer4.Name = "splitContainer4";
+            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.BackColor = System.Drawing.Color.Gold;
+            this.splitContainer4.Panel1.Controls.Add(this.label8);
+            this.splitContainer4.Panel1.Controls.Add(this.rechercheNomGroupe);
+            this.splitContainer4.Panel1.Controls.Add(this.button5);
+            this.splitContainer4.Panel1.Controls.Add(this.label12);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.Controls.Add(this.dataGridViewGroupe);
+            this.splitContainer4.Size = new System.Drawing.Size(1279, 657);
+            this.splitContainer4.SplitterDistance = 90;
+            this.splitContainer4.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(18, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(112, 37);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Groupe";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.Gray;
+            this.label12.Location = new System.Drawing.Point(992, 22);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(89, 21);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Recherche";
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.Stage);
             this.tabControl1.Controls.Add(this.Etudiant);
             this.tabControl1.Controls.Add(this.Entreprise);
             this.tabControl1.Controls.Add(this.Groupe);
-            this.tabControl1.Controls.Add(this.Stage);
             this.tabControl1.Controls.Add(this.Filiére);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.ItemSize = new System.Drawing.Size(200, 25);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -626,10 +719,10 @@
             this.Etudiant.Controls.Add(this.radioButton2);
             this.Etudiant.Controls.Add(this.radioButton5);
             this.Etudiant.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Etudiant.Location = new System.Drawing.Point(4, 22);
+            this.Etudiant.Location = new System.Drawing.Point(4, 29);
             this.Etudiant.Name = "Etudiant";
             this.Etudiant.Padding = new System.Windows.Forms.Padding(3);
-            this.Etudiant.Size = new System.Drawing.Size(1285, 670);
+            this.Etudiant.Size = new System.Drawing.Size(1285, 663);
             this.Etudiant.TabIndex = 1;
             this.Etudiant.Text = "Etudiant";
             // 
@@ -642,16 +735,17 @@
             this.button1.TabIndex = 47;
             this.button1.Text = "Ajouter Etudiant";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Filiére
             // 
             this.Filiére.BackColor = System.Drawing.Color.White;
             this.Filiére.Controls.Add(this.splitContainer2);
             this.Filiére.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Filiére.Location = new System.Drawing.Point(4, 22);
+            this.Filiére.Location = new System.Drawing.Point(4, 29);
             this.Filiére.Name = "Filiére";
             this.Filiére.Padding = new System.Windows.Forms.Padding(3);
-            this.Filiére.Size = new System.Drawing.Size(1285, 670);
+            this.Filiére.Size = new System.Drawing.Size(1285, 663);
             this.Filiére.TabIndex = 5;
             this.Filiére.Text = "Filiére";
             // 
@@ -674,8 +768,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dataGridViewFiliere);
-            this.splitContainer2.Size = new System.Drawing.Size(1279, 664);
-            this.splitContainer2.SplitterDistance = 92;
+            this.splitContainer2.Size = new System.Drawing.Size(1279, 657);
+            this.splitContainer2.SplitterDistance = 91;
             this.splitContainer2.TabIndex = 11;
             // 
             // label3
@@ -729,7 +823,7 @@
             this.dataGridViewFiliere.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewFiliere.Name = "dataGridViewFiliere";
             this.dataGridViewFiliere.ReadOnly = true;
-            this.dataGridViewFiliere.Size = new System.Drawing.Size(1279, 568);
+            this.dataGridViewFiliere.Size = new System.Drawing.Size(1279, 562);
             this.dataGridViewFiliere.TabIndex = 9;
             this.dataGridViewFiliere.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFiliere_CellDoubleClick);
             // 
@@ -738,10 +832,10 @@
             this.tabPage1.BackColor = System.Drawing.Color.White;
             this.tabPage1.Controls.Add(this.splitContainer1);
             this.tabPage1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1285, 670);
+            this.tabPage1.Size = new System.Drawing.Size(1285, 663);
             this.tabPage1.TabIndex = 6;
             this.tabPage1.Text = "Niveau";
             // 
@@ -764,8 +858,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridViewNiveau);
-            this.splitContainer1.Size = new System.Drawing.Size(1279, 664);
-            this.splitContainer1.SplitterDistance = 92;
+            this.splitContainer1.Size = new System.Drawing.Size(1279, 657);
+            this.splitContainer1.SplitterDistance = 91;
             this.splitContainer1.TabIndex = 10;
             // 
             // label16
@@ -810,105 +904,13 @@
             this.dataGridViewNiveau.MultiSelect = false;
             this.dataGridViewNiveau.Name = "dataGridViewNiveau";
             this.dataGridViewNiveau.ReadOnly = true;
-            this.dataGridViewNiveau.Size = new System.Drawing.Size(1279, 568);
+            this.dataGridViewNiveau.Size = new System.Drawing.Size(1279, 562);
             this.dataGridViewNiveau.TabIndex = 5;
             this.dataGridViewNiveau.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNiveau_CellDoubleClick);
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // splitContainer3
-            // 
-            this.splitContainer3.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer3.Name = "splitContainer3";
-            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.BackColor = System.Drawing.Color.Gold;
-            this.splitContainer3.Panel1.Controls.Add(this.label6);
-            this.splitContainer3.Panel1.Controls.Add(this.textBox9);
-            this.splitContainer3.Panel1.Controls.Add(this.btnAjoutStage);
-            this.splitContainer3.Panel1.Controls.Add(this.label7);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.dataGridView3);
-            this.splitContainer3.Size = new System.Drawing.Size(1279, 664);
-            this.splitContainer3.SplitterDistance = 92;
-            this.splitContainer3.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(20, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(240, 37);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Stages effectuees";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(963, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 21);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Recherche";
-            // 
-            // splitContainer4
-            // 
-            this.splitContainer4.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer4.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer4.Name = "splitContainer4";
-            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer4.Panel1
-            // 
-            this.splitContainer4.Panel1.BackColor = System.Drawing.Color.Gold;
-            this.splitContainer4.Panel1.Controls.Add(this.label8);
-            this.splitContainer4.Panel1.Controls.Add(this.rechercheNomGroupe);
-            this.splitContainer4.Panel1.Controls.Add(this.button5);
-            this.splitContainer4.Panel1.Controls.Add(this.label12);
-            // 
-            // splitContainer4.Panel2
-            // 
-            this.splitContainer4.Panel2.Controls.Add(this.dataGridViewGroupe);
-            this.splitContainer4.Size = new System.Drawing.Size(1279, 664);
-            this.splitContainer4.SplitterDistance = 91;
-            this.splitContainer4.TabIndex = 11;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(992, 22);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(89, 21);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Recherche";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(18, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 37);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Groupe";
             // 
             // Accueil
             // 
@@ -934,8 +936,18 @@
             this.Entreprise.ResumeLayout(false);
             this.Entreprise.PerformLayout();
             this.Stage.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel1.PerformLayout();
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.Groupe.ResumeLayout(false);
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel1.PerformLayout();
+            this.splitContainer4.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.Etudiant.ResumeLayout(false);
             this.Etudiant.PerformLayout();
@@ -953,16 +965,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveau)).EndInit();
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel1.PerformLayout();
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
-            this.splitContainer4.Panel1.ResumeLayout(false);
-            this.splitContainer4.Panel1.PerformLayout();
-            this.splitContainer4.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
-            this.splitContainer4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
