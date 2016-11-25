@@ -1,6 +1,6 @@
 ﻿namespace stage_isetna
 {
-    partial class Accueil
+    partial class Acceuil
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Acceuil));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -371,7 +371,6 @@
             // 
             this.dataGridViewGroupe.AllowUserToAddRows = false;
             this.dataGridViewGroupe.AllowUserToDeleteRows = false;
-            this.dataGridViewGroupe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGroupe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewGroupe.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewGroupe.Name = "dataGridViewGroupe";

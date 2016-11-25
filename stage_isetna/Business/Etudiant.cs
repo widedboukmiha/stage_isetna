@@ -17,22 +17,13 @@ namespace stage_isetna.Business
         public string CodePostal { get; set; }
         public string Tel { get; set; }
         public string Email { get; set; }
-        public int NiveauId { get; set; }
-        public int FiliereId { get; set; }
         public int GroupId { get; set; }
 
-        public Niveau Niveau { get; set; }
-        public Filiere Filiere { get; set; }
         public Group Group { get; set; }
 
-        public Etudiant(int niveau, int filiere, int group)
+        public Etudiant(int group)
         {
-            NiveauId = niveau;
-            FiliereId = filiere;
             GroupId = group;
-
-            Niveau = new DataAccess.NiveauDA().Get(NiveauId);
-            Filiere = new DataAccess.FiliereDA().Get(FiliereId);
             Group = new DataAccess.GroupeDA().Get(GroupId);
         }
     }

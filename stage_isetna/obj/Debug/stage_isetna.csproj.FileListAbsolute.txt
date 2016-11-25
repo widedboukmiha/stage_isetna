@@ -177,3 +177,4 @@ C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stag
 C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.Ajouter.resources
 C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.Modifier.resources
 C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Niveau.Ajouter.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.parametres.resources

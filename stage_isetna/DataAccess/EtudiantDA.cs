@@ -19,14 +19,14 @@ namespace stage_isetna.DataAccess
         {
 
         }
-        public static void Create(string Nom, string prenom, string mail, string cin, string adresse, string codeposte, string datenaiss, string niveau, string filiere, string groupe, string tel)
+        public static void Create(string Nom, string prenom, string mail, string cin, string adresse, string codeposte, string datenaiss, string groupe, string tel)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("INSERT INTO [Etudiant] VALUES ((SELECT MAX(Id) + 1 FROM [Etudiant]) , '{0}' ,'{1}' , '{2}', '{3}' , '{4}', '{5}' , '{6}' , '{7}' , '{8}' , '{9}' , '{10}' )", cin, Nom, prenom, datenaiss, adresse, codeposte, tel, mail, niveau, filiere, groupe);
+                    cmd.CommandText = String.Format("INSERT INTO [Etudiant] VALUES ((SELECT MAX(Id) + 1 FROM [Etudiant]) , '{0}' ,'{1}' , '{2}', '{3}' , '{4}', '{5}' , '{6}' , '{7}', '{10}' )", cin, Nom, prenom, datenaiss, adresse, codeposte, tel, mail, groupe);
                     cmd.ExecuteNonQuery();
                 }
             }

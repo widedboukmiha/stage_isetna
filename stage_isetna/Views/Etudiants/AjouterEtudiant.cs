@@ -197,7 +197,7 @@ namespace stage_isetna
             int fil, niv, grou;
             try
             {
-                DataAccess.EtudiantDA.Create(txtnom.Text , txtprenom.Text , txtmail.Text , txtcin.Text , txtadr.Text , txtcodepost.Text , txtdate.Text , comboFiliere.SelectedValue.ToString(), comboNi.SelectedValue.ToString() , comboGroupe.SelectedValue.ToString() , txttel.Text);
+                //DataAccess.EtudiantDA.Create(txtnom.Text , txtprenom.Text , txtmail.Text , txtcin.Text , txtadr.Text , txtcodepost.Text , txtdate.Text , comboFiliere.SelectedValue.ToString(), comboNi.SelectedValue.ToString() , comboGroupe.SelectedValue.ToString() , txttel.Text);
                 MessageBox.Show("Ajouter Etudiant Avec Succées");
             }
             catch (Exception ex)

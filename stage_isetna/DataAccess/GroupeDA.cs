@@ -16,14 +16,14 @@ namespace stage_isetna.DataAccess
         //private string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wided boukmiha\\Documents\\GitHub\\stage_isetna\\stage_isetna\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
         private string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
 
-        public void Create(string Nom)
+        public void Create(string nom, int niveau, int filiere)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("INSERT INTO [Group] VALUES ((SELECT MAX(Id) + 1 FROM [Group]), '{0}')", Nom);
+                    cmd.CommandText = String.Format("INSERT INTO [Group] VALUES ((SELECT MAX(Id) + 1 FROM [Group]), '{0}', '{1}', '{2}')", nom, filiere, niveau);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -39,7 +39,10 @@ namespace stage_isetna.DataAccess
                 table.Load(cmd.ExecuteReader());
                 ds.Tables.Add(table);
             }
-            var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Group { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
+            var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Group(dataRow.Field<int>("NiveauId"), dataRow.Field<int>("FiliereId")) {
+                Id = dataRow.Field<int>("Id"),
+                Nom = dataRow.Field<string>("Nom")
+            }).ToList();
             return list;
         }
         
@@ -53,7 +56,11 @@ namespace stage_isetna.DataAccess
                 table.Load(cmd.ExecuteReader());
                 ds.Tables.Add(table);
             }
-            var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Group { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
+            var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Group(dataRow.Field<int>("NiveauId"), dataRow.Field<int>("FiliereId"))
+            {
+                Id = dataRow.Field<int>("Id"),
+                Nom = dataRow.Field<string>("Nom")
+            }).ToList();
             return list[0];
         }
 
@@ -67,8 +74,12 @@ namespace stage_isetna.DataAccess
                 table.Load(cmd.ExecuteReader());
                 ds.Tables.Add(table);
             }
-            var liste = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Group { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
-            return liste[0];
+            var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Group(dataRow.Field<int>("NiveauId"), dataRow.Field<int>("FiliereId"))
+            {
+                Id = dataRow.Field<int>("Id"),
+                Nom = dataRow.Field<string>("Nom")
+            }).ToList();
+            return list[0];
         }
 
 
@@ -111,7 +122,11 @@ namespace stage_isetna.DataAccess
                 table.Load(cmd.ExecuteReader());
                 ds.Tables.Add(table);
             }
-            var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Group { Id = dataRow.Field<int>("Id"), Nom = dataRow.Field<string>("Nom") }).ToList();
+            var list = ds.Tables[0].AsEnumerable().Select(dataRow => new Business.Group(dataRow.Field<int>("NiveauId"), dataRow.Field<int>("FiliereId"))
+            {
+                Id = dataRow.Field<int>("Id"),
+                Nom = dataRow.Field<string>("Nom")
+            }).ToList();
             return list;
         }
     }

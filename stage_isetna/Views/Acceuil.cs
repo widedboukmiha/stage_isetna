@@ -19,9 +19,9 @@ using System.Data.SqlClient;
 
 namespace stage_isetna
 {
-    public partial class Accueil : Form
+    public partial class Acceuil : Form
     {
-        public Accueil()
+        public Acceuil()
         {
             InitializeComponent();
         }
