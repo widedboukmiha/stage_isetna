@@ -65,15 +65,18 @@ namespace stage_isetna
 
         private void Accueil_Load(object sender, EventArgs e)
         {
-            //dataGridViewEtudiant.DataSource = listEtudiant;
-            dataGridViewFiliere.DataSource = new DataAccess.FiliereDA().Get();
-            dataGridViewNiveau.DataSource = new DataAccess.NiveauDA().Get();
-            dataGridEntreprise.DataSource = new DataAccess.EntrepriseDA().Get();
-            dataGridTypes.DataSource = new DataAccess.TypeDA().Get();
+            dataGridViewEtudiant.DataSource = new DataAccess.EtudiantDA().Get();
+            dataGridViewEtudiant.Columns[9].Visible = false;
+            dataGridViewEtudiant.Columns[10].Visible = false;
 
             dataGridViewGroupe.DataSource = new DataAccess.GroupeDA().Get();
             dataGridViewGroupe.Columns[2].Visible = false;
             dataGridViewGroupe.Columns[3].Visible = false;
+
+            dataGridEntreprise.DataSource = new DataAccess.EntrepriseDA().Get();
+            dataGridViewFiliere.DataSource = new DataAccess.FiliereDA().Get();
+            dataGridViewNiveau.DataSource = new DataAccess.NiveauDA().Get();
+            dataGridTypes.DataSource = new DataAccess.TypeDA().Get();
 
             lbldate.Text = DateTime.Now.ToShortDateString();
             timer1.Start();
@@ -195,7 +198,8 @@ namespace stage_isetna
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            new Views.Etudiants.Ajouter().ShowDialog();
+            dataGridViewEtudiant.DataSource = new DataAccess.EtudiantDA().Find(NomTypeRecherche.Text);
         }
 
         private void dataGridEntreprise_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -222,6 +226,12 @@ namespace stage_isetna
         {
             new Views.Type.Modifier(Convert.ToInt16(dataGridTypes.Rows[dataGridTypes.SelectedCells[0].RowIndex].Cells[0].Value)).ShowDialog();
             dataGridTypes.DataSource = new DataAccess.TypeDA().Find(NomTypeRecherche.Text);
+        }
+
+        private void dataGridViewEtudiant_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new Views.Etudiants.Modifier(Convert.ToInt16(dataGridViewEtudiant.Rows[dataGridViewEtudiant.SelectedCells[0].RowIndex].Cells[0].Value)).ShowDialog();
+            dataGridViewEtudiant.DataSource = new DataAccess.EtudiantDA().Find(textBox1.Text);
         }
     }
 }

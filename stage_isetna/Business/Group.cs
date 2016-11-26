@@ -24,5 +24,10 @@ namespace stage_isetna.Business
             FiliereId = filiere;
             Filiere = new DataAccess.FiliereDA().Get(FiliereId);
         }
+
+        public override string ToString()
+        {
+            return Nom;
+        }
     }
 }
