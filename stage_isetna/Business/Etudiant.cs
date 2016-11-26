@@ -27,5 +27,10 @@ namespace stage_isetna.Business
             GroupId = group;
             Group = new DataAccess.GroupeDA().Get(GroupId);
         }
+
+        public override string ToString()
+        {
+            return Cin;
+        }
     }
 }

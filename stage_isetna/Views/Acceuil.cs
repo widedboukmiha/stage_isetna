@@ -34,8 +34,8 @@ namespace stage_isetna
 
         private void btnAjoutStage_Click_1(object sender, EventArgs e)
         {
-            AjouterStage ajoutstage = new AjouterStage();
-            ajoutstage.Show();
+            new Views.Stage.Ajouter().ShowDialog();
+            dataGridView3.DataSource = new DataAccess.StageDA().Find(textBox9.Text);
         }
 
         private void adfiliere_Click_1(object sender, EventArgs e)
@@ -65,6 +65,12 @@ namespace stage_isetna
 
         private void Accueil_Load(object sender, EventArgs e)
         {
+            dataGridView3.DataSource = new DataAccess.StageDA().Get();
+            dataGridView3.Columns[4].Visible = false;
+            dataGridView3.Columns[5].Visible = false;
+            dataGridView3.Columns[6].Visible = false;
+            dataGridView3.Columns[7].Visible = false;
+
             dataGridViewEtudiant.DataSource = new DataAccess.EtudiantDA().Get();
             dataGridViewEtudiant.Columns[9].Visible = false;
             dataGridViewEtudiant.Columns[10].Visible = false;
@@ -232,6 +238,22 @@ namespace stage_isetna
         {
             new Views.Etudiants.Modifier(Convert.ToInt16(dataGridViewEtudiant.Rows[dataGridViewEtudiant.SelectedCells[0].RowIndex].Cells[0].Value)).ShowDialog();
             dataGridViewEtudiant.DataSource = new DataAccess.EtudiantDA().Find(textBox1.Text);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dataGridViewEtudiant.DataSource = new DataAccess.EtudiantDA().Find(textBox1.Text);
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView3.DataSource = new DataAccess.StageDA().Find(textBox9.Text);
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new Views.Stage.Modifier(Convert.ToInt16(dataGridView3.Rows[dataGridView3.SelectedCells[0].RowIndex].Cells[0].Value)).ShowDialog();
+            dataGridView3.DataSource = new DataAccess.StageDA().Find(textBox9.Text);
         }
     }
 }

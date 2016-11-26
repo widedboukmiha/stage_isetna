@@ -26,7 +26,7 @@ namespace stage_isetna
 
         private void btnAjout_Click(object sender, EventArgs e)
         {
-            if (new DataAccess.UsersDA().checkedLogin(txtNom.Text, textBox1.Text))
+            if (new DataAccess.UserDA().checkedLogin(txtNom.Text, textBox1.Text))
             {
                 this.Hide();
                 new Acceuil().ShowDialog();

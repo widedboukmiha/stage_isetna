@@ -28,12 +28,12 @@ namespace stage_isetna.DataAccess
                 {
                     try
                     {
-                        cmd.CommandText = String.Format("INSERT INTO [Etudiant] VALUES ((SELECT MAX(Id) + 1 FROM [Etudiant]) , '{0}' ,'{1}' , '{2}', '{3}' , '{4}', '{5}' , '{6}' , '{7}', '{8}', '{9}' )", cin, Nom, prenom, datenaiss, adresse, codeposte, tel, mail, anneeuniv, groupe);
+                        cmd.CommandText = String.Format("INSERT INTO [Etudiant] VALUES ((SELECT MAX(Id) + 1 FROM [Etudiant]) , '{0}' ,'{1}' , '{2}', '{3}' , '{4}', '{5}' , '{6}' , '{7}', '{8}', '{9}' )", Nom, prenom, cin, datenaiss, adresse, codeposte, tel, mail, anneeuniv, groupe);
                         cmd.ExecuteNonQuery();
                     }
                     catch
                     {
-                        cmd.CommandText = String.Format("INSERT INTO [Etudiant] VALUES (1 , '{0}' ,'{1}' , '{2}', '{3}' , '{4}', '{5}' , '{6}' , '{7}', '{8}', '{9}' )", cin, Nom, prenom, datenaiss, adresse, codeposte, tel, mail, anneeuniv, groupe);
+                        cmd.CommandText = String.Format("INSERT INTO [Etudiant] VALUES (1 , '{0}' ,'{1}' , '{2}', '{3}' , '{4}', '{5}' , '{6}' , '{7}', '{8}', '{9}' )", Nom, prenom, cin, datenaiss, adresse, codeposte, tel, mail, anneeuniv, groupe);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -102,7 +102,7 @@ namespace stage_isetna.DataAccess
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("UPDATE [Etudiant] SET Nom = '{1}', Prenom = '{2}', Cin = '{3}', DateNaissance = '{4}', Adresse = '{5}', CodePostal = '{6}', Tel = '{7}', Email = '{8}', GroupId = '{9}' WHERE Id = {0}", Id, cin, Nom, prenom, datenaiss, adresse, codeposte, tel, mail, groupe);
+                    cmd.CommandText = String.Format("UPDATE [Etudiant] SET Nom = '{1}', Prenom = '{2}', Cin = '{3}', DateNaissance = '{4}', Adresse = '{5}', CodePostal = '{6}', Tel = '{7}', Email = '{8}', GroupId = '{9}' WHERE Id = {0}", Id, Nom, prenom, cin, datenaiss, adresse, codeposte, tel, mail, groupe);
                     cmd.ExecuteNonQuery();
                 }
             }

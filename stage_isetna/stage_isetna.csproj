@@ -48,6 +48,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocX, Version=1.0.0.22, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.1.0.0.22\lib\net40\DocX.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Excel.4.5">
       <HintPath>..\..\..\..\Downloads\output\net45\Excel.4.5.dll</HintPath>
     </Reference>
@@ -55,6 +59,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,8 +82,9 @@
     <Compile Include="DataAccess\FiliereDA.cs" />
     <Compile Include="DataAccess\GroupeDA.cs" />
     <Compile Include="DataAccess\NiveauDA.cs" />
+    <Compile Include="DataAccess\StageDA.cs" />
     <Compile Include="DataAccess\TypeDA.cs" />
-    <Compile Include="DataAccess\UsersDA.cs" />
+    <Compile Include="DataAccess\UserDA.cs" />
     <Compile Include="DataClasses1.cs">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
@@ -199,17 +205,23 @@
     <Compile Include="Views\Niveau\Supprimer.Designer.cs">
       <DependentUpon>Supprimer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Stage\AjouterStage.cs">
+    <Compile Include="Views\Stage\Ajouter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Stage\AjouterStage.Designer.cs">
-      <DependentUpon>AjouterStage.cs</DependentUpon>
+    <Compile Include="Views\Stage\Ajouter.Designer.cs">
+      <DependentUpon>Ajouter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Stage\ModifierStage.cs">
+    <Compile Include="Views\Stage\Modifier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Stage\ModifierStage.Designer.cs">
-      <DependentUpon>ModifierStage.cs</DependentUpon>
+    <Compile Include="Views\Stage\Modifier.Designer.cs">
+      <DependentUpon>Modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Stage\Supprimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Stage\Supprimer.Designer.cs">
+      <DependentUpon>Supprimer.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\TestUnitaire.cs" />
     <Compile Include="Views\Type\Ajouter.cs">
@@ -269,6 +281,12 @@
     <EmbeddedResource Include="Views\Niveau\Supprimer.resx">
       <DependentUpon>Supprimer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Stage\Ajouter.resx">
+      <DependentUpon>Ajouter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Stage\Modifier.resx">
+      <DependentUpon>Modifier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Type\Modifier.resx">
       <DependentUpon>Modifier.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,17 +339,12 @@
     <EmbeddedResource Include="Views\Niveau\Ajouter.resx">
       <DependentUpon>Ajouter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Stage\AjouterStage.resx">
-      <DependentUpon>AjouterStage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Stage\ModifierStage.resx">
-      <DependentUpon>ModifierStage.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

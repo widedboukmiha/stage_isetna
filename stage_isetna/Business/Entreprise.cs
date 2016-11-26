@@ -24,5 +24,10 @@ namespace stage_isetna.Business
         }
 
         public Entreprise() { }
+
+        public override string ToString()
+        {
+            return Nom;
+        }
     }
 }

@@ -34,7 +34,7 @@ namespace stage_isetna.Views.Utilisateurs
         private void AfficherUtilisateur_Load(object sender, EventArgs e)
         {
             List<Users> listUser; 
-            listUser = DataAccess.UsersDA.Get();
+            listUser = DataAccess.UserDA.Get();
             dataGridViewUsers.DataSource = listUser; 
         }
     }

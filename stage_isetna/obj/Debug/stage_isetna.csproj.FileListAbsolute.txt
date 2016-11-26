@@ -79,8 +79,6 @@ C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\bin\Debug\stage_isetna.pdb
 D:\stage_isetna\stage_isetna\bin\Debug\Database\Database.mdf
 D:\stage_isetna\stage_isetna\bin\Debug\Database\Database_log.ldf
-D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.AjouterStage.resources
-D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.ModifierStage.resources
 C:\Users\wided boukmiha\Documents\GitHub\stage_isetna\stage_isetna\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Filiere.AfficherFiliere.resources
 C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe.config
 C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.exe
@@ -180,3 +178,5 @@ D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Type.Modifier.resource
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Etudiants.Ajouter.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Etudiants.Modifier.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Etudiants.Supprimer.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.Ajouter.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.Modifier.resources

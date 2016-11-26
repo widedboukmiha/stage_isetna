@@ -23,7 +23,7 @@ namespace stage_isetna.Views.Utilisateurs
             try
             {
 
-                DataAccess.UsersDA.Create(txtCin.Text , txtNom.Text , txtPrenom.Text , txtMail.Text , txtLogin.Text , txtPass.Text);
+                DataAccess.UserDA.Create(txtCin.Text , txtNom.Text , txtPrenom.Text , txtMail.Text , txtLogin.Text , txtPass.Text);
                 MessageBox.Show("Ajouter Filiere Avec Succées");
             }
             catch (Exception ex)

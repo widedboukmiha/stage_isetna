@@ -27,7 +27,7 @@ namespace stage_isetna.Views.Utilisateurs
             try
             {
 
-                DataAccess.UsersDA.Update(txtCin.Text, txtNom.Text, txtPrenom.Text, txtMail.Text, txtLogin.Text, txtPass.Text);
+                DataAccess.UserDA.Update(txtCin.Text, txtNom.Text, txtPrenom.Text, txtMail.Text, txtLogin.Text, txtPass.Text);
                 MessageBox.Show("Users Modifier Avec Succées");
             }
             catch (Exception ex)

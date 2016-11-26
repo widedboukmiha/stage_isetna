@@ -11,9 +11,8 @@ namespace stage_isetna.Business
         public int Id { get; set; }
         public DateTime DateDebut { get; set; }
         public DateTime DateFin { get; set; }
-        public string AnneeScolaire { get; set; }
-        public double Note { get; set; }
-        public string Etat { get; set; }
+        public decimal Note { get; set; }
+        public bool Etat { get; set; }
         public int TypeId { get; set; }
         public int EtudiantId { get; set; }
         public int EntrepriseId { get; set; }
@@ -28,7 +27,7 @@ namespace stage_isetna.Business
             EntrepriseId = entreprise;
 
             Type = new DataAccess.TypeDA().Get(TypeId);
-            //Etudiant = new DataAccess.EtudiantDA().Get(EtudiantId);
+            Etudiant = new DataAccess.EtudiantDA().Get(EtudiantId);
             Entreprise = new DataAccess.EntrepriseDA().Get(EntrepriseId);
         }
     }
