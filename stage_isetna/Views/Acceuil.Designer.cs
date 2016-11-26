@@ -347,14 +347,14 @@
             // 
             this.dataGridEntreprise.AllowUserToAddRows = false;
             this.dataGridEntreprise.AllowUserToDeleteRows = false;
-            this.dataGridEntreprise.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridEntreprise.ColumnHeadersHeight = 40;
             this.dataGridEntreprise.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridEntreprise.Location = new System.Drawing.Point(0, 0);
             this.dataGridEntreprise.Name = "dataGridEntreprise";
             this.dataGridEntreprise.ReadOnly = true;
             this.dataGridEntreprise.Size = new System.Drawing.Size(1279, 563);
             this.dataGridEntreprise.TabIndex = 7;
-            this.dataGridEntreprise.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEntreprise_CellDoubleClick);
+            this.dataGridEntreprise.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEntreprise_CellDoubleClick);
             // 
             // button5
             // 
@@ -371,13 +371,14 @@
             // 
             this.dataGridViewGroupe.AllowUserToAddRows = false;
             this.dataGridViewGroupe.AllowUserToDeleteRows = false;
+            this.dataGridViewGroupe.ColumnHeadersHeight = 40;
             this.dataGridViewGroupe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewGroupe.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewGroupe.Name = "dataGridViewGroupe";
             this.dataGridViewGroupe.ReadOnly = true;
             this.dataGridViewGroupe.Size = new System.Drawing.Size(1279, 563);
             this.dataGridViewGroupe.TabIndex = 4;
-            this.dataGridViewGroupe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewGroupe_CellDoubleClick);
+            this.dataGridViewGroupe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewGroupe_CellDoubleClick);
             // 
             // g
             // 
@@ -529,7 +530,7 @@
             // 
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.ColumnHeadersHeight = 40;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(0, 0);
             this.dataGridView3.Name = "dataGridView3";
@@ -746,14 +747,14 @@
             // 
             this.dataGridViewFiliere.AllowUserToAddRows = false;
             this.dataGridViewFiliere.AllowUserToDeleteRows = false;
-            this.dataGridViewFiliere.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFiliere.ColumnHeadersHeight = 40;
             this.dataGridViewFiliere.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewFiliere.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewFiliere.Name = "dataGridViewFiliere";
             this.dataGridViewFiliere.ReadOnly = true;
             this.dataGridViewFiliere.Size = new System.Drawing.Size(1279, 562);
             this.dataGridViewFiliere.TabIndex = 9;
-            this.dataGridViewFiliere.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFiliere_CellDoubleClick);
+            this.dataGridViewFiliere.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFiliere_CellDoubleClick);
             // 
             // tabPage1
             // 
@@ -826,7 +827,7 @@
             // 
             this.dataGridViewNiveau.AllowUserToAddRows = false;
             this.dataGridViewNiveau.AllowUserToDeleteRows = false;
-            this.dataGridViewNiveau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNiveau.ColumnHeadersHeight = 40;
             this.dataGridViewNiveau.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewNiveau.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewNiveau.MultiSelect = false;
@@ -834,13 +835,13 @@
             this.dataGridViewNiveau.ReadOnly = true;
             this.dataGridViewNiveau.Size = new System.Drawing.Size(1279, 562);
             this.dataGridViewNiveau.TabIndex = 5;
-            this.dataGridViewNiveau.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNiveau_CellDoubleClick);
+            this.dataGridViewNiveau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNiveau_CellDoubleClick);
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Accueil
+            // Acceuil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -848,7 +849,7 @@
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Accueil";
+            this.Name = "Acceuil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion des Stages";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

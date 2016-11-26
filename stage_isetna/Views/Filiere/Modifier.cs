@@ -43,5 +43,11 @@ namespace stage_isetna.Views.Filiere
             new Supprimer(Id).ShowDialog();
             this.Close();
         }
+
+        private void Modifier_Load(object sender, EventArgs e)
+        {
+            var element = new DataAccess.FiliereDA().Get(Id);
+            txtNom.Text = element.Nom;
+        }
     }
 }

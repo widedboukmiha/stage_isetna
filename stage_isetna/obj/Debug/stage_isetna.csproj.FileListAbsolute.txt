@@ -19,7 +19,6 @@ D:\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe
 D:\stage_isetna\stage_isetna\bin\Debug\stage_isetna.pdb
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csprojResolveAssemblyReference.cache
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Authentification.resources
-D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Accueil.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Properties.Resources.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.csproj.GenerateResource.Cache
 C:\Users\lenovo\Documents\GitHub\stage_isetna\stage_isetna\bin\Debug\stage_isetna.exe
@@ -178,3 +177,4 @@ C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stag
 C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Groupe.Modifier.resources
 C:\Users\Hella Boukari\Documents\GitHub\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Niveau.Ajouter.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.parametres.resources
+D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Acceuil.resources

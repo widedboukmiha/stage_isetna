@@ -67,9 +67,13 @@ namespace stage_isetna
         {
             //dataGridViewEtudiant.DataSource = listEtudiant;
             dataGridViewFiliere.DataSource = new DataAccess.FiliereDA().Get();
-            dataGridViewGroupe.DataSource = new DataAccess.GroupeDA().Get();
             dataGridViewNiveau.DataSource = new DataAccess.NiveauDA().Get();
             dataGridEntreprise.DataSource = new DataAccess.EntrepriseDA().Get();
+
+            dataGridViewGroupe.DataSource = new DataAccess.GroupeDA().Get();
+            dataGridViewGroupe.Columns[2].Visible = false;
+            dataGridViewGroupe.Columns[3].Visible = false;
+
             lbldate.Text = DateTime.Now.ToShortDateString();
             timer1.Start();
         }

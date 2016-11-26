@@ -43,5 +43,49 @@ namespace stage_isetna.Views.Groupe
             new Supprimer(Id).ShowDialog();
             this.Close();
         }
+
+        private void Modifier_Load(object sender, EventArgs e)
+        {
+            var niveaux = from niveau in new DataAccess.NiveauDA().Get()
+                          select new ComboboxItem()
+                          {
+                              Text = niveau.Nom,
+                              Value = niveau.Id
+                          };
+            var filieres = from filiere in new DataAccess.FiliereDA().Get()
+                           select new ComboboxItem()
+                           {
+                               Text = filiere.Nom,
+                               Value = filiere.Id
+                           };
+
+            comboBox1.DataSource = niveaux.ToList();
+            comboBox2.DataSource = filieres.ToList();
+
+            var element = new DataAccess.GroupeDA().Get(Id);
+            txtNom.Text = element.Nom;
+
+            int i = 0;
+            foreach (ComboboxItem item in comboBox1.Items)
+            {
+                if (Convert.ToInt32(item.Value) == element.NiveauId)
+                {
+                    comboBox1.SelectedIndex = i;
+                }
+
+                i++;
+            }
+
+            i = 0;
+            foreach (ComboboxItem item in comboBox2.Items)
+            {
+                if (Convert.ToInt32(item.Value) == element.FiliereId)
+                {
+                    comboBox2.SelectedIndex = i;
+                }
+
+                i++;
+            }
+        }
     }
 }

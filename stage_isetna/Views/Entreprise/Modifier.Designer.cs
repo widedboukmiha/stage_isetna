@@ -160,6 +160,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 13;
             this.comboBox1.Items.AddRange(new object[] {
             "Ariana",
             "Béja",
@@ -171,9 +172,9 @@
             "Kairouan",
             "Kasserine",
             "Kébili",
+            "La Manouba",
             "Le Kef",
             "Mahdia",
-            "La Manouba",
             "Médenine",
             "Monastir",
             "Nabeul",
@@ -188,6 +189,7 @@
             this.comboBox1.Location = new System.Drawing.Point(28, 273);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(503, 21);
+            this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 64;
             // 
             // button1
@@ -227,6 +229,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Modifier Entreprise";
+            this.Load += new System.EventHandler(this.Modifier_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

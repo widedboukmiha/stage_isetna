@@ -22,8 +22,15 @@ namespace stage_isetna.DataAccess
                 con.Open();
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = String.Format("INSERT INTO [Entreprise] VALUES ((SELECT MAX(Id) + 1 FROM [Entreprise]), '{0}', '{1}', '{2}', '{3}')", Nom, Adresse, Ville, NumTel);
-                    cmd.ExecuteNonQuery();
+                    try
+                    {
+                        cmd.CommandText = String.Format("INSERT INTO [Entreprise] VALUES ((SELECT MAX(Id) + 1 FROM [Entreprise]), '{0}', '{1}', '{2}', '{3}')", Nom, Adresse, Ville, NumTel);
+                        cmd.ExecuteNonQuery();
+                    } catch
+                    {
+                        cmd.CommandText = String.Format("INSERT INTO [Entreprise] VALUES (1, '{0}', '{1}', '{2}', '{3}')", Nom, Adresse, Ville, NumTel);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
             }
         }

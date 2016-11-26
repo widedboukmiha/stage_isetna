@@ -43,5 +43,14 @@ namespace stage_isetna.Views.Entreprises
         {
             this.Close();
         }
+
+        private void Modifier_Load(object sender, EventArgs e)
+        {
+            var element = new DataAccess.EntrepriseDA().Get(Id);
+            txtNom.Text = element.Nom;
+            textBox1.Text = element.Adresse;
+            comboBox1.Text = element.Ville;
+            textBox3.Text = element.NumTel;
+        }
     }
 }
