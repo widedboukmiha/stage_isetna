@@ -21,6 +21,8 @@ namespace stage_isetna
 {
     public partial class Acceuil : Form
     {
+        private static string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\stage_isetna\\stage_isetna\\Database\\Database.mdf;Integrated Security=True";
+
         public Acceuil()
         {
             InitializeComponent();
@@ -78,6 +80,25 @@ namespace stage_isetna
             dataGridViewEtudiant.Columns[10].Visible = false;
             dataGridViewGroupe.Columns[2].Visible = false;
             dataGridViewGroupe.Columns[3].Visible = false;
+
+            DataSet ds = new DataSet();
+            using (SqlCommand cmd = new SqlCommand(String.Format("SELECT (SELECT COUNT(*) FROM Etudiant WHERE AnneeUniv = '{0}') AS 'Etudiants', (SELECT COUNT(DISTINCT(EntrepriseId)) FROM Entreprise, Stage, Etudiant WHERE Stage.EntrepriseId = Entreprise.Id AND Stage.EtudiantId = Etudiant.Id AND Etudiant.AnneeUniv = '{0}') AS 'Entreprises', (SELECT COUNT(Stage.Id) FROM Stage, Etudiant WHERE Stage.EtudiantId = Etudiant.Id AND Etudiant.AnneeUniv = '{0}') AS 'Stages', (SELECT TOP 1 EntrepriseId FROM Entreprise, Stage, Etudiant WHERE Stage.EntrepriseId = Entreprise.Id AND Stage.EtudiantId = Etudiant.Id AND Etudiant.AnneeUniv = '{0}' GROUP BY EntrepriseId ORDER BY COUNT(Entreprise.Id) DESC)", (DateTime.Now.Year + " - " + (DateTime.Now.Year + 1))), new SqlConnection(conString)))
+            {
+                cmd.Connection.Open();
+                DataTable table = new DataTable();
+                table.Load(cmd.ExecuteReader());
+                ds.Tables.Add(table);
+            }
+
+            label1.Text = (DateTime.Now.Year + " - " + (DateTime.Now.Year + 1));
+            label22.Text = ds.Tables[0].Rows[0]["Etudiants"].ToString();
+            label26.Text = ds.Tables[0].Rows[0]["Stages"].ToString();
+            label24.Text = ds.Tables[0].Rows[0]["Entreprises"].ToString();
+
+            try
+            {
+                label28.Text = "Meilleur Entreprise : " + new DataAccess.EntrepriseDA().Get(int.Parse(ds.Tables[0].Rows[0]["Column1"].ToString())).Nom;
+            } catch { }
         }
 
         private void reload()
@@ -123,37 +144,32 @@ namespace stage_isetna
             FileStream stream = new FileStream(ope.FileName, FileMode.Open);
             IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
             DataSet result = excelReader.AsDataSet();
-            DataClasses1DataContext conn = new DataClasses1DataContext();
+            DataClasses2DataContext conn = new DataClasses2DataContext();
             foreach (DataTable table in result.Tables)
             {
                 Etudiant addtable = new stage_isetna.Etudiant();
 
                 foreach (DataRow dr in table.Rows)
                 {
-                    addtable = new Etudiant()
-                    {
-                        Id = 0,
-                        Cin = Convert.ToString(dr[0]),
-                        Nom = Convert.ToString(dr[1]),
-                        Prenom = Convert.ToString(dr[2]),
-                        DateNaissance = DateTime.Parse(dr[3].ToString()),
-                        Adresse = Convert.ToString(dr[4]),
-                        CodePostal = Convert.ToString(dr[5]),
-                        Tel = Convert.ToString(dr[6]),
-                        Email = Convert.ToString(dr[7]),
-                        NiveauId = new DataAccess.NiveauDA().Get(Convert.ToString(dr[8])).Id,
-                        FiliereId = new DataAccess.FiliereDA().Get(Convert.ToString(dr[9])).Id,
-                        GroupId = new DataAccess.GroupeDA().Get(Convert.ToString(dr[10])).Id,
-                    };
-
-                    conn.Etudiants.InsertOnSubmit(addtable);
+                    new DataAccess.EtudiantDA().Create(
+                        Convert.ToString(dr[0]),
+                        Convert.ToString(dr[2]),
+                        Convert.ToString(dr[7]),
+                        Convert.ToString(dr[1]),
+                        Convert.ToString(dr[4]),
+                        Convert.ToString(dr[5]),
+                        DateTime.Parse(dr[3].ToString()),
+                        new DataAccess.GroupeDA().Get(Convert.ToString(dr[8])).Id,
+                        Convert.ToString(dr[6]),
+                        DateTime.Now.Year + " - " + (DateTime.Now.Year + 1)
+                    );
                 }
-                conn.SubmitChanges();
                 excelReader.Close();
                 stream.Close();
 
-                MessageBox.Show(conn.Etudiants.Contains(addtable).ToString());
-                MessageBox.Show("les etudiants sont ajoutès ");
+                MessageBox.Show("Les Etudiants Sont Ajoutès");
+
+                dataGridViewEtudiant.DataSource = new DataAccess.EtudiantDA().Get();
             }
         }
 

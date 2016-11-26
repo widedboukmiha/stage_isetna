@@ -71,6 +71,7 @@ namespace stage_isetna.Views.Etudiants
             textBox5.Text = element.Adresse;
             textBox6.Text = element.Tel;
             textBox7.Text = element.Email;
+            dateTimePicker1.Value = element.DateNaissance;
 
             int i = 0;
             foreach (ComboboxItem item in comboBox1.Items)

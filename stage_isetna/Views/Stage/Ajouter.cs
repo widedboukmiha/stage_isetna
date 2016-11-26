@@ -43,26 +43,27 @@ namespace stage_isetna.Views.Stage
 
         private void Ajouter_Load(object sender, EventArgs e)
         {
-            var types = from @group in new DataAccess.TypeDA().Get()
-                          select new ComboboxItem()
-                          {
-                              Text = @group.Nom,
-                              Value = @group.Id
-                          };
+            var types = from type in new DataAccess.TypeDA().Get()
+                        select new ComboboxItem()
+                        {
+                            Text = type.Nom,
+                            Value = type.Id
+                        };
 
-            var etudiants = from @group in new DataAccess.EtudiantDA().Get()
-                          select new ComboboxItem()
-                          {
-                              Text = @group.Cin,
-                              Value = @group.Id
-                          };
+            var entreprises = from entreprise in new DataAccess.EntrepriseDA().Get()
+                              select new ComboboxItem()
+                              {
+                                  Text = entreprise.Nom,
+                                  Value = entreprise.Id
+                              };
 
-            var entreprises = from @group in new DataAccess.EntrepriseDA().Get()
-                          select new ComboboxItem()
-                          {
-                              Text = @group.Nom,
-                              Value = @group.Id
-                          };
+            var etudiants = from etudiant in new DataAccess.EtudiantDA().Get()
+                            where etudiant.AnneeUniv == DateTime.Now.Year + " - " + (DateTime.Now.Year + 1)
+                            select new ComboboxItem()
+                            {
+                                Text = etudiant.Cin,
+                                Value = etudiant.Id
+                            };
 
             comboBox1.DataSource = types.ToList();
             comboBox2.DataSource = etudiants.ToList();

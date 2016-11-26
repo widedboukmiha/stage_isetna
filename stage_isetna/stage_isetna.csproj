@@ -85,13 +85,10 @@
     <Compile Include="DataAccess\StageDA.cs" />
     <Compile Include="DataAccess\TypeDA.cs" />
     <Compile Include="DataAccess\UserDA.cs" />
-    <Compile Include="DataClasses1.cs">
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="DataClasses1.designer.cs">
+    <Compile Include="DataClasses2.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
+      <DependentUpon>DataClasses2.dbml</DependentUpon>
     </Compile>
     <Compile Include="parametres.cs">
       <SubType>Form</SubType>
@@ -260,6 +257,9 @@
     <Compile Include="Views\Utilisateurs\ModifierUtilisateurs.Designer.cs">
       <DependentUpon>ModifierUtilisateurs.cs</DependentUpon>
     </Compile>
+    <None Include="DataClasses2.dbml.layout">
+      <DependentUpon>DataClasses2.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="parametres.resx">
       <DependentUpon>parametres.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,9 +299,6 @@
     <EmbeddedResource Include="Views\Utilisateurs\ModifierUtilisateurs.resx">
       <DependentUpon>ModifierUtilisateurs.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataClasses1.dbml.layout">
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="Views\Authentification.resx">
       <DependentUpon>Authentification.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,9 +336,9 @@
     <EmbeddedResource Include="Views\Niveau\Ajouter.resx">
       <DependentUpon>Ajouter.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataClasses1.dbml">
+    <None Include="DataClasses2.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <LastGenOutput>DataClasses2.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />

@@ -80,7 +80,7 @@
             // txtNom
             // 
             this.txtNom.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNom.Location = new System.Drawing.Point(28, 154);
+            this.txtNom.Location = new System.Drawing.Point(28, 231);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(337, 25);
             this.txtNom.TabIndex = 54;
@@ -151,7 +151,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(28, 231);
+            this.textBox3.Location = new System.Drawing.Point(28, 154);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(337, 25);
             this.textBox3.TabIndex = 61;

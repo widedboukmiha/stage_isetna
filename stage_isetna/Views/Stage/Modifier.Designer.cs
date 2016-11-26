@@ -232,7 +232,7 @@
             "Tozeur",
             "Tunis",
             "Zaghouan"});
-            this.comboBox2.Location = new System.Drawing.Point(374, 300);
+            this.comboBox2.Location = new System.Drawing.Point(200, 300);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(157, 21);
             this.comboBox2.TabIndex = 69;
@@ -265,7 +265,7 @@
             "Tozeur",
             "Tunis",
             "Zaghouan"});
-            this.comboBox3.Location = new System.Drawing.Point(200, 300);
+            this.comboBox3.Location = new System.Drawing.Point(374, 300);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(157, 21);
             this.comboBox3.TabIndex = 70;
