@@ -19,7 +19,7 @@ namespace stage_isetna.DataAccess
         {
 
         }
-        public void Create(string Nom, string prenom, string mail, string cin, string adresse, string codeposte, DateTime datenaiss, int groupe, string tel, DateTime anneeuniv)
+        public void Create(string Nom, string prenom, string mail, string cin, string adresse, string codeposte, DateTime datenaiss, int groupe, string tel, string anneeuniv)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
@@ -63,7 +63,7 @@ namespace stage_isetna.DataAccess
                 CodePostal = dataRow.Field<string>("CodePostal"),
                 Tel = dataRow.Field<string>("Tel"),
                 Email = dataRow.Field<string>("Email"),
-                AnneeUniv = dataRow.Field<DateTime>("AnneeUniv")
+                AnneeUniv = dataRow.Field<string>("AnneeUniv")
             }).ToList();
             return list;
         }
@@ -90,7 +90,7 @@ namespace stage_isetna.DataAccess
                 CodePostal = dataRow.Field<string>("CodePostal"),
                 Tel = dataRow.Field<string>("Tel"),
                 Email = dataRow.Field<string>("Email"),
-                AnneeUniv = dataRow.Field<DateTime>("AnneeUniv")
+                AnneeUniv = dataRow.Field<string>("AnneeUniv")
             }).ToList();
             return list[0];
         }
@@ -124,7 +124,7 @@ namespace stage_isetna.DataAccess
         public List<Business.Etudiant> Find(string query)
         {
             DataSet ds = new DataSet();
-            using (SqlCommand cmd = new SqlCommand(String.Format("SELECT * FROM [Etudiant] WHERE Nom LIKE '%{0}%' OR Prenom LIKE '%{0}%' OR Cin LIKE '%{0}%' OR DateNaissance LIKE '%{0}%' OR Adresse LIKE '%{0}%' OR CodePostal LIKE '%{0}%' OR Tel LIKE '%{0}%' OR Email LIKE '%{0}%' OR GroupId LIKE '%{0}%'", query), new SqlConnection(conString)))
+            using (SqlCommand cmd = new SqlCommand(String.Format("SELECT [Etudiant].* FROM [Etudiant], [Group] WHERE ([Group].Id = [Etudiant].GroupId) AND ([Etudiant].Nom LIKE '%{0}%' OR [Group].Nom LIKE '%{0}%' OR Prenom LIKE '%{0}%' OR Cin LIKE '%{0}%' OR DateNaissance LIKE '%{0}%' OR Adresse LIKE '%{0}%' OR CodePostal LIKE '%{0}%' OR Tel LIKE '%{0}%' OR Email LIKE '%{0}%' OR GroupId LIKE '%{0}%')", query), new SqlConnection(conString)))
             {
                 cmd.Connection.Open();
                 DataTable table = new DataTable();
@@ -143,7 +143,7 @@ namespace stage_isetna.DataAccess
                 CodePostal = dataRow.Field<string>("CodePostal"),
                 Tel = dataRow.Field<string>("Tel"),
                 Email = dataRow.Field<string>("Email"),
-                AnneeUniv = dataRow.Field<DateTime>("AnneeUniv")
+                AnneeUniv = dataRow.Field<string>("AnneeUniv")
             }).ToList();
             return list;
         }

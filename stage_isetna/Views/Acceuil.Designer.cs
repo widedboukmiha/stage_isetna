@@ -374,6 +374,7 @@
             this.Entreprises.Size = new System.Drawing.Size(1285, 663);
             this.Entreprises.TabIndex = 2;
             this.Entreprises.Text = "Entreprises";
+            this.Entreprises.Enter += new System.EventHandler(this.Entreprises_Enter);
             // 
             // splitContainer5
             // 
@@ -432,6 +433,7 @@
             this.Stages.Size = new System.Drawing.Size(1285, 663);
             this.Stages.TabIndex = 4;
             this.Stages.Text = "Stages";
+            this.Stages.Enter += new System.EventHandler(this.Stages_Enter);
             // 
             // splitContainer3
             // 
@@ -534,6 +536,7 @@
             this.Groupes.Size = new System.Drawing.Size(1285, 663);
             this.Groupes.TabIndex = 3;
             this.Groupes.Text = "Groupes";
+            this.Groupes.Enter += new System.EventHandler(this.Groupes_Enter);
             // 
             // splitContainer4
             // 
@@ -610,6 +613,7 @@
             this.Etudiants.Size = new System.Drawing.Size(1285, 663);
             this.Etudiants.TabIndex = 1;
             this.Etudiants.Text = "Etudiants";
+            this.Etudiants.Enter += new System.EventHandler(this.Etudiants_Enter);
             // 
             // splitContainer7
             // 
@@ -679,6 +683,7 @@
             this.Filiéres.Size = new System.Drawing.Size(1285, 663);
             this.Filiéres.TabIndex = 5;
             this.Filiéres.Text = "Filiéres";
+            this.Filiéres.Enter += new System.EventHandler(this.Filiéres_Enter);
             // 
             // splitContainer2
             // 
@@ -769,6 +774,7 @@
             this.Niveaux.Size = new System.Drawing.Size(1285, 663);
             this.Niveaux.TabIndex = 6;
             this.Niveaux.Text = "Niveaux";
+            this.Niveaux.Enter += new System.EventHandler(this.Niveaux_Enter);
             // 
             // splitContainer1
             // 
@@ -848,6 +854,7 @@
             this.TypeStages.TabIndex = 8;
             this.TypeStages.Text = "Type Stages";
             this.TypeStages.UseVisualStyleBackColor = true;
+            this.TypeStages.Enter += new System.EventHandler(this.TypeStages_Enter);
             // 
             // splitContainer6
             // 

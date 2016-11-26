@@ -65,27 +65,30 @@ namespace stage_isetna
 
         private void Accueil_Load(object sender, EventArgs e)
         {
-            dataGridView3.DataSource = new DataAccess.StageDA().Get();
+            lbldate.Text = DateTime.Now.ToShortDateString();
+            timer1.Start();
+
+            reload();
+
             dataGridView3.Columns[4].Visible = false;
             dataGridView3.Columns[5].Visible = false;
             dataGridView3.Columns[6].Visible = false;
             dataGridView3.Columns[7].Visible = false;
-
-            dataGridViewEtudiant.DataSource = new DataAccess.EtudiantDA().Get();
-            dataGridViewEtudiant.Columns[9].Visible = false;
+            dataGridViewEtudiant.Columns[9].HeaderText = "Annee Universitaire";
             dataGridViewEtudiant.Columns[10].Visible = false;
-
-            dataGridViewGroupe.DataSource = new DataAccess.GroupeDA().Get();
             dataGridViewGroupe.Columns[2].Visible = false;
             dataGridViewGroupe.Columns[3].Visible = false;
+        }
 
+        private void reload()
+        {
+            dataGridView3.DataSource = new DataAccess.StageDA().Get();
+            dataGridViewEtudiant.DataSource = new DataAccess.EtudiantDA().Get();
+            dataGridViewGroupe.DataSource = new DataAccess.GroupeDA().Get();
             dataGridEntreprise.DataSource = new DataAccess.EntrepriseDA().Get();
             dataGridViewFiliere.DataSource = new DataAccess.FiliereDA().Get();
             dataGridViewNiveau.DataSource = new DataAccess.NiveauDA().Get();
             dataGridTypes.DataSource = new DataAccess.TypeDA().Get();
-
-            lbldate.Text = DateTime.Now.ToShortDateString();
-            timer1.Start();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -254,6 +257,41 @@ namespace stage_isetna
         {
             new Views.Stage.Modifier(Convert.ToInt16(dataGridView3.Rows[dataGridView3.SelectedCells[0].RowIndex].Cells[0].Value)).ShowDialog();
             dataGridView3.DataSource = new DataAccess.StageDA().Find(textBox9.Text);
+        }
+
+        private void TypeStages_Enter(object sender, EventArgs e)
+        {
+            dataGridTypes.DataSource = new DataAccess.TypeDA().Get();
+        }
+
+        private void Filiéres_Enter(object sender, EventArgs e)
+        {
+            dataGridViewFiliere.DataSource = new DataAccess.FiliereDA().Get();
+        }
+
+        private void Niveaux_Enter(object sender, EventArgs e)
+        {
+            dataGridViewNiveau.DataSource = new DataAccess.NiveauDA().Get();
+        }
+
+        private void Groupes_Enter(object sender, EventArgs e)
+        {
+            dataGridViewGroupe.DataSource = new DataAccess.GroupeDA().Get();
+        }
+
+        private void Entreprises_Enter(object sender, EventArgs e)
+        {
+            dataGridEntreprise.DataSource = new DataAccess.EntrepriseDA().Get();
+        }
+
+        private void Etudiants_Enter(object sender, EventArgs e)
+        {
+            dataGridViewEtudiant.DataSource = new DataAccess.EtudiantDA().Get();
+        }
+
+        private void Stages_Enter(object sender, EventArgs e)
+        {
+            dataGridView3.DataSource = new DataAccess.StageDA().Get();
         }
     }
 }

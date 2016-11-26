@@ -180,3 +180,4 @@ D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Etudiants.Modifier.res
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Etudiants.Supprimer.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.Ajouter.resources
 D:\stage_isetna\stage_isetna\obj\Debug\stage_isetna.Views.Stage.Modifier.resources
+D:\stage_isetna\stage_isetna\bin\Debug\DocX.dll

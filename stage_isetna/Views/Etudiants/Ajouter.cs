@@ -33,7 +33,7 @@ namespace stage_isetna.Views.Etudiants
                     dateTimePicker1.Value,
                     group,
                     textBox6.Text,
-                    DateTime.Now
+                    DateTime.Now.Year + " - " + (DateTime.Now.Year + 1)
                 );
                 this.Close();
             }

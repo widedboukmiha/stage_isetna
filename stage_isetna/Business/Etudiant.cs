@@ -17,7 +17,7 @@ namespace stage_isetna.Business
         public string CodePostal { get; set; }
         public string Tel { get; set; }
         public string Email { get; set; }
-        public DateTime AnneeUniv { get; set; }
+        public string AnneeUniv { get; set; }
         public int GroupId { get; set; }
 
         public Group Group { get; set; }
