@@ -272,6 +272,9 @@
     <EmbeddedResource Include="Views\Niveau\Supprimer.resx">
       <DependentUpon>Supprimer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Type\Modifier.resx">
+      <DependentUpon>Modifier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Utilisateurs\AfficherUtilisateur.resx">
       <DependentUpon>AfficherUtilisateur.cs</DependentUpon>
     </EmbeddedResource>

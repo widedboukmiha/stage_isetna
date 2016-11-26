@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Acceuil));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Home = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblheure = new System.Windows.Forms.Label();
@@ -54,11 +54,11 @@
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridViewGroupe = new System.Windows.Forms.DataGridView();
             this.g = new System.Windows.Forms.Label();
-            this.Entreprise = new System.Windows.Forms.TabPage();
+            this.Entreprises = new System.Windows.Forms.TabPage();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.Stage = new System.Windows.Forms.TabPage();
+            this.Stages = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -67,63 +67,76 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.Groupe = new System.Windows.Forms.TabPage();
+            this.Groupes = new System.Windows.Forms.TabPage();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.label8 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.Etudiant = new System.Windows.Forms.TabPage();
+            this.Etudiants = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
-            this.Filiére = new System.Windows.Forms.TabPage();
+            this.Filiéres = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.adfiliere = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridViewFiliere = new System.Windows.Forms.DataGridView();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Niveaux = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.nomNiveauRecherche = new System.Windows.Forms.TextBox();
             this.dataGridViewNiveau = new System.Windows.Forms.DataGridView();
+            this.TypeStages = new System.Windows.Forms.TabPage();
+            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.NomTypeRecherche = new System.Windows.Forms.TextBox();
+            this.dataGridTypes = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tabPage2.SuspendLayout();
+            this.Home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEtudiant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEntreprise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroupe)).BeginInit();
-            this.Entreprise.SuspendLayout();
+            this.Entreprises.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
-            this.Stage.SuspendLayout();
+            this.Stages.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.Groupe.SuspendLayout();
+            this.Groupes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.Etudiant.SuspendLayout();
-            this.Filiére.SuspendLayout();
+            this.Etudiants.SuspendLayout();
+            this.Filiéres.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFiliere)).BeginInit();
-            this.tabPage1.SuspendLayout();
+            this.Niveaux.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveau)).BeginInit();
+            this.TypeStages.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
+            this.splitContainer6.Panel1.SuspendLayout();
+            this.splitContainer6.Panel2.SuspendLayout();
+            this.splitContainer6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTypes)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -145,22 +158,22 @@
             this.radioButton4.Text = "Classe";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // Home
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.LightGray;
-            this.tabPage2.Controls.Add(this.pictureBox1);
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Controls.Add(this.label14);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1285, 663);
-            this.tabPage2.TabIndex = 7;
-            this.tabPage2.Text = "Iset";
+            this.Home.BackColor = System.Drawing.Color.LightGray;
+            this.Home.Controls.Add(this.pictureBox1);
+            this.Home.Controls.Add(this.groupBox1);
+            this.Home.Controls.Add(this.label14);
+            this.Home.Controls.Add(this.label11);
+            this.Home.Controls.Add(this.label9);
+            this.Home.Controls.Add(this.button4);
+            this.Home.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home.Location = new System.Drawing.Point(4, 29);
+            this.Home.Name = "Home";
+            this.Home.Padding = new System.Windows.Forms.Padding(3);
+            this.Home.Size = new System.Drawing.Size(1285, 663);
+            this.Home.TabIndex = 7;
+            this.Home.Text = "Acceuil";
             // 
             // pictureBox1
             // 
@@ -391,18 +404,18 @@
             this.g.TabIndex = 5;
             this.g.Text = "Gestion des Entreprises";
             // 
-            // Entreprise
+            // Entreprises
             // 
-            this.Entreprise.BackColor = System.Drawing.Color.Lavender;
-            this.Entreprise.Controls.Add(this.splitContainer5);
-            this.Entreprise.Controls.Add(this.g);
-            this.Entreprise.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Entreprise.Location = new System.Drawing.Point(4, 29);
-            this.Entreprise.Name = "Entreprise";
-            this.Entreprise.Padding = new System.Windows.Forms.Padding(3);
-            this.Entreprise.Size = new System.Drawing.Size(1285, 663);
-            this.Entreprise.TabIndex = 2;
-            this.Entreprise.Text = "Entreprise";
+            this.Entreprises.BackColor = System.Drawing.Color.Lavender;
+            this.Entreprises.Controls.Add(this.splitContainer5);
+            this.Entreprises.Controls.Add(this.g);
+            this.Entreprises.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Entreprises.Location = new System.Drawing.Point(4, 29);
+            this.Entreprises.Name = "Entreprises";
+            this.Entreprises.Padding = new System.Windows.Forms.Padding(3);
+            this.Entreprises.Size = new System.Drawing.Size(1285, 663);
+            this.Entreprises.TabIndex = 2;
+            this.Entreprises.Text = "Entreprises";
             // 
             // splitContainer5
             // 
@@ -450,17 +463,17 @@
             this.label17.TabIndex = 7;
             this.label17.Text = "Recherche";
             // 
-            // Stage
+            // Stages
             // 
-            this.Stage.BackColor = System.Drawing.Color.Lavender;
-            this.Stage.Controls.Add(this.splitContainer3);
-            this.Stage.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Stage.Location = new System.Drawing.Point(4, 29);
-            this.Stage.Name = "Stage";
-            this.Stage.Padding = new System.Windows.Forms.Padding(3);
-            this.Stage.Size = new System.Drawing.Size(1285, 663);
-            this.Stage.TabIndex = 4;
-            this.Stage.Text = "Stage";
+            this.Stages.BackColor = System.Drawing.Color.Lavender;
+            this.Stages.Controls.Add(this.splitContainer3);
+            this.Stages.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Stages.Location = new System.Drawing.Point(4, 29);
+            this.Stages.Name = "Stages";
+            this.Stages.Padding = new System.Windows.Forms.Padding(3);
+            this.Stages.Size = new System.Drawing.Size(1285, 663);
+            this.Stages.TabIndex = 4;
+            this.Stages.Text = "Stages";
             // 
             // splitContainer3
             // 
@@ -561,17 +574,17 @@
             this.label1.TabIndex = 46;
             this.label1.Text = "Gestion des Etudiants";
             // 
-            // Groupe
+            // Groupes
             // 
-            this.Groupe.BackColor = System.Drawing.Color.Lavender;
-            this.Groupe.Controls.Add(this.splitContainer4);
-            this.Groupe.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Groupe.Location = new System.Drawing.Point(4, 29);
-            this.Groupe.Name = "Groupe";
-            this.Groupe.Padding = new System.Windows.Forms.Padding(3);
-            this.Groupe.Size = new System.Drawing.Size(1285, 663);
-            this.Groupe.TabIndex = 3;
-            this.Groupe.Text = "Groupe";
+            this.Groupes.BackColor = System.Drawing.Color.Lavender;
+            this.Groupes.Controls.Add(this.splitContainer4);
+            this.Groupes.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Groupes.Location = new System.Drawing.Point(4, 29);
+            this.Groupes.Name = "Groupes";
+            this.Groupes.Padding = new System.Windows.Forms.Padding(3);
+            this.Groupes.Size = new System.Drawing.Size(1285, 663);
+            this.Groupes.TabIndex = 3;
+            this.Groupes.Text = "Groupes";
             // 
             // splitContainer4
             // 
@@ -621,13 +634,14 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.Stage);
-            this.tabControl1.Controls.Add(this.Etudiant);
-            this.tabControl1.Controls.Add(this.Entreprise);
-            this.tabControl1.Controls.Add(this.Groupe);
-            this.tabControl1.Controls.Add(this.Filiére);
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.Home);
+            this.tabControl1.Controls.Add(this.Stages);
+            this.tabControl1.Controls.Add(this.Etudiants);
+            this.tabControl1.Controls.Add(this.Entreprises);
+            this.tabControl1.Controls.Add(this.Groupes);
+            this.tabControl1.Controls.Add(this.Filiéres);
+            this.tabControl1.Controls.Add(this.Niveaux);
+            this.tabControl1.Controls.Add(this.TypeStages);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.ItemSize = new System.Drawing.Size(200, 25);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -636,24 +650,24 @@
             this.tabControl1.Size = new System.Drawing.Size(1293, 696);
             this.tabControl1.TabIndex = 2;
             // 
-            // Etudiant
+            // Etudiants
             // 
-            this.Etudiant.BackColor = System.Drawing.Color.Lavender;
-            this.Etudiant.Controls.Add(this.button1);
-            this.Etudiant.Controls.Add(this.label1);
-            this.Etudiant.Controls.Add(this.dataGridViewEtudiant);
-            this.Etudiant.Controls.Add(this.textBox1);
-            this.Etudiant.Controls.Add(this.radioButton4);
-            this.Etudiant.Controls.Add(this.radioButton3);
-            this.Etudiant.Controls.Add(this.radioButton2);
-            this.Etudiant.Controls.Add(this.radioButton5);
-            this.Etudiant.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Etudiant.Location = new System.Drawing.Point(4, 29);
-            this.Etudiant.Name = "Etudiant";
-            this.Etudiant.Padding = new System.Windows.Forms.Padding(3);
-            this.Etudiant.Size = new System.Drawing.Size(1285, 663);
-            this.Etudiant.TabIndex = 1;
-            this.Etudiant.Text = "Etudiant";
+            this.Etudiants.BackColor = System.Drawing.Color.Lavender;
+            this.Etudiants.Controls.Add(this.button1);
+            this.Etudiants.Controls.Add(this.label1);
+            this.Etudiants.Controls.Add(this.dataGridViewEtudiant);
+            this.Etudiants.Controls.Add(this.textBox1);
+            this.Etudiants.Controls.Add(this.radioButton4);
+            this.Etudiants.Controls.Add(this.radioButton3);
+            this.Etudiants.Controls.Add(this.radioButton2);
+            this.Etudiants.Controls.Add(this.radioButton5);
+            this.Etudiants.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Etudiants.Location = new System.Drawing.Point(4, 29);
+            this.Etudiants.Name = "Etudiants";
+            this.Etudiants.Padding = new System.Windows.Forms.Padding(3);
+            this.Etudiants.Size = new System.Drawing.Size(1285, 663);
+            this.Etudiants.TabIndex = 1;
+            this.Etudiants.Text = "Etudiants";
             // 
             // button1
             // 
@@ -666,17 +680,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Filiére
+            // Filiéres
             // 
-            this.Filiére.BackColor = System.Drawing.Color.White;
-            this.Filiére.Controls.Add(this.splitContainer2);
-            this.Filiére.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Filiére.Location = new System.Drawing.Point(4, 29);
-            this.Filiére.Name = "Filiére";
-            this.Filiére.Padding = new System.Windows.Forms.Padding(3);
-            this.Filiére.Size = new System.Drawing.Size(1285, 663);
-            this.Filiére.TabIndex = 5;
-            this.Filiére.Text = "Filiére";
+            this.Filiéres.BackColor = System.Drawing.Color.White;
+            this.Filiéres.Controls.Add(this.splitContainer2);
+            this.Filiéres.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Filiéres.Location = new System.Drawing.Point(4, 29);
+            this.Filiéres.Name = "Filiéres";
+            this.Filiéres.Padding = new System.Windows.Forms.Padding(3);
+            this.Filiéres.Size = new System.Drawing.Size(1285, 663);
+            this.Filiéres.TabIndex = 5;
+            this.Filiéres.Text = "Filiéres";
             // 
             // splitContainer2
             // 
@@ -756,17 +770,17 @@
             this.dataGridViewFiliere.TabIndex = 9;
             this.dataGridViewFiliere.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFiliere_CellDoubleClick);
             // 
-            // tabPage1
+            // Niveaux
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.Controls.Add(this.splitContainer1);
-            this.tabPage1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1285, 663);
-            this.tabPage1.TabIndex = 6;
-            this.tabPage1.Text = "Niveau";
+            this.Niveaux.BackColor = System.Drawing.Color.White;
+            this.Niveaux.Controls.Add(this.splitContainer1);
+            this.Niveaux.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Niveaux.Location = new System.Drawing.Point(4, 29);
+            this.Niveaux.Name = "Niveaux";
+            this.Niveaux.Padding = new System.Windows.Forms.Padding(3);
+            this.Niveaux.Size = new System.Drawing.Size(1285, 663);
+            this.Niveaux.TabIndex = 6;
+            this.Niveaux.Text = "Niveaux";
             // 
             // splitContainer1
             // 
@@ -837,6 +851,96 @@
             this.dataGridViewNiveau.TabIndex = 5;
             this.dataGridViewNiveau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNiveau_CellDoubleClick);
             // 
+            // TypeStages
+            // 
+            this.TypeStages.Controls.Add(this.splitContainer6);
+            this.TypeStages.Location = new System.Drawing.Point(4, 29);
+            this.TypeStages.Name = "TypeStages";
+            this.TypeStages.Size = new System.Drawing.Size(1285, 663);
+            this.TypeStages.TabIndex = 8;
+            this.TypeStages.Text = "Type Stages";
+            this.TypeStages.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer6
+            // 
+            this.splitContainer6.BackColor = System.Drawing.Color.Transparent;
+            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer6.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer6.Name = "splitContainer6";
+            this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer6.Panel1
+            // 
+            this.splitContainer6.Panel1.BackColor = System.Drawing.Color.Gold;
+            this.splitContainer6.Panel1.Controls.Add(this.label10);
+            this.splitContainer6.Panel1.Controls.Add(this.button2);
+            this.splitContainer6.Panel1.Controls.Add(this.label18);
+            this.splitContainer6.Panel1.Controls.Add(this.NomTypeRecherche);
+            // 
+            // splitContainer6.Panel2
+            // 
+            this.splitContainer6.Panel2.Controls.Add(this.dataGridTypes);
+            this.splitContainer6.Size = new System.Drawing.Size(1285, 663);
+            this.splitContainer6.SplitterDistance = 91;
+            this.splitContainer6.TabIndex = 11;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(18, 27);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(170, 37);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Type Stages";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(211, 22);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(125, 48);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Ajouter";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.Color.Gray;
+            this.label18.Location = new System.Drawing.Point(1037, 22);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(89, 21);
+            this.label18.TabIndex = 7;
+            this.label18.Text = "Recherche";
+            // 
+            // NomTypeRecherche
+            // 
+            this.NomTypeRecherche.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomTypeRecherche.Location = new System.Drawing.Point(1041, 48);
+            this.NomTypeRecherche.Name = "NomTypeRecherche";
+            this.NomTypeRecherche.Size = new System.Drawing.Size(217, 22);
+            this.NomTypeRecherche.TabIndex = 8;
+            // 
+            // dataGridTypes
+            // 
+            this.dataGridTypes.AllowUserToAddRows = false;
+            this.dataGridTypes.AllowUserToDeleteRows = false;
+            this.dataGridTypes.ColumnHeadersHeight = 40;
+            this.dataGridTypes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridTypes.Location = new System.Drawing.Point(0, 0);
+            this.dataGridTypes.MultiSelect = false;
+            this.dataGridTypes.Name = "dataGridTypes";
+            this.dataGridTypes.ReadOnly = true;
+            this.dataGridTypes.Size = new System.Drawing.Size(1285, 568);
+            this.dataGridTypes.TabIndex = 5;
+            this.dataGridTypes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridTypes_CellClick);
+            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -855,51 +959,58 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Accueil_Load);
             this.Click += new System.EventHandler(this.button3_Click);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.Home.ResumeLayout(false);
+            this.Home.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEtudiant)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEntreprise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroupe)).EndInit();
-            this.Entreprise.ResumeLayout(false);
-            this.Entreprise.PerformLayout();
+            this.Entreprises.ResumeLayout(false);
+            this.Entreprises.PerformLayout();
             this.splitContainer5.Panel1.ResumeLayout(false);
             this.splitContainer5.Panel1.PerformLayout();
             this.splitContainer5.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
-            this.Stage.ResumeLayout(false);
+            this.Stages.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.Groupe.ResumeLayout(false);
+            this.Groupes.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.PerformLayout();
             this.splitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.Etudiant.ResumeLayout(false);
-            this.Etudiant.PerformLayout();
-            this.Filiére.ResumeLayout(false);
+            this.Etudiants.ResumeLayout(false);
+            this.Etudiants.PerformLayout();
+            this.Filiéres.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFiliere)).EndInit();
-            this.tabPage1.ResumeLayout(false);
+            this.Niveaux.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveau)).EndInit();
+            this.TypeStages.ResumeLayout(false);
+            this.splitContainer6.Panel1.ResumeLayout(false);
+            this.splitContainer6.Panel1.PerformLayout();
+            this.splitContainer6.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
+            this.splitContainer6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTypes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -907,7 +1018,7 @@
         #endregion
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage Home;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button4;
@@ -922,20 +1033,20 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridViewGroupe;
         private System.Windows.Forms.Label g;
-        private System.Windows.Forms.TabPage Entreprise;
-        private System.Windows.Forms.TabPage Stage;
+        private System.Windows.Forms.TabPage Entreprises;
+        private System.Windows.Forms.TabPage Stages;
         private System.Windows.Forms.Button btnAjoutStage;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage Groupe;
+        private System.Windows.Forms.TabPage Groupes;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage Etudiant;
-        private System.Windows.Forms.TabPage Filiére;
+        private System.Windows.Forms.TabPage Etudiants;
+        private System.Windows.Forms.TabPage Filiéres;
         private System.Windows.Forms.Button adfiliere;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage Niveaux;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox nomNiveauRecherche;
         private System.Windows.Forms.Label label15;
@@ -963,5 +1074,12 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabPage TypeStages;
+        private System.Windows.Forms.SplitContainer splitContainer6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox NomTypeRecherche;
+        private System.Windows.Forms.DataGridView dataGridTypes;
     }
 }

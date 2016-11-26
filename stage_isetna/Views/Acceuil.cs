@@ -69,6 +69,7 @@ namespace stage_isetna
             dataGridViewFiliere.DataSource = new DataAccess.FiliereDA().Get();
             dataGridViewNiveau.DataSource = new DataAccess.NiveauDA().Get();
             dataGridEntreprise.DataSource = new DataAccess.EntrepriseDA().Get();
+            dataGridTypes.DataSource = new DataAccess.TypeDA().Get();
 
             dataGridViewGroupe.DataSource = new DataAccess.GroupeDA().Get();
             dataGridViewGroupe.Columns[2].Visible = false;
@@ -209,6 +210,18 @@ namespace stage_isetna
         {
             parametres parm = new parametres();
             parm.Show(); 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new Views.Type.Ajouter().ShowDialog();
+            dataGridTypes.DataSource = new DataAccess.TypeDA().Find(NomTypeRecherche.Text);
+        }
+
+        private void dataGridTypes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new Views.Type.Modifier(Convert.ToInt16(dataGridTypes.Rows[dataGridTypes.SelectedCells[0].RowIndex].Cells[0].Value)).ShowDialog();
+            dataGridTypes.DataSource = new DataAccess.TypeDA().Find(NomTypeRecherche.Text);
         }
     }
 }

@@ -77,7 +77,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(21, 24);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(208, 37);
+            this.label7.Size = new System.Drawing.Size(254, 37);
             this.label7.TabIndex = 52;
             this.label7.Text = "Modifier Type Stage";
             // 
@@ -134,6 +134,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Modifier Type Stage";
+            this.Load += new System.EventHandler(this.Modifier_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
