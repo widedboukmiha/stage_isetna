@@ -137,39 +137,35 @@ namespace stage_isetna
         {
             OpenFileDialog ope = new OpenFileDialog();
             ope.Filter = "Excel Files | *.xls;*.xlsx;*.xlsm";
-            if (ope.ShowDialog() == DialogResult.Cancel)
+            if (ope.ShowDialog() == DialogResult.OK)
             {
-                return;
-            }
-            FileStream stream = new FileStream(ope.FileName, FileMode.Open);
-            IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-            DataSet result = excelReader.AsDataSet();
-            DataClasses2DataContext conn = new DataClasses2DataContext();
-            foreach (DataTable table in result.Tables)
-            {
-                Etudiant addtable = new stage_isetna.Etudiant();
-
-                foreach (DataRow dr in table.Rows)
+                FileStream stream = new FileStream(ope.FileName, FileMode.Open);
+                IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
+                DataSet result = excelReader.AsDataSet();
+                foreach (DataTable table in result.Tables)
                 {
-                    new DataAccess.EtudiantDA().Create(
-                        Convert.ToString(dr[0]),
-                        Convert.ToString(dr[2]),
-                        Convert.ToString(dr[7]),
-                        Convert.ToString(dr[1]),
-                        Convert.ToString(dr[4]),
-                        Convert.ToString(dr[5]),
-                        DateTime.Parse(dr[3].ToString()),
-                        new DataAccess.GroupeDA().Get(Convert.ToString(dr[8])).Id,
-                        Convert.ToString(dr[6]),
-                        DateTime.Now.Year + " - " + (DateTime.Now.Year + 1)
-                    );
+                    foreach (DataRow dr in table.Rows)
+                    {
+                        new DataAccess.EtudiantDA().Create(
+                            Convert.ToString(dr[0]),
+                            Convert.ToString(dr[2]),
+                            Convert.ToString(dr[7]),
+                            Convert.ToString(dr[1]),
+                            Convert.ToString(dr[4]),
+                            Convert.ToString(dr[5]),
+                            DateTime.Parse(dr[3].ToString()),
+                            new DataAccess.GroupeDA().Get(Convert.ToString(dr[8])).Id,
+                            Convert.ToString(dr[6]),
+                            DateTime.Now.Year + " - " + (DateTime.Now.Year + 1)
+                        );
+                    }
+                    excelReader.Close();
+                    stream.Close();
+
+                    MessageBox.Show("Les Etudiants Sont Ajoutès");
+
+                    dataGridViewEtudiant.DataSource = new DataAccess.EtudiantDA().Get();
                 }
-                excelReader.Close();
-                stream.Close();
-
-                MessageBox.Show("Les Etudiants Sont Ajoutès");
-
-                dataGridViewEtudiant.DataSource = new DataAccess.EtudiantDA().Get();
             }
         }
 

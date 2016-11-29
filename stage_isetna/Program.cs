@@ -19,8 +19,8 @@ namespace stage_isetna
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Authentification());
-            Application.Run(new Acceuil());
+            Application.Run(new Authentification());
+            //Application.Run(new Acceuil());
         }
     }
 
